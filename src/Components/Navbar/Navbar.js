@@ -37,7 +37,7 @@ const Navbar = () => {
                 {isOpen && (
                     <ul className="navbar-menu-mobile">
                         <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/about">About Us</NavLink></li>
+                        <li><NavLink to="/AboutUs">About Us</NavLink></li>
                         <li><NavLink to="/services">Services</NavLink></li>
                         <li><NavLink to="/menu">Menu</NavLink></li>
                         <li><NavLink to="/gallery">Gallery</NavLink></li>

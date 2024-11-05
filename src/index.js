@@ -12,6 +12,8 @@ import Menu from './Pages/Menu/Menu';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
+import Photos from './Pages/Photos/Photos';
+import Videos from './Pages/Videos/Videos';
 const Rout=createBrowserRouter([
   {
     path:"",
@@ -48,6 +50,14 @@ const Rout=createBrowserRouter([
       {
         path:"/Blogs",
         element:<Blogs/>
+      },
+      {
+        path:"/Gallery/Photos",
+        element:<Photos />
+      },
+      {
+        path:"/Gallery/Videos",
+        element:<Videos />
       },
       {
         path:"*",
