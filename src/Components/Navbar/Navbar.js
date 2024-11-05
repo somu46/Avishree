@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import Hamburger from 'hamburger-react';
+import { Link, NavLink } from 'react-router-dom';
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +10,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                <img src="logo.png" alt="Avishree-Logo" className="logo" />
+                <Link to="/"> <img src="logo.png" alt="Avishree-Logo" className="logo" /></Link>
                 <div className="brand">
-                    <h1>Avishree Hospitality Pvt. Ltd.</h1>
+                <NavLink to="/"> <h1>Avishree Hospitality Pvt. Ltd.</h1></NavLink>
                     {/* <p>A Unit Of Sai Foods & Caterers</p> */}
                 </div>
             </div>
@@ -18,15 +20,15 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="desktop-menu">
                 <ul className="navbar-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#AboutUs">About Us</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#blogs">Blogs</a></li>
+                    <li><NavLink to="/home">Home</NavLink></li>
+                    <li><NavLink to="/services">Services</NavLink></li>
+                    <li><NavLink to="/menu">Menu</NavLink></li>
+                    <li><NavLink to="/AboutUs">About Us</NavLink></li>
+                    <li><NavLink to="/gallery">Gallery</NavLink></li>
+                    <li><NavLink to="/contact">Contact Us</NavLink></li>
+                    <li><NavLink to="/blogs">Blogs</NavLink></li>
                 </ul>
-                <a href="#book" className="book-now-button">Book Now</a>
+                <NavLink to="/book" className="book-now-button">Book Now</NavLink>
             </div>
 
             {/* Mobile Menu */}
@@ -34,14 +36,14 @@ const Navbar = () => {
                 <Hamburger toggled={isOpen} toggle={setIsOpen} />
                 {isOpen && (
                     <ul className="navbar-menu-mobile">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#create-menu">Create Menu</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#book" className="book-now-button-mobile">Book Now</a></li>
+                        <li><NavLink to="/home">Home</NavLink></li>
+                        <li><NavLink to="/about">About Us</NavLink></li>
+                        <li><NavLink to="/menu">Menu</NavLink></li>
+                        <li><NavLink to="/create-menu">Create Menu</NavLink></li>
+                        <li><NavLink to="/gallery">Gallery</NavLink></li>
+                        <li><NavLink to="/contact">Contact Us</NavLink></li>
+                        <li><NavLink to="/blogs">Blogs</NavLink></li>
+                        <li><NavLink to="/book" className="book-now-button-mobile">Book Now</NavLink></li>
                     </ul>
                 )}
             </div>
