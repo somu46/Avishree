@@ -1,0 +1,21 @@
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+    width: 150px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  

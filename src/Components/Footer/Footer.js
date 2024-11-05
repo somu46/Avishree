@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import {  NavLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
@@ -21,12 +22,13 @@ const Footer = () => {
                 <div className="footer-section links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/AboutUs">About Us</NavLink></li>
+                        <li><NavLink to="/services">Services</NavLink></li>
+                        <li><NavLink to="/menu">Menu</NavLink></li>
+                        <li><NavLink to="/gallery">Gallery</NavLink></li>
+                        <li><NavLink to="/contact">Contact Us</NavLink></li>
+                        <li><NavLink to="/blogs">Blogs</NavLink></li>
                     </ul>
                 </div>
 
