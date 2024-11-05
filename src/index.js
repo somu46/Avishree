@@ -6,9 +6,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './Root/Root';
 import ErrorPage from './Pages/Error/Error';
 import QuoteForm from './Components/BookFrom/BookFrom';
-
-
-
+import AboutUs from './Pages/AboutUs/AboutUs';
+import Services from './Pages/Services/Services';
+import Menu from './Pages/Menu/Menu';
+import Gallery from './Pages/Gallery/Gallery';
+import Contact from './Pages/ContactUs/ContactUs';
+import Blogs from './Pages/Blogs/Blogs';
 const Rout=createBrowserRouter([
   {
     path:"",
@@ -19,8 +22,32 @@ const Rout=createBrowserRouter([
         element:<App/>
       },
       {
+        path:"/AboutUs",
+        element:<AboutUs/>
+      },
+      {
+        path:"/Services",
+        element:<Services/>
+      },
+      {
         path:"/book",
         element:<QuoteForm/>
+      },
+      {
+        path:"/Menu",
+        element:<Menu/>
+      },
+      {
+        path:"/Gallery",
+        element:<Gallery/>
+      },
+      {
+        path:"/Contact",
+        element:<Contact/>
+      },
+      {
+        path:"/Blogs",
+        element:<Blogs/>
       },
       {
         path:"*",

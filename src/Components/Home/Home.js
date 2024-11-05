@@ -1,10 +1,11 @@
 import React from 'react'
 import './Home.css'
-import Testimonial from '../Testimonial/Testimonial'
+// import Testimonial from '../Testimonial/Testimonial'
 const Home = () => {
   return (
     <div className='Home-container'>
-        <Testimonial/>
+        {/* <Testimonial/> */}
+        <h1>Home</h1>
     </div>
   )
 }
