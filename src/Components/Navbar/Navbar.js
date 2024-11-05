@@ -20,10 +20,10 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="desktop-menu">
                 <ul className="navbar-menu">
-                    <li><NavLink to="/home">Home</NavLink></li>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="/AboutUs">About Us</NavLink></li>
                     <li><NavLink to="/services">Services</NavLink></li>
                     <li><NavLink to="/menu">Menu</NavLink></li>
-                    <li><NavLink to="/AboutUs">About Us</NavLink></li>
                     <li><NavLink to="/gallery">Gallery</NavLink></li>
                     <li><NavLink to="/contact">Contact Us</NavLink></li>
                     <li><NavLink to="/blogs">Blogs</NavLink></li>
@@ -36,10 +36,10 @@ const Navbar = () => {
                 <Hamburger toggled={isOpen} toggle={setIsOpen} />
                 {isOpen && (
                     <ul className="navbar-menu-mobile">
-                        <li><NavLink to="/home">Home</NavLink></li>
+                        <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/about">About Us</NavLink></li>
+                        <li><NavLink to="/services">Services</NavLink></li>
                         <li><NavLink to="/menu">Menu</NavLink></li>
-                        <li><NavLink to="/create-menu">Create Menu</NavLink></li>
                         <li><NavLink to="/gallery">Gallery</NavLink></li>
                         <li><NavLink to="/contact">Contact Us</NavLink></li>
                         <li><NavLink to="/blogs">Blogs</NavLink></li>
