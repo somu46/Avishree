@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-60  backdrop-blur-md">
       <div className="navbar-left ">
         <Link to="/">  
           <img src="logo.png" alt="Avishree-Logo" className="logo" />
@@ -61,40 +61,53 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      {/* Mobile Menu */}
-      <div className="mobile-menu  border-2 ">
-        <Hamburger toggled={isOpen} toggle={setIsOpen} />
-        {isOpen && (
-          <ul className="navbar-menu-mobile z-10 ">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/AboutUs">About Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/services">Services</NavLink>
-            </li>
-            <li>
-              <NavLink to="/menu">Menu</NavLink>
-            </li>
-            <li>
-              <NavLink to="/gallery">Gallery</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blogs">Blogs</NavLink>
-            </li>
-            <li>
-              <NavLink to="/book" className="book-now-button-mobile">
-                Book Now
-              </NavLink>
-            </li>
-          </ul>
-        )}
-      </div>
+     
+     {/* Mobile Menu */}
+<div className="relative  lg:hidden  -mr-9 ">
+
+<div className="fixed top-5 right-5 z-30">
+    <Hamburger toggled={isOpen} toggle={setIsOpen} />
+  </div>
+
+
+  {isOpen && (
+    <div
+    className={`fixed top-0 right-0 h-full w-1/2 bg-white/70 backdrop-blur-md z-20 shadow-lg transition-transform duration-300 ${
+      isOpen ? 'translate-x-0' : 'translate-x-full'
+    }`}
+  >
+      <ul className="flex flex-col items-start p-8 space-y-4">
+        <li>
+          <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
+        </li>
+        <li>
+          <NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
+        </li>
+        <li>
+          <NavLink to="/menu" onClick={() => setIsOpen(false)}>Menu</NavLink>
+        </li>
+        <li>
+          <NavLink to="/gallery" onClick={() => setIsOpen(false)}>Gallery</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
+        </li>
+        <li>
+          <NavLink to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink>
+        </li>
+        <li>
+          <NavLink to="/book" className="book-now-button-mobile" onClick={() => setIsOpen(false)}>
+            Book Now
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  )}
+</div>
+
     </nav>
   );
 };

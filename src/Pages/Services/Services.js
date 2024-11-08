@@ -1,21 +1,34 @@
 import React from 'react';
 import './Services.css';
-import logo from '../../Assets/logo.png';
+import DJ from '../../Assets/DJ.jpg'
+import Band from '../../Assets/liveBand.jpg'
+import Security from '../../Assets/Security.PNG'
+import Artist from '../../Assets/makeupArtist.jpg'
+import SFX from '../../Assets/SFX.jpg'
+import Choreographer from '../../Assets/Choreographer.jpg'
+import Photgrapher from '../../Assets/Photographer.jpg'
+import LS from '../../Assets/Light&sound.png'
+import RentCar from '../../Assets/Car-hire.jpg'
+import EventPlanner from '../../Assets/Event Planner.jpg'
+import Catering from '../../Assets/Catering.png'
+import Consultant from '../../Assets/Consultant.png'
+import ThemeR from '../../Assets/ThemeDecoration.png'
+
 
 const services = [
-  { title: 'Event Planning & Coordination', image: logo },
-  { title: 'Event Consultancy', image: logo },
-  { title: 'Catering Services', image: logo },
-  { title: 'Theme Decoration', image: logo },
-  { title: 'Light & Sound', image: logo },
-  { title: 'DJ', image: logo },
-  { title: 'Live Band', image: logo },
-  { title: 'Choreographer', image: logo },
-  { title: 'SFX', image: logo },
-  { title: 'Photographer', image: logo },
-  { title: 'Makeup Artist', image: logo },
-  { title: 'Event Security', image: logo },
-  { title: 'Hire-Car for Event', image: logo },
+  { title: 'Event Planning & Coordination', image: EventPlanner },
+  { title: 'Event Consultancy', image: Consultant },
+  { title: 'Catering Services', image: Catering },
+  { title: 'Theme Decoration', image: ThemeR },
+  { title: 'Light & Sound', image: LS },
+  { title: 'DJ', image: DJ },
+  { title: 'Live Band', image: Band },
+  { title: 'Choreographer', image: Choreographer },
+  { title: 'SFX', image: SFX },
+  { title: 'Photographer', image: Photgrapher },
+  { title: 'Makeup Artist', image: Artist },
+  { title: 'Event Security', image: Security },
+  { title: 'Hire-Car for Event', image: RentCar },
 ];
 
 function ServiceComponent() {

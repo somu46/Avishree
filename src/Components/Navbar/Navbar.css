@@ -5,8 +5,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 50px;
-    background-color: #fff;
+    /* background-color: #fff; */
     font-family: Arial, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Left Section (Logo and Brand) */
@@ -35,11 +41,11 @@
 }
 
 .brand p {
-    font-size: 16px; /* Increased for better visibility since Lobster is more decorative */
-    color: #333; /* Darker color to improve readability */
+    font-size: 16px; 
+    color: #333; 
     margin: 0;
-    font-family: 'Lobster', cursive; /* Applying the Lobster font */
-    letter-spacing: 0.3px; /* Slight letter spacing for a balanced look */
+    font-family: 'Lobster', cursive; 
+    letter-spacing: 0.3px;
   }
   
 /* Dropdown Menu Container */
@@ -164,7 +170,7 @@
 
     .mobile-menu {
         display: block; /* Show hamburger menu on mobile */
-        margin-right: -20px;
+        /* margin-right: -20px; */
     }
 
     .navbar-menu-mobile {
