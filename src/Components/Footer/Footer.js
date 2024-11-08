@@ -6,6 +6,9 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+
+
+
 const Footer = () => {
     return (
         <footer className="footer">
@@ -14,7 +17,7 @@ const Footer = () => {
                 <div className="footer-section company-info">
                     <img src="logo.png" alt="Company Logo" className="footer-logo" />
                     <p>Avishree Hospitality Pvt. Ltd.</p>
-                    <p>A Unit Of Sai Foods & Caterers</p>
+                    <p>Crafting unfogettable Memories</p>
                     <p>&copy; 2024-2027 . All rights reserved.</p>
                 </div>
 
@@ -38,10 +41,10 @@ const Footer = () => {
                 <div className="footer-section social">
                     <h3>Follow Us</h3>
                     <div className="social-icons">
-                        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon">
+                        <a href="https://www.facebook.com/profile.php?id=61565446652658" target="_blank" rel="noreferrer" className="social-icon">
                             <FacebookIcon />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon">
+                        <a href="https://www.instagram.com/avishreehospitalityofficial/" target="_blank" rel="noreferrer" className="social-icon">
                             <InstagramIcon />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-icon">
@@ -58,7 +61,7 @@ const Footer = () => {
                     <h3>Subscribe to Our Newsletter</h3>
                     <p>Get the latest updates and offers.</p>
                     <div className="newsletter-input-container">
-                        <input type="email" placeholder="Enter your email" className="newsletter-input" />
+                        <input type="email" placeholder="Enter your email" className="newsletter-input text-black" />
                         <button className="subscribe-button">Subscribe</button>
                     </div>
                 </div>
