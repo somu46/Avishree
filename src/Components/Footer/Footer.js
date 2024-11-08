@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="footer-content">
                 {/* Company Information */}
                 <div className="footer-section company-info">
-                    <img src="logo.png" alt="Company Logo" className="footer-logo" />
+                  <div className='flex justify-center '> <img src="logo.png" alt="Company Logo" className="footer-logo" /></div> 
                     <p>Avishree Hospitality Pvt. Ltd.</p>
                     <p>Crafting unfogettable Memories</p>
                     <p>&copy; 2024-2027 . All rights reserved.</p>
@@ -57,10 +57,10 @@ const Footer = () => {
                 </div>
                 
                 {/* Newsletter Subscription */}
-                <div className="footer-section newsletter">
-                    <h3>Subscribe to Our Newsletter</h3>
-                    <p>Get the latest updates and offers.</p>
-                    <div className="newsletter-input-container">
+                <div className=" flex flex-col justify-start  w-auto">
+                    <h3 className='text-yellow-400 text-center m-5'>Subscribe to Our Newsletter</h3>
+                    <p className='text-gray-300 text-center mb-3'>Get the latest updates and offers.</p>
+                    <div className="newsletter-input-container rounded-lg overflow-hidden  w-auto ">
                         <input type="email" placeholder="Enter your email" className="newsletter-input text-black" />
                         <button className="subscribe-button">Subscribe</button>
                     </div>
