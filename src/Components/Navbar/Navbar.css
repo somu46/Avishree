@@ -47,6 +47,7 @@
 }
 .mobile-menu{
     display: none;
+    float: left;
 }
 .navbar-menu {
     list-style: none;
