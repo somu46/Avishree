@@ -8,8 +8,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-left ">
+    <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-90 md:bg-opacity-70  backdrop-blur-md">
+      <div className="navbar-left  ">
         <Link to="/">  
           <img src="logo.png" alt="Avishree-Logo" className="logo" />
         </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
 
      
     {/* Mobile Menu */}
-<div className="relative lg:hidden">
+<div className="relative lg:hidden  ">
   {/* Hamburger Button */}
   <div className="fixed top-5 right-5 z-30">
     <Hamburger toggled={isOpen} toggle={setIsOpen} />
