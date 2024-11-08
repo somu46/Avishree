@@ -75,7 +75,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div
-          className={`fixed top-0 right-0 min-h-screen w-1/2 bg-white bg-opacity-90 z-20 transition-transform duration-300 ${
+          className={`fixed top-0 right-0 min-h-screen w-[65%] bg-white bg-opacity-90 z-20 transition-transform duration-300 ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -102,7 +102,7 @@ const Navbar = () => {
               </button>
               {isGalleryOpen && (
                 <ul className="pl-4 space-y-2">
-                  <li>
+                  <li className="mt-3">
                     <NavLink 
                       to="/Gallery/photos" 
                       onClick={() => {
