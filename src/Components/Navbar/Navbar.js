@@ -4,8 +4,12 @@ import Hamburger from "hamburger-react";
 import { Link, NavLink } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
+
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   return (
     <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
@@ -63,49 +67,85 @@ const Navbar = () => {
 
      
     {/* Mobile Menu */}
-<div className="relative lg:hidden   ">
-  {/* Hamburger Button */}
-  <div className="fixed top-5 right-5 z-30">
-    <Hamburger toggled={isOpen} toggle={setIsOpen} />
-  </div>
+    <div className="relative lg:hidden">
+      {/* Hamburger Button */}
+      <div className="fixed top-5 right-5 z-30">
+        <Hamburger toggled={isOpen} toggle={setIsOpen} />
+      </div>
 
-  {isOpen && (
-    <div
-      className={`fixed  top-0 right-0 min-h-screen w-1/2 bg-white bg-opacity-90  z-20  transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}
-    >
-      <ul className=" flex flex-col items-start p-8 space-y-4">
-        <li>
-          <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
-        </li>
-        <li>
-          <NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
-        </li>
-        <li>
-          <NavLink to="/menu" onClick={() => setIsOpen(false)}>Menu</NavLink>
-        </li>
-        <li>
-          <NavLink to="/gallery" onClick={() => setIsOpen(false)}>Gallery</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
-        </li>
-        <li>
-          <NavLink to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink>
-        </li>
-        <li>
-          <NavLink to="/book" className="book-now-button-mobile" onClick={() => setIsOpen(false)}>
-            Book Now
-          </NavLink>
-        </li>
-      </ul>
+      {isOpen && (
+        <div
+          className={`fixed top-0 right-0 min-h-screen w-1/2 bg-white bg-opacity-90 z-20 transition-transform duration-300 ${
+            isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <ul className="flex flex-col items-start p-8 space-y-4">
+            <li>
+              <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
+            </li>
+            <li>
+              <NavLink to="/menu" onClick={() => setIsOpen(false)}>Menu</NavLink>
+            </li>
+            <li>
+              <button 
+                className="focus:outline-none" 
+                onClick={() => setIsGalleryOpen(!isGalleryOpen)}
+              >
+                Gallery
+                <ArrowDropDownIcon/>
+              </button>
+              {isGalleryOpen && (
+                <ul className="pl-4 space-y-2">
+                  <li>
+                    <NavLink 
+                      to="/Gallery/photos" 
+                      onClick={() => {
+                        setIsOpen(false);
+                        setIsGalleryOpen(false);
+                      }}
+                    >
+                      Photos
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink 
+                      to="/Gallery/videos" 
+                      onClick={() => {
+                        setIsOpen(false);
+                        setIsGalleryOpen(false);
+                      }}
+                    >
+                      Videos
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/book" 
+                className="book-now-button-mobile" 
+                onClick={() => setIsOpen(false)}
+              >
+                Book Now
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
-  )}
-</div>
 
     </nav>
   );
