@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-90 md:bg-opacity-70  backdrop-blur-md">
+    <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
       <div className="navbar-left  ">
         <Link to="/">  
           <img src="logo.png" alt="Avishree-Logo" className="logo" />
@@ -63,7 +63,7 @@ const Navbar = () => {
 
      
     {/* Mobile Menu */}
-<div className="relative lg:hidden  ">
+<div className="relative lg:hidden   ">
   {/* Hamburger Button */}
   <div className="fixed top-5 right-5 z-30">
     <Hamburger toggled={isOpen} toggle={setIsOpen} />
@@ -71,11 +71,11 @@ const Navbar = () => {
 
   {isOpen && (
     <div
-      className={`fixed top-0 right-0 h-full w-1/2 bg-white z-20 shadow-lg transition-transform duration-300 ${
+      className={`fixed  top-0 right-0 min-h-screen w-1/2 bg-white bg-opacity-90  z-20  transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <ul className="flex flex-col items-start p-8 space-y-4">
+      <ul className=" flex flex-col items-start p-8 space-y-4">
         <li>
           <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
         </li>

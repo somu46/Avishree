@@ -179,13 +179,18 @@
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: #fff;
+        /* background-color: #fff; */
         border: 1px solid #ddd;
         border-radius: 5px;
         width: 200px;
         padding: 10px;
         list-style: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         transition: background-color 0.4s ease, color 0.4s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         
     }
 
