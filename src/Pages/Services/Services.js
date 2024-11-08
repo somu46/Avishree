@@ -1,16 +1,16 @@
 import React from 'react';
 import './Services.css';
-
+import logo from '../../Assets/logo.png'
 const services = [
-  { title: 'Baby Shower Catering', image: 'path/to/baby-shower.jpg' },
-  { title: 'Office Catering Service', image: 'path/to/office-catering.jpg' },
-  { title: 'Housewarming Catering', image: 'path/to/housewarming.jpg' },
-  { title: 'Birthday Party Catering', image: 'path/to/birthday-party.jpg' },
-  { title: 'Anniversary Catering', image: 'path/to/anniversary.jpg' },
-  { title: 'Bengali Food Catering', image: 'path/to/bengali-food.jpg' },
-  { title: 'Rice Ceremony Catering', image: 'path/to/rice-ceremony.jpg' },
-  { title: 'Engagement Party Catering', image: 'path/to/engagement-party.jpg' },
-  { title: 'Reunion Party' , image : ''}
+  { title: 'Baby Shower Catering', image: logo  },
+  { title: 'Office Catering Service', image: logo  },
+  { title: 'Housewarming Catering', image: logo },
+  { title: 'Birthday Party Catering', image: logo },
+  { title: 'Anniversary Catering', image: logo},
+  { title: 'Bengali Food Catering', image: logo},
+  { title: 'Rice Ceremony Catering', image: logo },
+  { title: 'Engagement Party Catering', image:logo  },
+  { title: 'Reunion Party' , image : logo}
 ];
 
 function ServiceComponent() {

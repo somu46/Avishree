@@ -13,7 +13,7 @@ const Navbar = () => {
                 <Link to="/"> <img src="logo.png" alt="Avishree-Logo" className="logo" /></Link>
                 <div className="brand">
                 <NavLink to="/"> <h1>Avishree Hospitality Pvt. Ltd.</h1></NavLink>
-                    {/* <p>A Unit Of Sai Foods & Caterers</p> */}
+                    <p>crafting unfogettable Memories</p>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             <div className="mobile-menu">
                 <Hamburger toggled={isOpen} toggle={setIsOpen} />
                 {isOpen && (
-                    <ul className="navbar-menu-mobile">
+                    <ul className="navbar-menu-mobile z-10 ">
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/AboutUs">About Us</NavLink></li>
                         <li><NavLink to="/services">Services</NavLink></li>
