@@ -39,7 +39,7 @@ function ServiceComponent() {
         {services.map((service, index) => (
           <div className="service-card" key={index}>
             <div className="service-image-wrapper">
-              <img src={service.image} alt={service.title} className="service-image" />
+              <img src={service.image} alt={service.title} className="service-image " />
             </div>
             <h3 className="service-title">{service.title}</h3>
           </div>
