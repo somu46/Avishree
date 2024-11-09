@@ -25,7 +25,7 @@
 }
 
 .menu-image {
-  height: 150px; /* Fixed height for image container */
+  height: 185px;
   overflow: hidden;
 }
 
@@ -48,8 +48,8 @@
 }
 
 .menu-price {
-  color: #666;
-  font-size: 1rem;
+  color: #db1c1c;
+  font-size: 3rem;
   margin-top: 4px;
 }
 
@@ -109,7 +109,9 @@
     grid-template-columns: 1fr;
     padding: 10px;
   }
-
+  .menu-image{
+    height:230px;
+  }
   .modal-box {
     width: 90%; /* Make the modal smaller on mobile screens */
   }
