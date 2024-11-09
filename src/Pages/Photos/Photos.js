@@ -2,7 +2,7 @@ import React from 'react'
 import './Photos.css'
 const Photos = () => {
   return (
-    <div>Photos</div>
+    <div className='mt-[5.1rem]'>Photos</div>
   )
 }
 
