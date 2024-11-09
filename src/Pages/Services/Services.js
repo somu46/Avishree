@@ -33,7 +33,7 @@ const services = [
 
 function ServiceComponent() {
   return (
-    <div className="service-container">
+    <div className="service-container mt-[5.1rem]">
       <h2>Discover Our Exclusive Catering Services</h2>
       <div className="service-grid">
         {services.map((service, index) => (

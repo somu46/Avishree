@@ -5,12 +5,6 @@ import menuData from './MenuData';
 
 
 
-
-
-
-
-
-
 const Menu = () => {
   const [open, setOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
@@ -26,11 +20,12 @@ const Menu = () => {
   };
 
   return (
+    <div className='Menu-grid-wrapper'>
     <div className='Menu-grid z-1'>
       {menuData.map((menu, index) => (
         <div className="Menu-card" key={index}>
           <div className="menu-image over">
-            <img src={menu.image} alt={`${menu.name} photo`} />
+            <img src={menu.image} alt={`${menu.name} `} />
           </div>
           <div className="menu-details">
             <Typography variant="h6" className="menu-name">
@@ -122,6 +117,7 @@ const Menu = () => {
   </Box>
 </Modal>
 
+    </div>
     </div>
   );
 };

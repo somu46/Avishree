@@ -14,7 +14,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-container mt-[5.1rem]">
       <div className="card modern-card" onClick={handlePhotoClick}>
         <h2>Photo</h2>
         <p>View our photo gallery</p>

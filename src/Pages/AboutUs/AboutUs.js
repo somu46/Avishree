@@ -4,7 +4,7 @@ import './AboutUs.css';
 
 const AboutUs = () => {
   return (
-    <div className="about-container">
+    <div className="about-container mt-[5.1rem]">
       {/* Header Section */}
       <div className="about-header">
         <h1>About Us</h1>
