@@ -1,4 +1,10 @@
-import Bronze from '../../Assets/logo.png'
+import Bronze from '../../Assets/bronze.png'
+import Gold from '../../Assets/gold.png'
+import Silver from '../../Assets/silver.png'
+import Diamond from '../../Assets/Diamond.png'
+import Platinum from '../../Assets/Platinum.png'
+import Exclusive from '../../Assets/Exclusive.png'
+import Royal from '../../Assets/Royal.png'
 
 
 
@@ -27,7 +33,7 @@ const menuData = [
     },
     {
       name: "Silver Package",
-      image:Bronze,
+      image:Silver,
       price: "₹849 + 18% GST",
     //   image: "/images/silver-package.jpg",
       items: {
@@ -49,7 +55,7 @@ const menuData = [
     },
     {
       name: "Gold Package",
-      image:Bronze,
+      image:Gold,
       price: "₹949 + 18% GST",
     //   image: "/images/gold-package.jpg",
       items: {
@@ -72,7 +78,7 @@ const menuData = [
     },
     {
       name: "Diamond Package",
-      image:Bronze,
+      image:Diamond,
       price: "₹999 + 18% GST",
     //   image: "/images/diamond-package.jpg",
       items: {
@@ -95,7 +101,7 @@ const menuData = [
     },
     {
       name: "Platinum Package",
-      image:Bronze,
+      image:Platinum,
       price: "₹1099 + 18% GST",
     //   image: "/images/platinum-package.jpg",
       items: {
@@ -120,7 +126,7 @@ const menuData = [
     },
     {
       name: "Exclusive Package",
-      image:Bronze,
+      image:Exclusive,
       price: "₹1199 + 18% GST",
       items: {
         Beverages: ["Mocktail (6-7 variety)", "Fresh juice (orange, mango, pineapple)", "Black coffee", "Kullar chai", "Lemon tea"],
@@ -145,7 +151,7 @@ const menuData = [
 
     {
       name: "Royal Package",
-      image:Bronze,
+      image:Royal,
       price: "₹1499 + 18% GST",
     //   image: "/images/royal-package.jpg",
       items: {

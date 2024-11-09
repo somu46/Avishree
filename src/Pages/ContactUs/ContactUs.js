@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkIcon from '@mui/icons-material/Link';
 import ContactSection from './ContactSection';
+import Ofiice from './Office';
 
 
 
@@ -54,7 +55,9 @@ const ContactUs = () => {
          <LinkIcon />
         </a>
       </div>
-    
+      <div className='lg:h-auto'>
+      <Ofiice/>
+    </div>
      
     </div>
     </>
