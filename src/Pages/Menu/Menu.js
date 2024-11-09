@@ -24,7 +24,7 @@ const Menu = () => {
     <div className='Menu-grid z-1'>
       {menuData.map((menu, index) => (
         <div className="Menu-card" key={index}>
-          <div className="menu-image over">
+          <div className="menu-image cover">
             <img src={menu.image} alt={`${menu.name} `} />
           </div>
           <div className="menu-details">
