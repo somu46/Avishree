@@ -6,7 +6,6 @@ const QuoteForm = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
 
