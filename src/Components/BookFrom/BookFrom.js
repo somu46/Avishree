@@ -1,72 +1,85 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
 const QuoteForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const fromRef = useRef();
+  const formRef = useRef(); 
 
-  const handleFrom = (data) => {
-    console.log("Data: ", data);
+  const handleFormSubmit = (data) => {
+    console.log("Form Data: ", data);
 
-    console.log("Form ref:", fromRef);
-    fromRef.current.reset();
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        'service_pb5lx2h',
+        'template_ae3951x',
+        formRef.current,
+      'nFhx0SkpCFIPu0t2K'
+      )
+      .then(
+        (result) => {
+          console.log('Email successfully sent!', result.text);
+          formRef.current.reset(); 
+          // reset();   
+         
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6 mt-[5.1rem]">
       <div className="w-full max-w-md md:max-w-lg lg:max-w-xl bg-white rounded-lg shadow-lg p-8">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
           Request a Quote
         </h2>
         
         <form
-          onSubmit={handleSubmit(handleFrom)}
-          ref={fromRef}
+          onSubmit={handleSubmit(handleFormSubmit)}
+          ref={formRef}
           className="space-y-4"
         >
+          {/* Full Name Input */}
           <input
-            {...register("fullName", { required: "Full name is required" })}
+            {...register("user_name", { required: "Full name is required" })}
             type="text"
             placeholder="Your Name *"
             className="w-full p-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-blue-500"
           />
-          {errors.fullName && (
-            <div className="text-red-500 text-center">
-              *{errors.fullName.message}
-            </div>
+          {errors.user_name && (
+            <div className="text-red-500 text-center">*{errors.user_name.message}</div>
           )}
 
           {/* Phone Number Input */}
           <input
-            {...register("phoneNumber", {
-              required: "Phone Number is required",
-            })}
+            {...register("Phone_Number", { required: "Phone Number is required" })}
             type="text"
             placeholder="Phone Number *"
             className="w-full p-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-blue-500"
           />
-          {errors.phoneNumber && (
-            <div className="text-red-500 text-center">
-              *{errors.phoneNumber.message}
-            </div>
+          {errors.Phone_Number && (
+            <div className="text-red-500 text-center">*{errors.Phone_Number.message}</div>
           )}
 
           {/* Email Input */}
           <input
             type="email"
-            {...register("Email", { required: "Email is required" })}
+            {...register("user_email", { required: "Email is required" })}
             placeholder="Email *"
             className="w-full p-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-blue-500"
           />
-          {errors.Email && (
-            <div className="text-red-500 text-center">
-              *{errors.Email.message}
-            </div>
+          {errors.user_email && (
+            <div className="text-red-500 text-center">*{errors.user_email.message}</div>
           )}
 
           {/* Service Selection */}
@@ -80,9 +93,7 @@ const QuoteForm = () => {
             <option value="event-planning">Event Planning</option>
           </select>
           {errors.service && (
-            <div className="text-red-500 text-center">
-              *{errors.service.message}
-            </div>
+            <div className="text-red-500 text-center">*{errors.service.message}</div>
           )}
 
           {/* Date Input */}
@@ -93,9 +104,7 @@ const QuoteForm = () => {
             className="w-full p-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-blue-500"
           />
           {errors.date && (
-            <div className="text-red-500 text-center">
-              *{errors.date.message}
-            </div>
+            <div className="text-red-500 text-center">*{errors.date.message}</div>
           )}
 
           {/* Number of Guests */}
@@ -106,11 +115,6 @@ const QuoteForm = () => {
             placeholder="Number Of Guests"
             className="w-full p-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:border-blue-500"
           />
-          {errors.number_of_guests && (
-            <div className="text-red-500 text-center">
-              *{errors.number_of_guests.message}
-            </div>
-          )}
 
           {/* Message Textarea */}
           <textarea
@@ -120,15 +124,13 @@ const QuoteForm = () => {
             rows="2"
           ></textarea>
           {errors.message && (
-            <div className="text-red-500 text-center">
-              *{errors.message.message}
-            </div>
+            <div className="text-red-500 text-center">*{errors.message.message}</div>
           )}
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition"
+            className="w-full py-4 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
           >
             Request Quote
           </button>
