@@ -3,6 +3,11 @@ import "./Home.css";
 import Feature from "./Feature";
 import Services from "./Services";
 import Hero from "./Hero";
+import CorporateClients from "./CorporateClients";
+import StatsSection from "./SpeakingNumbers";
+
+
+
 
 const HomeCome = () => {
   return (
@@ -13,6 +18,8 @@ const HomeCome = () => {
       <Feature />
       {/* Services Section */}
       <Services />
+      <CorporateClients/>
+      <StatsSection/>
     </div>
   );
 };
