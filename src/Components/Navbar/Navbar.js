@@ -3,7 +3,7 @@ import "./Navbar.css";
 import Hamburger from "hamburger-react";
 import { Link, NavLink } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
+import ReactTypingEffect from "react-typing-effect";
 
 
 
@@ -22,7 +22,17 @@ const Navbar = () => {
            
             <h1>Avishree Hospitality Pvt. Ltd.</h1>
           </NavLink>
-          <p>Crafting unfogettable Memories</p>
+          <p>
+          <ReactTypingEffect
+              speed={100}
+              eraseSpeed={50}
+              typingDelay={500}
+              eraseDelay={2000}
+              text={[
+                "Crafting unfogettable Memories",
+              ]}
+            />
+          </p>
         </div>
       </div>
 
@@ -44,7 +54,7 @@ const Navbar = () => {
           <li className="nav-item gallery-dropdown">
             <NavLink to="/gallery">Gallery</NavLink>
             <ArrowDropDownIcon/>
-            <ul className="dropdown bg-transparent">
+            <ul className="dropdown bg-white bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
               <li>
                 <NavLink to="/gallery/videos">Video</NavLink>
               </li>

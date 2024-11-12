@@ -31,9 +31,9 @@ const Menu = () => {
             <Typography variant="h6" className="menu-name">
               {menu.name}
             </Typography>
-            <Typography variant="body1" className="menu-price">
+            {/* <Typography variant="body1" className="menu-price">
               {menu.price}
-            </Typography>
+            </Typography> */}
           </div>
           <Accordion className='flex flex-wrap justify-center'>
             <AccordionSummary  >
@@ -75,7 +75,8 @@ const Menu = () => {
     {selectedMenu && (
       <>
         <Typography id="modal-title" variant="h5" sx={{ fontWeight: 'bold', mb: 2 }}>
-          {selectedMenu.name} - {selectedMenu.price}
+          {selectedMenu.name} 
+          {/* - {selectedMenu.price} */}
         </Typography>
         <div id="modal-description">
           {Object.entries(selectedMenu.items).map(([section, items], idx) => (

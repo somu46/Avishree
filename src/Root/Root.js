@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 import { Outlet } from 'react-router-dom';
-
+// import { Spinner } from "@material-tailwind/react"; 
 
 
 
@@ -11,6 +11,7 @@ import { Outlet } from 'react-router-dom';
   return (
    <>
    <Navbar/>
+
    <Outlet/>
    <Footer/>
    </>
@@ -19,3 +20,5 @@ import { Outlet } from 'react-router-dom';
 
 
 export default Root;
+
+
