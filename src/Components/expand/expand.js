@@ -14,7 +14,7 @@ const Expand = ({ question, children }) => {
         className="expand-header" 
         onClick={handleToggle}
       >
-        <span className='text-orange-800'>{question}</span>
+        <span className='text-red-500'>{question}</span>
         {isExpanded ? <FaMinus /> : <FaPlus />}
       </div>
 
