@@ -67,8 +67,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
-  font-weight: 600;
+  /* font-size: 16px; */
+  /* font-weight: 300; */
   color: #41479b;
 }
 
@@ -76,8 +76,8 @@
 .expand-content {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
-  font-weight: 600;
+  /* font-size: 16px;
+  font-weight: 600; */
   color: #41479b;
 }
 
@@ -115,7 +115,7 @@
     font-size: 15px;
   }
 
-  .expand-content {
+  /* .expand-content {
     font-size: 14px;
-  }
+  } */
 }
