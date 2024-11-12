@@ -1,6 +1,11 @@
 /* General Navbar Styling */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+.active{
+    color: rgb(255, 4, 0);
+    text-shadow:#dab8b8;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid rgb(255, 0, 0);
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -97,7 +102,7 @@
   /* Style for the main "Gallery" link */
   .nav-item > a {
     font-weight: 600;
-    color: #ff3b3b; /* Customize the color as needed */
+    /* color: #ff3b3b;  */
   }
   
   .nav-item > a:hover {
@@ -126,7 +131,7 @@
 
 .navbar-menu li a {
     text-decoration: none;
-    color: #333;
+    /* color: #333; */
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s;
