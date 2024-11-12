@@ -5,6 +5,11 @@ import Services from "./Services";
 import Hero from "./Hero";
 import CorporateClients from "./CorporateClients";
 import StatsSection from "./SpeakingNumbers";
+import IntroSection from "./IntroSection";
+import HowItWorks from "./HowItWork";
+import Testimonial from "../Testimonial/Testimonial";
+import Faq from "../Faqs/faq";
+import BanquetHalls from "./BanquetHalls";
 
 
 
@@ -14,11 +19,17 @@ const HomeCome = () => {
     <div className="home-container">
       {/* Hero Section */}
         <Hero />
+    <IntroSection/>
+
       {/* Feature Section */}
       <Feature />
+      <HowItWorks/>
       {/* Services Section */}
       <Services />
+      <BanquetHalls/>
       <CorporateClients/>
+      <Testimonial/>
+      <Faq/>
       <StatsSection/>
     </div>
   );
