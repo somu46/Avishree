@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Root from './Root/Root';
+// import Root from './Root/Root';
 import ErrorPage from './Pages/Error/Error';
 import QuoteForm from './Components/BookFrom/BookFrom';
 import AboutUs from './Pages/AboutUs/AboutUs';
@@ -14,14 +14,42 @@ import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
 import Photos from './Pages/Photos/Photos';
 import Videos from './Pages/Videos/Videos';
+import  { LoadingComponent } from './Components/Loding/Loding.js';
+
+// const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
+const Root=lazy(()=>waitPromise(1500).then(()=>import("./Root/Root")));
+
+
+
+
+
+const waitPromise=(time)=>{
+    
+  return new Promise (resolve=>{
+    setTimeout(()=>{
+      resolve();
+    },time)
+  })
+}
+
+
+
+
+
+
+
 const Rout=createBrowserRouter([
   {
     path:"",
-    element:<Root/>,
+    element:(<Suspense
+      fallback={<LoadingComponent/>}>
+        <Root/></Suspense>),
     children:[
       {
         path:"/",
-        element:<App/>
+        element:(
+                <App />
+        )
       },
       {
         path:"/AboutUs",
