@@ -5,20 +5,21 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-
+import Qrcode from "../../Assets/AvishreeHospitality.png";
 
 
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <>
+        <footer className="footer max-w-[100%]">
             <div className="footer-content">
                 {/* Company Information */}
                 <div className="footer-section company-info">
                   <div className='flex justify-center '> <img src="logo.png" alt="Company Logo" className="footer-logo" /></div> 
                     <p>Avishree Hospitality Pvt. Ltd.</p>
                     <p>Crafting unfogettable Memories</p>
-                    <p>&copy; 2024-2027 . All rights reserved.</p>
+                 
                 </div>
 
                 {/* Quick Links */}
@@ -38,8 +39,8 @@ const Footer = () => {
                 
 
                 {/* Social Media Links */}
-                <div className="footer-section social">
-                    <h3>Follow Us</h3>
+                <div className="footer-section social  ">
+                    <h3 className='text-center'>Follow Us</h3>
                     <div className="social-icons">
                         <a href="https://www.facebook.com/profile.php?id=61565446652658" target="_blank" rel="noreferrer" className="social-icon">
                             <FacebookIcon />
@@ -54,7 +55,15 @@ const Footer = () => {
                             <YouTubeIcon />
                         </a>
                     </div>
+                    <div className='h-auto w-auto my-5'>
+                    <h3 className='mb-3 text-center'>Scan Me:</h3>
+                        <img src={Qrcode} alt='Qr Code' className='h-32 w-32 bg-white'/>
+                    </div>
                 </div>
+
+
+
+
                 
                 {/* Newsletter Subscription */}
                 <div className=" flex flex-col justify-start  w-auto">
@@ -67,6 +76,13 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+            <div className='copyRight flex justify-center items-center max-w-[100%] flex-col w-screen  bottom-0 m-0'>
+                <div className='border-t-2 border-slate-500 w-full lg:w-[70%]'>
+
+                </div>
+                <p className="text-center text-gray-300 font-thin">Copyright 2023 Avishree Hospitality | &copy; 2024-2027 . All rights reserved. </p>
+            </div>
+        </>
     );
 };
 
