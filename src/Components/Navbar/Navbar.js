@@ -40,37 +40,37 @@ const Navbar = () => {
       <div className="desktop-menu">
         <ul className="navbar-menu">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink activeClass="active" to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/AboutUs">About Us</NavLink>
+            <NavLink activeClass="active"  to="/AboutUs">About Us</NavLink>
           </li>
           <li>
-            <NavLink to="/services">Services</NavLink>
+            <NavLink activeClass="active"  to="/services">Services</NavLink>
           </li>
           <li>
-            <NavLink to="/menu">Menu</NavLink>
+            <NavLink activeClass="active"  to="/menu">Menu</NavLink>
           </li>
           <li className="nav-item gallery-dropdown">
-            <NavLink to="/gallery">Gallery</NavLink>
+            <NavLink activeClass="active"  to="/gallery">Gallery</NavLink>
             <ArrowDropDownIcon/>
             <ul className="dropdown bg-white bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
               <li>
-                <NavLink to="/gallery/videos">Video</NavLink>
+                <NavLink activeClass="active"  to="/gallery/videos">Video</NavLink>
               </li>
               <li>
-                <NavLink to="/gallery/Photos">Photo</NavLink>
+                <NavLink activeClass="active"  to="/gallery/Photos">Photo</NavLink>
               </li>
             </ul>
           </li>
           <li>
-            <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink activeClass="active"  to="/contact">Contact Us</NavLink>
           </li>
           <li>
-            <NavLink to="/blogs">Blogs</NavLink>
+            {/* <NavLink activeClass="active"  to="/blogs">Blogs</NavLink> */}
           </li>
         </ul>
-        <NavLink to="/book" className="book-now-button">
+        <NavLink  to="/book" className="book-now-button">
           Book Now
         </NavLink>
       </div>
@@ -91,16 +91,16 @@ const Navbar = () => {
         >
           <ul className="flex flex-col items-start p-8 space-y-4">
             <li>
-              <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+              <NavLink activeClass="active"  to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
+              <NavLink activeClass="active"  to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
             </li>
             <li>
-              <NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
+              <NavLink activeClass="active"  to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
             </li>
             <li>
-              <NavLink to="/menu" onClick={() => setIsOpen(false)}>Menu</NavLink>
+              <NavLink activeClass="active"  to="/menu" onClick={() => setIsOpen(false)}>Menu</NavLink>
             </li>
             <li>
               <button 
@@ -113,7 +113,7 @@ const Navbar = () => {
               {isGalleryOpen && (
                 <ul className="pl-4 space-y-2">
                   <li className="mt-3">
-                    <NavLink 
+                    <NavLink activeClass="active"  
                       to="/Gallery/photos" 
                       onClick={() => {
                         setIsOpen(false);
@@ -124,7 +124,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink 
+                    <NavLink activeClass="active"  
                       to="/Gallery/videos" 
                       onClick={() => {
                         setIsOpen(false);
@@ -138,10 +138,10 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
+              <NavLink activeClass="active"  to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
             </li>
             <li>
-              <NavLink to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink>
+              {/* <NavLink activeClass="active"  to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink> */}
             </li>
             <li>
               <NavLink 
