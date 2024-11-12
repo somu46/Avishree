@@ -1,19 +1,22 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./Home.css";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import Haldiram from "../../Assets/Haldiram's-Logo.png";
 import Amartree from "../../Assets/AmarTree.jpg";
 
 const CorporateClients = () => {
   const clients = [
-    { name: 'Haldiram Prahuji Ltd.', logo: Haldiram },
-    { name: 'Amartree Group', logo: Amartree },
-    { name: 'Haldiram Prahuji Ltd.', logo: Haldiram },
-    { name: 'Amartree Group', logo: Amartree },
-    { name: 'Haldiram Prahuji Ltd.', logo: Haldiram },
-    { name: 'Amartree Group', logo: Amartree },
+    { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
+    { name: "Amartree Group", logo: Amartree },
+    { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
+    { name: "Amartree Group", logo: Amartree },
+    { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
+    { name: "Amartree Group", logo: Amartree },
   ];
 
   return (
@@ -22,16 +25,18 @@ const CorporateClients = () => {
         Our Corporate Clients
       </h2>
       <Swiper
+        modules={[Navigation, Autoplay, Pagination]}
         spaceBetween={30}
         slidesPerView={1}
-        navigation
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        navigation={{ hideOnClick: true }}
         pagination={{ clickable: true }}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        className="w-full"
+        className="w-full relative group"
       >
         {clients.map((client, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center">
@@ -45,6 +50,9 @@ const CorporateClients = () => {
             </div>
           </SwiperSlide>
         ))}
+        {/* Navigation Arrows */}
+        <div className="swiper-button-prev hidden group-hover:flex"></div>
+        <div className="swiper-button-next hidden group-hover:flex"></div>
       </Swiper>
     </div>
   );
