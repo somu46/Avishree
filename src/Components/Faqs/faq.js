@@ -7,24 +7,25 @@ import Expand from "../expand/expand"
 const Faq = () => {
   const faqs = [
     {
-      question: 'What Is Paradise Car Rental Service?',
-      answer: 'Paradise car rental service provides the best journey to your destination.',
+      question: 'What is AVISHREE HOSPITALITY PRIVATE LIMITED?',
+      answer: 'AVISHREE HOSPITALITY PRIVATE LIMITED having CIN U93290WB2024PTC273108 is 2 months & 15 days old Private company incorporated with MCA on 29th August, 2024. AVISHREE HOSPITALITY PRIVATE LIMITED is listed in the class of Private company and classified as Non-govt company. This company is registered at Registrar of Companies(ROC), RoC-Kolkata with an Authorized Share Capital of ₹15,00,000 and paid-up capital is ₹1,00,000.',
     },
     {
-      question: 'Is Paradise Available In My City?',
-      answer: 'Yes, Paradise is available in multiple cities across the country. Check our website for your location.',
+      question: 'What is the CIN of AVISHREE HOSPITALITY PRIVATE LIMITED?',
+      answer: 'CIN of AVISHREE HOSPITALITY PRIVATE LIMITED is U93290WB2024PTC273108.',
     },
     {
-      question: 'What Type Of Vehicles/Cars Does Paradise Offer?',
-      answer: 'We offer a wide range of vehicles, including SUVs, sedans, and hatchbacks.',
+      question: 'Where is AVISHREE HOSPITALITY PRIVATE LIMITED located?',
+      answer: 'Address of AVISHREE HOSPITALITY PRIVATE LIMITED is 4, Block-n, 5/221, Narendra Nagar, Rajarhat Gopalpur, North 24 Parganas, Rajarhat, West Bengal, India, 700136.',
     },
     {
-      question: 'How Much Does It Cost To Rent A Car At Paradise?',
-      answer: 'The cost varies based on the car type and duration. Please visit our pricing page for more details.',
+      question: 'Who are the directors of AVISHREE HOSPITALITY PRIVATE LIMITED?',
+      answer: 'The company has 3 directors/key management personnel AURODEEP PAUL, SUDESHNA PAUL, SWATI PAUL',
     },
     {
-      question: 'What Are The Advantages Of Availing Cars On Rent At Paradise?',
-      answer: 'We offer competitive pricing, well-maintained vehicles, and excellent customer service.',
+      question: 'What is the contact details of AVISHREE HOSPITALITY PRIVATE LIMITED?',
+      answer: 'Email : aurodeeppaul071@gmail.com  Contact Number : 8777584271',
+              
     },
   ];
 
