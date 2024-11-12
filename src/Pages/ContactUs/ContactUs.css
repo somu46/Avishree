@@ -40,9 +40,7 @@
 .instagram {
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
-.linktree {
-  background: linear-gradient(45deg, #44f529, #063b18, #34af3c, #51d4a0);
-}
+
 .instagram:hover {
   transform: scale(1.1);
   background: linear-gradient(45deg, #515bd4, #8134af, #dd2a7b, #f58529);
@@ -80,9 +78,13 @@
   transform: scale(1.1);
   background: linear-gradient(45deg, #c4302b, #ff0000);
 }
-
-
-
+.linktree {
+  background: linear-gradient(45deg, #44f529, #063b18, #34af3c, #51d4a0);
+}
+.linktree:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg,  #44f529, #063b18, #34af3c, #51d4a0);
+}
 
 .contact-link:hover svg {
   color: #fff;
@@ -104,7 +106,7 @@
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
 
 .contact-form label {
