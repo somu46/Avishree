@@ -5,6 +5,11 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ReactTypingEffect from "react-typing-effect";
 import ButtonCom from "../Button/Button";
+// import Swal from "sweetalert2";
+
+
+
+
 
 
 
@@ -15,7 +20,49 @@ const Navbar = () => {
 const handleClick=()=>{
   setIsOpen(!isOpen);
   navigate('/book', { state: { id: 12523 } });
+
   
+
+
+  // let timerInterval;
+
+  // Swall.fire({
+  //   title: '<span className="font-mono" style="color: #4CAF50;">Your Quote is Sending......</span>',
+  //   html: `
+  //   <div style="
+  //     font-size: 18px; 
+  //     color: #555; 
+  //     margin-bottom: 10px; 
+  //     padding: 10px;
+  //     opacity:0.5;
+  //     background-color: rgba(255, 255, 255, 0.8); 
+  //     border-radius: 8px;
+  //   ">
+  //     Please wait while we submit your quote. 
+  //     <br /> This will close automatically.
+  //   </div>
+  // `,
+  // background: `url(${require('../../Assets/FooterLogo.jpeg')}) center/cover no-repeat`,
+  //   timer: 3000,
+  //   timerProgressBar: true,
+  //   didOpen: () => {
+  //     Swal.showLoading();
+      
+      
+  //   },
+  //   willClose: () => {
+  //     clearInterval(timerInterval);
+  //   }
+  // }).then(() => {
+  //   Swal.fire({
+  //     title: '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
+  //     text: "WE will  Contact you Soon !",
+  //     icon: "success",
+  //     confirmButtonColor: "#4CAF50"
+  //   });
+  // });
+  
+
 }
 
 

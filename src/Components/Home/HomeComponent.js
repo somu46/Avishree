@@ -19,10 +19,13 @@ const HomeCome = () => {
     <div className="home-container">
       {/* Hero Section */}
         <Hero />
-    <IntroSection/>
+        <div  className="bg-image">
+        <IntroSection/>
+          </div>
+      <Feature />
+     
 
       {/* Feature Section */}
-      <Feature />
       <HowItWorks/>
       {/* Services Section */}
       <Services />
