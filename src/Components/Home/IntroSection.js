@@ -1,8 +1,10 @@
 import React from 'react';
+import './Intro.css';
+
 
 function IntroSection() {
   return (
-    <div className="bg-white text-gray-700 p-8 md:p-12 lg:p-16 mx-auto max-w-5xl rounded-lg shadow-md">
+    <div className="bg-transparent text-gray-700 p-8 md:p-12 lg:p-16 mx-auto max-w-5xl rounded-lg shadow-md">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-6">
         Avishree Hospitality Pvt. Ltd.
       </h1>

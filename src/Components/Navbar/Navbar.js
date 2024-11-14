@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import Hamburger from "hamburger-react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ReactTypingEffect from "react-typing-effect";
+import ButtonCom from "../Button/Button";
 
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+ const navigate=useNavigate();
+const handleClick=()=>{
+  setIsOpen(!isOpen);
+  navigate('/book', { state: { id: 12523 } });
+  
+}
+
+
 
   return (
     <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
@@ -70,9 +79,10 @@ const Navbar = () => {
             {/* <NavLink activeClass="active"  to="/blogs">Blogs</NavLink> */}
           </li>
         </ul>
-        <NavLink  to="/book" className="book-now-button">
-          Book Now
-        </NavLink>
+        
+         {/* <Button onClick={handleClick} variant="outlined">Book Now</Button> */}
+        <div><ButtonCom title="Book Now" fun={handleClick}/></div> 
+       
       </div>
 
      
@@ -144,13 +154,10 @@ const Navbar = () => {
               {/* <NavLink activeClass="active"  to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink> */}
             </li>
             <li>
-              <NavLink 
-                to="/book" 
-                className="book-now-button-mobile" 
-                onClick={() => setIsOpen(false)}
-              >
-                Book Now
-              </NavLink>
+            
+                {/* <Button onClick={handleClick} variant="outlined">Book Now</Button> */}
+                <div className=""><ButtonCom title="Book Now" fun={handleClick}/></div> 
+           
             </li>
           </ul>
         </div>

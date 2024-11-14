@@ -37,10 +37,6 @@
     
 }
 
-.company-info p {
-    font-size: 14px;
-    color: #bbbbbb;
-}
 
 /* Quick Links Styling */
 .links h3 {
@@ -60,7 +56,7 @@
 
 .links ul li a {
     text-decoration: none;
-    color: #bbbbbb;
+    /* color: #bbbbbb; */
     transition: color 0.3s;
 }
 

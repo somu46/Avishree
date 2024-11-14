@@ -1,18 +1,24 @@
 .home-container {
     font-family: Arial, sans-serif;
+    background-color: transparent;
   }
+  .shadow-text {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6), 
+                 0 2px 4px rgba(0, 0, 0, 0.4) blur(3px);
+  }
+  
   
   /* Hero Section */
   .hero {
 
       height: 30rem;
-      /* background-image: url('../../Assets/Poster.jpeg'); Set the background image */
-      /* background-size: cover; Ensure the image covers the entire screen */
-      /* background-position: center; Center the background image */
-      /* background-repeat: no-repeat; Prevent the image from repeating */
-      /* background-attachment: fixed; Keep the background fixed during scroll */
+      /* background-image: url('../../Assets/Poster.jpeg'); 
+      background-size: cover; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;  */
     
-    color:rgba(255, 255, 255, 0.845);
+    /* color:rgba(255, 255, 255, 0.845); */
     font-size: 3rem;
     font-weight: bolder;
     /* transform: translate(50%,-50%); */
@@ -41,7 +47,7 @@
     margin-bottom: 20px;
   }
   
-  .hero-button {
+   .hero-button {
     padding: 10px 20px;
     background-color: #f4f4f4;
     color: #0044cc;
@@ -49,7 +55,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-  }
+  } 
   
   .hero-button:hover {
     background-color: #e0e0e0;
