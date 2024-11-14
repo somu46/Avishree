@@ -1,8 +1,17 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+// import { useLocation } from "react-router-dom";
+import ButtonCom from "../Button/Button";
 
 const QuoteForm = () => {
+
+  // const locationData=useLocation();
+
+  // console.log(locationData.state);
+  
+
+
   const {
     register,
     handleSubmit,
@@ -33,8 +42,8 @@ const QuoteForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10 px-6 mt-[5.1rem]">
-      <div className="w-full min-w-[80%] max-w-lg bg-white rounded-lg shadow-lg p-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10 px-3 lg:px-6 mt-[5.1rem]">
+      <div className=" w-full min-w-[85%] max-w-lg bg-white rounded-lg shadow-lg p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
           Request a Quote
         </h2>
@@ -92,15 +101,19 @@ const QuoteForm = () => {
           {errors.service && (
             <div className="text-red-500 text-sm">{errors.service.message}</div>
           )}
-
+        <div className="flex flex-row ">
+        <label className="flex lg:hidden text-center mr-1 mt-1">Enter Event Date:</label>
           <input
             type="date"
+            placeholder="Date"
             {...register("date", { required: "Date is required" })}
             min={new Date().toISOString().split("T")[0]}
-            className="w-full p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+            className="w-[55%] lg:w-full p-1 lg:p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
             aria-label="Date"
           />
-          {errors.date && (
+          
+        </div>
+        {errors.date && (
             <div className="text-red-500 text-sm">{errors.date.message}</div>
           )}
 
@@ -123,13 +136,19 @@ const QuoteForm = () => {
           {errors.message && (
             <div className="text-red-500 text-sm">{errors.message.message}</div>
           )}
+     
 
-          <button
+
+
+     <div  className=" lg:w-[30%] lg:m-auto">
+     <ButtonCom title="Request Quote"/>
+     </div>
+          {/* <button
             type="submit"
             className="w-full py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
           >
             Request Quote
-          </button>
+          </button> */}
         </form>
       </div>
     </div>

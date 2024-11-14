@@ -1,9 +1,10 @@
 /* General Navbar Styling */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .active{
-    color: rgb(255, 4, 0);
+    color: rgb(246, 83, 80);
     text-shadow:#dab8b8;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
+   
     border-bottom: 3px solid rgb(255, 0, 0);
 }
 .navbar {
@@ -32,6 +33,7 @@
 .logo {
     width: 60px;
     height: 60px;
+    border-radius: 5px;
 }
 
 .brand a {
