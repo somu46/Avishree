@@ -42,7 +42,7 @@ const Menu = () => {
                 style={{ fontWeight: 'bold', cursor: 'pointer' }}
                 onClick={() => handleOpen(menu)}
               >
-              <p > View Menu</p> 
+              <p  > View Menu</p> 
               </Typography>
             </AccordionSummary>
           </Accordion>

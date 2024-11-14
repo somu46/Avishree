@@ -4,8 +4,9 @@ import './Intro.css';
 
 function IntroSection() {
   return (
-    <div className="bg-transparent text-gray-700 p-8 md:p-12 lg:p-16 mx-auto max-w-5xl rounded-lg shadow-md">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-6">
+    <div className="  bg-slate-50 opacity-70 text-gray-700 p-8 mt-5  lg:mt-5 md:p-12 lg:p-16 mx-auto max-w-5xl rounded-lg shadow-md">
+      <div className='intro-text'>
+      <h1 className=" opacity-100 text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-6">
         Avishree Hospitality Pvt. Ltd.
       </h1>
       <p className="text-lg md:text-xl text-center text-gray-600 mb-8">
@@ -24,6 +25,7 @@ function IntroSection() {
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
           Get in Touch
         </button>
+      </div>
       </div>
     </div>
   );

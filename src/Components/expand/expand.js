@@ -9,17 +9,17 @@ const Expand = ({ question, children }) => {
   };
 
   return (
-    <div className="expand-container">
+    <div className="expand-container ">
       <div 
         className="expand-header" 
         onClick={handleToggle}
       >
-        <span className='text-red-500'>{question}</span>
+        <span className='text-red-500 font-mono '>{question}</span>
         {isExpanded ? <FaMinus /> : <FaPlus />}
       </div>
 
       {isExpanded && (
-        <div className="expand-content ">
+        <div className="expand-content  ">
           {children}
         </div>
       )}

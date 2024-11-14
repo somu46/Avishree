@@ -39,7 +39,7 @@ const Faq = () => {
       <div className="faq-right">
         {faqs.map((faq, index) => (
           <Expand key={index}  question={`Q.  ${faq.question}`}>
-            <p className='text-left m-1 pt-3'>A: {faq.answer}</p>
+            <p className='text-left m-1 pt-3 font-mono'>A: {faq.answer}</p>
           </Expand>
         ))}
       </div>

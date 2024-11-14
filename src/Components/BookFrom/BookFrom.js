@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 // import { useLocation } from "react-router-dom";
+import Swal from 'sweetalert2';
 import ButtonCom from "../Button/Button";
 
 const QuoteForm = () => {
@@ -21,6 +22,7 @@ const QuoteForm = () => {
   const formRef = useRef();
 
   const handleFormSubmit = (data) => {
+ 
     if (!formRef.current) return;
 
     emailjs
@@ -39,6 +41,47 @@ const QuoteForm = () => {
           console.log("FAILED...", error.text);
         }
       );
+     
+
+
+      
+  let timerInterval;
+
+  Swal.fire({
+    title: '<span className="font-mono" style="color: #4CAF50;">Your Quote is Sending......</span>',
+    html: `
+    <div style="
+      font-size: 18px; 
+      color: #555; 
+      margin-bottom: 10px; 
+      padding: 10px;
+      opacity:0.5;
+      background-color: rgba(255, 255, 255, 0.8); 
+      border-radius: 8px;
+    ">
+      Please wait while we submit your quote. 
+      <br /> This will close automatically.
+    </div>
+  `,
+  background: `url(${require('../../Assets/FooterLogo.jpeg')}) center/cover no-repeat`,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading();
+      
+      
+    },
+    willClose: () => {
+      clearInterval(timerInterval);
+    }
+  }).then(() => {
+    Swal.fire({
+      title: '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
+      text: "WE will  Contact you Soon !",
+      icon: "success",
+      confirmButtonColor: "#4CAF50"
+    });
+  });
   };
 
   return (
