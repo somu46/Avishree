@@ -20,7 +20,9 @@ const HomeCome = () => {
       {/* Hero Section */}
         <Hero />
         <div  className="bg-image">
+        <div className="w-screen bg-transparent opacity-80 backdrop-blur-xl">
         <IntroSection/>
+        </div>
           </div>
       <Feature />
      

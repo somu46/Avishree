@@ -1,7 +1,7 @@
 import React from 'react';
 import './faq.css';
 import Expand from "../expand/expand"
-
+// import bgImage from ""
 
 
 const Faq = () => {
@@ -35,6 +35,7 @@ const Faq = () => {
         <h1>FAQ's</h1>
         <h3>Frequently Asked Questions.</h3>
         <button>View All</button>
+
       </div>
       <div className="faq-right">
         {faqs.map((faq, index) => (
