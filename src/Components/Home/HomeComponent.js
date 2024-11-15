@@ -7,36 +7,33 @@ import CorporateClients from "./CorporateClients";
 import StatsSection from "./SpeakingNumbers";
 import IntroSection from "./IntroSection";
 import HowItWorks from "./HowItWork";
-import Testimonial from "../Testimonial/Testimonial";
+// import Testimonial from "../Testimonial/Testimonial";
 import Faq from "../Faqs/faq";
 import BanquetHalls from "./BanquetHalls";
 import FloatingWhatsAppButton from "../FloatWhatsapp/FloatingWhatsAppButton";
-
+import GoogleReviews from '../GoogleReviews/GoogleReviews.js';
 
 
 const HomeCome = () => {
   return (
     <div className="home-container">
-
-      {/* Hero Section */}
         <Hero />
         <div  className="bg-image">
-        <div className="w-screen bg-transparent opacity-80 backdrop-blur-xl">
+        <div className="max-w-screen bg-transparent opacity-80 backdrop-blur-xl">
         <IntroSection/>
         </div>
           </div>
       <Feature />
       <FloatingWhatsAppButton/>
-
-      {/* Feature Section */}
       <HowItWorks/>
-      {/* Services Section */}
       <Services />
       <BanquetHalls/>
       <CorporateClients/>
-      <Testimonial/>
-      <Faq/>
+      <GoogleReviews/>
+      {/* <Testimonial/> */}
       <StatsSection/>
+      <Faq/>
+      
     </div>
   );
 };

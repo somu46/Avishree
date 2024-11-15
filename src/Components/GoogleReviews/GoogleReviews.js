@@ -17,7 +17,7 @@ import React, { useEffect } from 'react'
 
   return (
     <>
-       <div className="min-w-full min-h-auto my-3">
+       <div className="min-w-screen min-h-auto my-3">
         <div className="elfsight-app-46f374f3-3e68-44cf-a66c-a6822504a0ba" data-elfsight-app-lazy></div>
       </div>
       
