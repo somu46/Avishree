@@ -4,7 +4,10 @@ import Wedding from "../../Assets/wedding.jpg";
 import Party from "../../Assets/party.jpg";
 import liveshow from "../../Assets/live show.jpg";
 import corporate from "../../Assets/corporate.jpg";
-
+import RiceCeremony from  '../../Assets/riceSeromoni.webp'
+import Engagement from '../../Assets/Engagement.jpg'
+import BengaliFood from '../../Assets/BengaliFood.webp'
+import Aniversary from '../../Assets/Anniversary.webp'
 const Services = () => {
   const servicesData = [
     { 
@@ -24,27 +27,27 @@ const Services = () => {
     },
     { 
       title: 'Anniversary Catering', 
-      image: 'anniversary.jpg', 
+      image: Aniversary, 
       description: 'Catering services that add elegance to your anniversary celebration.'
     },
     { 
       title: 'Bengali Food Catering', 
-      image: 'bengali_food.jpg', 
+      image: BengaliFood, 
       description: 'Authentic Bengali food catering for a flavorful experience.'
     },
     { 
       title: 'Rice Ceremony Catering', 
-      image: 'rice_ceremony.jpg', 
+      image: RiceCeremony, 
       description: 'Traditional rice ceremony catering for a cultural celebration.'
     },
     { 
       title: 'Engagement Party Catering', 
-      image: 'engagement.jpg', 
+      image: Engagement, 
       description: 'Celebrate engagements with our premium catering service.'
     },
     { 
       title: 'Engagement Party Catering', 
-      image: 'engagement.jpg', 
+      image: Engagement, 
       description: 'Celebrate engagements with our premium catering service.'
     },
     {
