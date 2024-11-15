@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.css';
+
+
 import Wedding from "../../Assets/wedding.jpg";
 import Party from "../../Assets/party.jpg";
 import liveshow from "../../Assets/live show.jpg";
@@ -8,21 +10,26 @@ import RiceCeremony from  '../../Assets/riceSeromoni.webp'
 import Engagement from '../../Assets/Engagement.jpg'
 import BengaliFood from '../../Assets/BengaliFood.webp'
 import Aniversary from '../../Assets/Anniversary.webp'
+import Birthday from '../../Assets/Birthday.jpg'
+import HouseWarming from '../../Assets/House-Warming.jpg'
+import BabyShower from '../../Assets/BabyShowering.jpg'
+
+
 const Services = () => {
   const servicesData = [
     { 
       title: 'Baby Shower Catering', 
-      image: 'baby_shower.jpg', 
+      image: BabyShower, 
       description: 'Celebrate the new arrival with customized catering for baby showers.'
     },
     { 
       title: 'Housewarming Catering', 
-      image: 'housewarming.jpg', 
+      image: HouseWarming, 
       description: 'Catering services that make your housewarming special and memorable.'
     },
     { 
       title: 'Birthday Party Catering', 
-      image: 'birthday_party.jpg', 
+      image: Birthday, 
       description: 'Perfectly tailored catering to celebrate birthdays for all ages.'
     },
     { 
@@ -45,11 +52,11 @@ const Services = () => {
       image: Engagement, 
       description: 'Celebrate engagements with our premium catering service.'
     },
-    { 
-      title: 'Engagement Party Catering', 
-      image: Engagement, 
-      description: 'Celebrate engagements with our premium catering service.'
-    },
+    // { 
+    //   title: 'Engagement Party Catering', 
+    //   image: Engagement, 
+    //   description: 'Celebrate engagements with our premium catering service.'
+    // },
     {
       title: 'Wedding',
       image: Wedding,
