@@ -13,6 +13,7 @@ const Services = () => {
       description:
         'Make your special day unforgettable with our top-tier wedding planning services. From venue decoration to catering, we ensure every detail is perfect. Our experienced team will handle everything from start to finish, allowing you to focus on enjoying the moment.',
     },
+    
     {
       title: 'Party',
       image: Party,
