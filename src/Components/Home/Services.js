@@ -1,7 +1,6 @@
 import React from 'react';
 import './Home.css';
 
-
 import Wedding from "../../Assets/wedding.jpg";
 import Party from "../../Assets/party.jpg";
 import liveshow from "../../Assets/live show.jpg";
@@ -13,7 +12,6 @@ import Aniversary from '../../Assets/Anniversary.webp'
 import Birthday from '../../Assets/Birthday.jpg'
 import HouseWarming from '../../Assets/House-Warming.jpg'
 import BabyShower from '../../Assets/BabyShowering.jpg'
-
 
 const Services = () => {
   const servicesData = [
