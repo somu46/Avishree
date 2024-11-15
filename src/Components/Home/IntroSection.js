@@ -21,11 +21,7 @@ function IntroSection() {
       <p className="text-md md:text-lg text-gray-700 mb-8 leading-relaxed">
         Our dedication to excellence in service and culinary art sets us apart as one of Kolkata’s premier event organizers and caterers. Trust Avishree Hospitality Pvt. Ltd. to turn your event into an unforgettable experience, filled with delightful flavors, beautiful decor, and impeccable service.
       </p>
-      <div className="text-center">
-        <button className="bg-blue-600 opacity-100 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
-          Get in Touch
-        </button>
-      </div>
+      
       </div>
     </div>
   );

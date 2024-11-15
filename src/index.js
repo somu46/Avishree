@@ -14,7 +14,7 @@ import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
 import Photos from './Pages/Photos/Photos';
 import Videos from './Pages/Videos/Videos';
-import  { LoadingComponent } from './Components/Loding/Loding.js';
+import  LoadingSpinner, { LoadingComponent } from './Components/Loding/Loding.js';
 
 // const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
 const Root=lazy(()=>waitPromise(1500).then(()=>import("./Root/Root")));
@@ -42,7 +42,7 @@ const Rout=createBrowserRouter([
   {
     path:"",
     element:(<Suspense
-      fallback={<LoadingComponent/>}>
+      fallback={<LoadingSpinner/>}>
         <Root/></Suspense>),
     children:[
       {
