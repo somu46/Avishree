@@ -5,11 +5,23 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ReactTypingEffect from "react-typing-effect";
 import ButtonCom from "../Button/Button";
-// import Swal from "sweetalert2";
+import { motion } from "motion/react";
 
 
 
 
+const variants = {
+  open: {
+    x: 0,
+    opacity: 1,
+    transition: { type: 'spring', stiffness: 200, damping: 20 },
+  },
+  closed: {
+    x: '100%',
+    opacity: 0,
+    transition: { type: 'spring', stiffness: 200, damping: 20 },
+  },
+};
 
 
 
@@ -21,46 +33,6 @@ const handleClick=()=>{
   setIsOpen(!isOpen);
   navigate('/book', { state: { id: 12523 } });
 
-  
-
-
-  // let timerInterval;
-
-  // Swall.fire({
-  //   title: '<span className="font-mono" style="color: #4CAF50;">Your Quote is Sending......</span>',
-  //   html: `
-  //   <div style="
-  //     font-size: 18px; 
-  //     color: #555; 
-  //     margin-bottom: 10px; 
-  //     padding: 10px;
-  //     opacity:0.5;
-  //     background-color: rgba(255, 255, 255, 0.8); 
-  //     border-radius: 8px;
-  //   ">
-  //     Please wait while we submit your quote. 
-  //     <br /> This will close automatically.
-  //   </div>
-  // `,
-  // background: `url(${require('../../Assets/FooterLogo.jpeg')}) center/cover no-repeat`,
-  //   timer: 3000,
-  //   timerProgressBar: true,
-  //   didOpen: () => {
-  //     Swal.showLoading();
-      
-      
-  //   },
-  //   willClose: () => {
-  //     clearInterval(timerInterval);
-  //   }
-  // }).then(() => {
-  //   Swal.fire({
-  //     title: '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
-  //     text: "WE will  Contact you Soon !",
-  //     icon: "success",
-  //     confirmButtonColor: "#4CAF50"
-  //   });
-  // });
   
 
 }
@@ -134,6 +106,7 @@ const handleClick=()=>{
 
      
     {/* Mobile Menu */}
+    
     <div className="relative lg:hidden">
       {/* Hamburger Button */}
       <div className="fixed top-5 right-5 z-30">
@@ -146,6 +119,10 @@ const handleClick=()=>{
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
+          <motion.nav
+  animate={isOpen ? "open" : "closed"}
+  variants={variants}
+>
           <ul className="flex flex-col items-start p-8 space-y-4">
             <li>
               <NavLink activeClass="active"  to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
@@ -207,6 +184,7 @@ const handleClick=()=>{
            
             </li>
           </ul>
+          </motion.nav>
         </div>
       )}
     </div>
