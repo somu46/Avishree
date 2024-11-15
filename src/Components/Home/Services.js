@@ -7,31 +7,6 @@ import corporate from "../../Assets/corporate.jpg";
 
 const Services = () => {
   const servicesData = [
-    {
-      title: 'Wedding',
-      image: Wedding,
-      description:
-        'Make your special day unforgettable with our top-tier wedding planning services. From venue decoration to catering, we ensure every detail is perfect. Our experienced team will handle everything from start to finish, allowing you to focus on enjoying the moment.',
-    },
-    
-    {
-      title: 'Party',
-      image: Party,
-      description:
-        'Throw a party your guests won’t forget! Whether it\'s a birthday bash, anniversary celebration, or themed event, we provide everything from sound and lighting to décor and entertainment, ensuring your party is lively and perfectly executed.',
-    },
-    {
-      title: 'Live Show',
-      image: liveshow,
-      description:
-        'Experience the thrill of live entertainment with our expertly organized shows. From concerts to stand-up comedy, we handle logistics, staging, and sound systems, ensuring your live show is a smashing success.',
-    },
-    {
-      title: 'Corporate',
-      image: corporate,
-      description:
-        'Elevate your corporate events with our professional planning services. We specialize in conferences, product launches, and business meetings, handling everything from venue setup to audio-visual equipment.',
-    },
     { 
       title: 'Baby Shower Catering', 
       image: 'baby_shower.jpg', 
@@ -72,6 +47,32 @@ const Services = () => {
       image: 'engagement.jpg', 
       description: 'Celebrate engagements with our premium catering service.'
     },
+    {
+      title: 'Wedding',
+      image: Wedding,
+      description:
+        'Make your special day unforgettable with our top-tier wedding planning services. From venue decoration to catering, we ensure every detail is perfect. Our experienced team will handle everything from start to finish, allowing you to focus on enjoying the moment.',
+    },
+
+    {
+      title: 'Party',
+      image: Party,
+      description:
+        'Throw a party your guests won’t forget! Whether it\'s a birthday bash, anniversary celebration, or themed event, we provide everything from sound and lighting to décor and entertainment, ensuring your party is lively and perfectly executed.',
+    },
+    {
+      title: 'Live Show',
+      image: liveshow,
+      description:
+        'Experience the thrill of live entertainment with our expertly organized shows. From concerts to stand-up comedy, we handle logistics, staging, and sound systems, ensuring your live show is a smashing success.',
+    },
+    {
+      title: 'Corporate',
+      image: corporate,
+      description:
+        'Elevate your corporate events with our professional planning services. We specialize in conferences, product launches, and business meetings, handling everything from venue setup to audio-visual equipment.',
+    },
+    
   ];
 
   return (
