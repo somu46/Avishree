@@ -8,3 +8,10 @@
 .intro-text h1 p button{
   opacity: 1;
 }
+
+
+@media only screen and (min-width: 1366px) and (max-width: 1440px) {
+    .SizeContenar-14{
+        margin-top: 9rem;
+    }
+}

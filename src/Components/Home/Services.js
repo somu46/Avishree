@@ -31,6 +31,46 @@ const Services = () => {
       description:
         'Elevate your corporate events with our professional planning services. We specialize in conferences, product launches, and business meetings, handling everything from venue setup to audio-visual equipment.',
     },
+    { 
+      title: 'Baby Shower Catering', 
+      image: 'baby_shower.jpg', 
+      description: 'Celebrate the new arrival with customized catering for baby showers.'
+    },
+    { 
+      title: 'Housewarming Catering', 
+      image: 'housewarming.jpg', 
+      description: 'Catering services that make your housewarming special and memorable.'
+    },
+    { 
+      title: 'Birthday Party Catering', 
+      image: 'birthday_party.jpg', 
+      description: 'Perfectly tailored catering to celebrate birthdays for all ages.'
+    },
+    { 
+      title: 'Anniversary Catering', 
+      image: 'anniversary.jpg', 
+      description: 'Catering services that add elegance to your anniversary celebration.'
+    },
+    { 
+      title: 'Bengali Food Catering', 
+      image: 'bengali_food.jpg', 
+      description: 'Authentic Bengali food catering for a flavorful experience.'
+    },
+    { 
+      title: 'Rice Ceremony Catering', 
+      image: 'rice_ceremony.jpg', 
+      description: 'Traditional rice ceremony catering for a cultural celebration.'
+    },
+    { 
+      title: 'Engagement Party Catering', 
+      image: 'engagement.jpg', 
+      description: 'Celebrate engagements with our premium catering service.'
+    },
+    { 
+      title: 'Engagement Party Catering', 
+      image: 'engagement.jpg', 
+      description: 'Celebrate engagements with our premium catering service.'
+    },
   ];
 
   return (
