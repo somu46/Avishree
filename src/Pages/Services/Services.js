@@ -13,6 +13,7 @@ import EventPlanner from '../../Assets/Event Planner.jpg'
 import Catering from '../../Assets/Catering.png'
 import Consultant from '../../Assets/Consultant.png'
 import ThemeR from '../../Assets/ThemeDecoration.png'
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 
 
@@ -105,6 +106,7 @@ function ServiceComponent() {
     </div>
   ))}
 </div>
+<FloatingWhatsAppButton/>
 
     </div>
   );

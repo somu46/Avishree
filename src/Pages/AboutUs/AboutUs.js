@@ -3,6 +3,7 @@ import teamData from "./teamData";
 import "./AboutUs.css";
 import founderImage from "../../Assets/Aurodeep Paul.jpg"; // Import the founder's image
 import Company from "../../Assets/logo.png"
+import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
 
 
 const AboutUs = () => {
@@ -79,6 +80,8 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
+      <FloatingWhatsAppButton/>
+
     </div>
   );
 };

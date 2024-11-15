@@ -8,6 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkIcon from '@mui/icons-material/Link';
 import ContactSection from './ContactSection';
 import Ofiice from './Office';
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 
 
@@ -58,7 +59,8 @@ const ContactUs = () => {
       <div className='lg:h-auto'>
       <Ofiice/>
     </div>
-     
+    <FloatingWhatsAppButton/>
+
     </div>
     </>
   );
