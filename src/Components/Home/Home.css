@@ -126,6 +126,21 @@
     color: #0044cc;
     margin-bottom: 10px;
   }
+
+
+  .step-number {
+    font-size: 3rem; /* Adjust as needed */
+    font-weight: bold;
+    color: #FFBF00; /* Original color */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .step-number:hover {
+    transform: scale(1.1); /* Slightly enlarges the number */
+    color: #FF8000; /* Changes color on hover */
+  }
+  
   
   .swiper-button-next,
   .swiper-button-prev {

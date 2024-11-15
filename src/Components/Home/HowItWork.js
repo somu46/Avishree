@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css'
 
 function HowItWorks() {
   const steps = [
@@ -35,7 +36,7 @@ function HowItWorks() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center text-center">
-            <div className="text-6xl text-amber-400 font-bold mb-4">{step.number}</div>
+            <div className="step-number">{step.number}</div>
             <h3 className="text-xl font-semibold text-teal-900 mb-2">{step.title}</h3>
             <p className="text-gray-600">{step.description}</p>
           </div>

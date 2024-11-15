@@ -1,7 +1,7 @@
 import React from "react";
 import teamData from "./teamData";
 import "./AboutUs.css";
-import founderImage from "../../Assets/Aurodeep Paul.jpeg"; // Import the founder's image
+import founderImage from "../../Assets/Aurodeep Paul.jpg"; // Import the founder's image
 import Company from "../../Assets/logo.png"
 
 
