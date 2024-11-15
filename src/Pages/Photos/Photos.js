@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 const PhotosData = [
   {
@@ -60,6 +61,8 @@ function Photos() {
           </div>
         </div>
       )}
+            <FloatingWhatsAppButton/>
+
     </div>
   );
 }

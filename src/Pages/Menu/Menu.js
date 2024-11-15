@@ -2,6 +2,7 @@ import './Menu.css'
 import React, { useState } from 'react';
 import { Typography, Accordion, AccordionSummary, Modal, Box } from '@mui/material';
 import menuData from './MenuData';
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 
 
@@ -119,6 +120,8 @@ const Menu = () => {
 </Modal>
 
     </div>
+    <FloatingWhatsAppButton/>
+
     </div>
   );
 };

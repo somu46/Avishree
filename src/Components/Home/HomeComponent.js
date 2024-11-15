@@ -10,13 +10,14 @@ import HowItWorks from "./HowItWork";
 import Testimonial from "../Testimonial/Testimonial";
 import Faq from "../Faqs/faq";
 import BanquetHalls from "./BanquetHalls";
-
+import FloatingWhatsAppButton from "../FloatWhatsapp/FloatingWhatsAppButton";
 
 
 
 const HomeCome = () => {
   return (
     <div className="home-container">
+
       {/* Hero Section */}
         <Hero />
         <div  className="bg-image">
@@ -25,7 +26,7 @@ const HomeCome = () => {
         </div>
           </div>
       <Feature />
-     
+      <FloatingWhatsAppButton/>
 
       {/* Feature Section */}
       <HowItWorks/>

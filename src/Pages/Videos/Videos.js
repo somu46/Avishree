@@ -1,4 +1,5 @@
 import React from 'react';
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 const VideosData = [
   {
@@ -26,6 +27,8 @@ function Videos() {
           </div>
         ))}
       </div>
+      <FloatingWhatsAppButton/>
+
     </div>
   );
 }

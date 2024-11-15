@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Gallery.css';
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 const Gallery = () => {
   const navigate = useNavigate();
@@ -23,6 +24,8 @@ const Gallery = () => {
         <h2>Video</h2>
         <p>Watch our video collection</p>
       </div>
+      <FloatingWhatsAppButton/>
+
     </div>
   );
 };
