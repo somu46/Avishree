@@ -1,28 +1,36 @@
 import React from 'react';
 import PhotosData from "./importedPhoto.js"
-
+import './Photo.css';
 import LightGallery from 'lightgallery/react';
 
-// Import LightGallery CSS styles
+// import styles
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-autoplay.css';
+import 'lightgallery/css/lg-fullscreen.css';
+import 'lightgallery/css/lg-share.css';
+import 'lightgallery/css/lg-rotate.css';
 
-// Import LightGallery plugins
+
+// import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
-
+import lgAutoplay from 'lightgallery/plugins/autoplay'
+import lgFullscreen from 'lightgallery/plugins/fullscreen';
+import lgShare from 'lightgallery/plugins/share';
+import lgRotate from 'lightgallery/plugins/rotate';
 function Photos() {
     const onInit = () => {
         console.log('lightGallery has been initialized');
     };
 
     return (
-        <div className="App">
+        <div className="photo-body">
             <LightGallery
                 onInit={onInit}
                 speed={500}
-                plugins={[lgThumbnail, lgZoom]}
+                plugins={[lgThumbnail, lgZoom,lgAutoplay, lgFullscreen, lgRotate, lgShare]}
             >
                {
                 PhotosData.map((photo,key)=>{
@@ -34,7 +42,7 @@ function Photos() {
                 })
                }
 
-                ...
+              
             </LightGallery>
         </div>
     );
