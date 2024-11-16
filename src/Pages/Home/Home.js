@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import HomeCome from '../../Components/Home/HomeComponent';
 
 const Home = () => {

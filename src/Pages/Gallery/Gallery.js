@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Gallery.css';
 import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';

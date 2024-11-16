@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './faq.css';
 import Expand from "../expand/expand"
 // import bgImage from ""

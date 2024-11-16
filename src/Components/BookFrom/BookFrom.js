@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 // import { useLocation } from "react-router-dom";
@@ -21,7 +21,7 @@ const QuoteForm = () => {
 
   const formRef = useRef();
 
-  const handleFormSubmit = (data) => {
+  const handleFormSubmit = () => {
  
     if (!formRef.current) return;
 

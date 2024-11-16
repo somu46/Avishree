@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import Root from './Root/Root';
 import ErrorPage from './Pages/Error/Error';
 import QuoteForm from './Components/BookFrom/BookFrom';
 import AboutUs from './Pages/AboutUs/AboutUs';
@@ -14,93 +13,86 @@ import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
 import Photos from './Pages/Photo/Photos';
 import Videos from './Pages/Videos/Videos';
-import  LoadingSpinner from './Components/Loding/Loding.js';
+import LoadingSpinner from './Components/Loding/Loding.js';
 
-// const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
-const Root=lazy(()=>waitPromise(1500).then(()=>import("./Root/Root")));
+// Lazy load the Root component with a delay
+const Root = lazy(() => waitPromise(1500).then(() => import('./Root/Root')));
 
-
-
-
-
-const waitPromise=(time)=>{
-    
-  return new Promise (resolve=>{
-    setTimeout(()=>{
+// Simulate a promise for loading delay
+const waitPromise = (time) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve();
-    },time)
-  })
+    }, time);
+  });
 }
 
-
-
-
-
-
-
-const Rout=createBrowserRouter([
+// Set up your routes with React Router v6
+const Rout = createBrowserRouter([
   {
-    path:"",
-    element:(<Suspense
-      fallback={<LoadingSpinner/>}>
-        <Root/></Suspense>),
-    children:[
+    path: "",
+    element: (
+      <Suspense fallback={<LoadingSpinner />}>
+        <Root />
+      </Suspense>
+    ),
+    children: [
       {
-        path:"/",
-        element:(
-                <App />
-        )
+        path: "/",
+        element: <App />
       },
       {
-        path:"/AboutUs",
-        element:<AboutUs/>
+        path: "/AboutUs",
+        element: <AboutUs />
       },
       {
-        path:"/Services",
-        element:<Services/>
+        path: "/Services",
+        element: <Services />
       },
       {
-        path:"/book",
-        element:<QuoteForm/>
+        path: "/book",
+        element: <QuoteForm />
       },
       {
-        path:"/Menu",
-        element:<Menu/>
+        path: "/Menu",
+        element: <Menu />
       },
       {
-        path:"/Gallery",
-        element:<Gallery/>
+        path: "/Gallery",
+        element: <Gallery />
       },
       {
-        path:"/Contact",
-        element:<Contact/>
+        path: "/Contact",
+        element: <Contact />
       },
       {
-        path:"/Blogs",
-        element:<Blogs/>
+        path: "/Blogs",
+        element: <Blogs />
       },
       {
-        path:"/Gallery/Photos",
-        element:<Photos/>
+        path: "/Gallery/Photos",
+        element: <Photos />
       },
       {
-        path:"/Gallery/Videos",
-        element:<Videos />
+        path: "/Gallery/Videos",
+        element: <Videos />
       },
       {
-        path:"*",
-        element:<ErrorPage/>
+        path: "*",
+        element: <ErrorPage />
       }
     ]
   }
-])
+]);
 
-
+// Render the application
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
 root.render(
+
   <React.StrictMode>
-   <RouterProvider router={Rout}/>
+    <RouterProvider router={Rout} />
   </React.StrictMode>
 );
-
-

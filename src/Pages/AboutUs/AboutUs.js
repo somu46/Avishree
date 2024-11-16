@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import teamData from "./teamData";
 import "./AboutUs.css";
 import founderImage from "../../Assets/Aurodeep Paul.jpg"; // Import the founder's image
