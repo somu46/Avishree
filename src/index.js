@@ -12,7 +12,7 @@ import Menu from './Pages/Menu/Menu';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
-import Photos from './Pages/Photos/Photos';
+import Photos from './Pages/Photo/Photos';
 import Videos from './Pages/Videos/Videos';
 import  LoadingSpinner from './Components/Loding/Loding.js';
 
@@ -81,7 +81,7 @@ const Rout=createBrowserRouter([
       },
       {
         path:"/Gallery/Photos",
-        element:<Photos />
+        element:<Photos/>
       },
       {
         path:"/Gallery/Videos",
