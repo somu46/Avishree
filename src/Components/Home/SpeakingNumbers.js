@@ -3,6 +3,8 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { FaUtensils, FaCalendarAlt, FaSmile, FaUsers } from 'react-icons/fa';
 
+
+
 const StatsSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
