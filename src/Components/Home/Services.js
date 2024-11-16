@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
-
+import { motion, AnimatePresence } from "framer-motion";
 import Wedding from "../../Assets/wedding.jpg";
 import Party from "../../Assets/party.jpg";
 import liveshow from "../../Assets/live show.jpg";
@@ -14,6 +14,11 @@ import HouseWarming from '../../Assets/House-Warming.jpg'
 import BabyShower from '../../Assets/BabyShowering.jpg'
 
 const Services = () => {
+
+
+  const [selectedService, setSelectedService] = useState(null);
+  
+
   const servicesData = [
     { 
       title: 'Baby Shower Catering', 
@@ -82,7 +87,7 @@ const Services = () => {
     },
     
   ];
-
+  
   return (
     <section className="bg-gray-100 py-16">
       <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-800">
@@ -90,9 +95,11 @@ const Services = () => {
       </h2>
       <div className="max-w-7xl mx-auto grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 lg:px-0">
         {servicesData.map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out"
+            layoutId={`card-${index}`}
+            className="bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 ease-in-out cursor-pointer"
+            onClick={() => setSelectedService({ ...service, id: `card-${index}` })}
           >
             <img
               src={service.image}
@@ -107,11 +114,43 @@ const Services = () => {
                 {service.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
+
+      <AnimatePresence>
+        {selectedService && (
+          <motion.div
+            layoutId={selectedService.id}
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+            onClick={() => setSelectedService(null)}
+          >
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedService.image}
+                alt={selectedService.title}
+                className="w-full h-48 object-cover rounded-t-lg"
+              />
+              <h3 className="text-2xl font-bold mt-4 mb-2 text-center">
+                {selectedService.title}
+              </h3>
+              <p className="text-gray-600 text-center">{selectedService.description}</p>
+              <button
+                onClick={() => setSelectedService(null)}
+                className="mt-4 px-4 py-2 bg-red-500 text-white rounded block mx-auto"
+              >
+                Close
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
+
 
 export default Services;

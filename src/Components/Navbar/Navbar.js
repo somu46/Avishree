@@ -5,7 +5,11 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ReactTypingEffect from "react-typing-effect";
 import ButtonCom from "../Button/Button";
-import { motion } from "motion/react";
+import { motion} from 'framer-motion';
+
+
+
+  
 
 
 
@@ -29,15 +33,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
  const navigate=useNavigate();
+
+
+
+
 const handleClick=()=>{
   setIsOpen(!isOpen);
   navigate('/book', { state: { id: 12523 } });
 
-  
-
 }
-
-
 
   return (
     <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
@@ -66,6 +70,7 @@ const handleClick=()=>{
 
       {/* Desktop Menu */}
       <div className="desktop-menu">
+      
         <ul className="navbar-menu">
           <li>
             <NavLink activeClass="active" to="/">Home</NavLink>
@@ -113,42 +118,75 @@ const handleClick=()=>{
         <Hamburger toggled={isOpen} toggle={setIsOpen} />
       </div>
 
-      {isOpen && (
-        <div
-          className={`fixed top-0 right-0 min-h-screen w-[65%] bg-white bg-opacity-90 z-20 transition-transform duration-300 ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <motion.nav
-  animate={isOpen ? "open" : "closed"}
-  variants={variants}
->
+      {/* Mobile Menu */}
+      <motion.div
+        className={`fixed top-0 right-0 min-h-screen w-[65%] bg-white bg-opacity-90 z-20`}
+        initial="closed"
+        animate={isOpen ? 'open' : 'closed'}
+        variants={variants}
+      >
+        <nav>
           <ul className="flex flex-col items-start p-8 space-y-4">
             <li>
-              <NavLink activeClass="active"  to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink activeClass="active"  to="/AboutUs" onClick={() => setIsOpen(false)}>About Us</NavLink>
+              <NavLink
+                to="/AboutUs"
+                className={({ isActive }) =>
+                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                About Us
+              </NavLink>
             </li>
             <li>
-              <NavLink activeClass="active"  to="/services" onClick={() => setIsOpen(false)}>Services</NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                Services
+              </NavLink>
             </li>
             <li>
-              <NavLink activeClass="active"  to="/menu" onClick={() => setIsOpen(false)}>Menu</NavLink>
+              <NavLink
+                to="/menu"
+                className={({ isActive }) =>
+                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                Menu
+              </NavLink>
             </li>
             <li>
-              <button 
-                className="focus:outline-none" 
+              <button
+                className="focus:outline-none"
                 onClick={() => setIsGalleryOpen(!isGalleryOpen)}
               >
                 Gallery
-                <ArrowDropDownIcon/>
+                <ArrowDropDownIcon />
               </button>
               {isGalleryOpen && (
                 <ul className="pl-4 space-y-2">
-                  <li className="mt-3">
-                    <NavLink activeClass="active"  
-                      to="/Gallery/photos" 
+                  <li>
+                    <NavLink
+                      to="/Gallery/photos"
+                      className={({ isActive }) =>
+                        isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                      }
                       onClick={() => {
                         setIsOpen(false);
                         setIsGalleryOpen(false);
@@ -158,8 +196,11 @@ const handleClick=()=>{
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink activeClass="active"  
-                      to="/Gallery/videos" 
+                    <NavLink
+                      to="/Gallery/videos"
+                      className={({ isActive }) =>
+                        isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                      }
                       onClick={() => {
                         setIsOpen(false);
                         setIsGalleryOpen(false);
@@ -172,21 +213,22 @@ const handleClick=()=>{
               )}
             </li>
             <li>
-              <NavLink activeClass="active"  to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                Contact Us
+              </NavLink>
             </li>
             <li>
-              {/* <NavLink activeClass="active"  to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavLink> */}
-            </li>
-            <li>
-            
-                {/* <Button onClick={handleClick} variant="outlined">Book Now</Button> */}
-                <div className=""><ButtonCom title="Book Now" fun={handleClick}/></div> 
-           
+              <ButtonCom title="Book Now" fun={() => console.log('Booking')} />
             </li>
           </ul>
-          </motion.nav>
-        </div>
-      )}
+        </nav>
+      </motion.div>
     </div>
 
     </nav>

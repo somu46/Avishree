@@ -14,7 +14,7 @@ import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
 import Photos from './Pages/Photos/Photos';
 import Videos from './Pages/Videos/Videos';
-import  LoadingSpinner, { LoadingComponent } from './Components/Loding/Loding.js';
+import  LoadingSpinner from './Components/Loding/Loding.js';
 
 // const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
 const Root=lazy(()=>waitPromise(1500).then(()=>import("./Root/Root")));

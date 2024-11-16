@@ -11,7 +11,7 @@ import HowItWorks from "./HowItWork";
 import Faq from "../Faqs/faq";
 import BanquetHalls from "./BanquetHalls";
 import FloatingWhatsAppButton from "../FloatWhatsapp/FloatingWhatsAppButton";
-import GoogleReviews from '../GoogleReviews/GoogleReviews.js';
+// import GoogleReviews from '../GoogleReviews/GoogleReviews.js';
 
 
 const HomeCome = () => {
@@ -29,7 +29,7 @@ const HomeCome = () => {
       <Services />
       <BanquetHalls/>
       <CorporateClients/>
-      <GoogleReviews/>
+      {/* <GoogleReviews/> */}
       {/* <Testimonial/> */}
       <StatsSection/>
       <Faq/>

@@ -1,0 +1,13 @@
+@keyframes custom-spin {
+    0% {
+      transform: rotate(-90deg); 
+    }
+    100% {
+      transform: rotate(0deg); 
+    }
+  }
+  
+  .custom-spin {
+    animation: custom-spin 1.5s linear infinite; /* Adjust the duration for speed */
+  }
+  
