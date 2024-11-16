@@ -46,7 +46,14 @@
   color: #444;
   margin-top: 8px;
 }
-
+/* .bg-img{
+  background-image: url('../../Assets/FooterLogo.jpeg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    opacity:0.1;
+} */
 .menu-price {
   color: #db1c1c;
   font-size: 3rem;
@@ -96,6 +103,8 @@
 .modal-box button:hover {
   background-color: #0056b3;
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
