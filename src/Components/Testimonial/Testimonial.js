@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './Testimonial.css'; 
 // import jit from '../../Assets/Jit_Paul.png'
 // import shakti from '../../Assets/Shakti.png'

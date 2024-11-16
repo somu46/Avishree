@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 import ReactTypingEffect from "react-typing-effect";

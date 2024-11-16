@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 import './floatingWhatsAppButton.css';
 

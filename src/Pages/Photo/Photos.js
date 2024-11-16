@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import PhotosData from "./importedPhoto.js"
 import './Photo.css';
 import LightGallery from 'lightgallery/react';
@@ -33,9 +33,9 @@ function Photos() {
                 plugins={[lgThumbnail, lgZoom,lgAutoplay, lgFullscreen, lgRotate, lgShare]}
             >
                {
-                PhotosData.map((photo,key)=>{
+                PhotosData.map((photo)=>{
                     return (
-                        <a key={photo.id} href={photo.image}>
+                        <a key={photo.id}  href={photo.image}>
                             <img alt="img1" src={photo.image} />
                         </a>  
                     );

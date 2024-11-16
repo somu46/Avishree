@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import logo from '../../Assets/FooterLogo.jpeg'; // Make sure this path is correct
 import './loading.css'
 const LoadingSpinner = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Home.css';
 import { motion, AnimatePresence } from "framer-motion";
 import Wedding from "../../Assets/wedding.jpg";
