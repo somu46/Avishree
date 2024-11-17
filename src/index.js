@@ -15,6 +15,8 @@ import Photos from './Pages/Photo/Photos';
 import Videos from './Pages/Videos/Videos';
 import LoadingSpinner from './Components/Loding/Loding.js';
 
+
+
 // Lazy load the Root component with a delay
 const Root = lazy(() => waitPromise(1500).then(() => import('./Root/Root')));
 
