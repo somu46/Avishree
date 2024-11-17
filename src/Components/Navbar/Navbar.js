@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./Navbar.css";
 import Hamburger from "hamburger-react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -224,7 +224,9 @@ const handleClick=()=>{
               </NavLink>
             </li>
             <li>
-              <ButtonCom title="Book Now" fun={() => console.log('Booking')} />
+              <ButtonCom title="Book Now" 
+              
+              fun={handleClick} />
             </li>
           </ul>
         </nav>
