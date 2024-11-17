@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React , { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -11,7 +11,7 @@ import Menu from './Pages/Menu/Menu';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
-import Photos from './Pages/Photo/Photos';
+import Photos from './Pages/Photos/Photos';
 import Videos from './Pages/Videos/Videos';
 import LoadingSpinner from './Components/Loding/Loding.js';
 

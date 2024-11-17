@@ -103,7 +103,9 @@ const Footer = () => {
             </div>
             <div className="h-auto w-auto my-5">
               <h3 className="mb-3 text-center">Scan Me:</h3>
-              <img src={Qrcode} alt="Qr Code" className="h-32 w-32 bg-white" />
+         
+          <img src={Qrcode} alt="Qr Code" className="h-auto w-32 bg-white  rounded-none" />
+          
             </div>
           </div>
 
