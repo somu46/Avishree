@@ -13,9 +13,7 @@ const Hero = () => {
   }, []);
   return (
     <>
-      <section className="hero mt-[5.1rem] delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0"
-       data-taos-offset="300"
-      >
+      <section className="hero mt-[5.1rem] ">
         <video
           className="background-video opacity-90"
           ref={videoRef}
