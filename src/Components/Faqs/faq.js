@@ -32,6 +32,7 @@ const Faq = () => {
   return (
     <div className='faqs'>
       <div className="faq-left">
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <h1>FAQ's</h1>
         <h3>Frequently Asked Questions.</h3>
         <button>View All</button>
@@ -40,6 +41,7 @@ const Faq = () => {
       <div className="faq-right">
         {faqs.map((faq, index) => (
           <Expand key={index}  question={`Q.  ${faq.question}`}>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <p className='text-left m-1 pt-3 font-mono'>A: {faq.answer}</p>
           </Expand>
         ))}

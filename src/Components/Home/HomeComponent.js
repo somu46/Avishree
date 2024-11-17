@@ -25,25 +25,42 @@ const HomeCome = () => {
     <div className="home-container "
    
     >
+      
         <Hero/>
         <div  className="bg-image">
         <div className="max-w-screen bg-transparent opacity-80 backdrop-blur-xl">
         <IntroSection/>
         </div>
-          </div>
+        </div>
+<div>
       <Feature />
+
+<div>
       <FloatingWhatsAppButton/>
+</div>
+<div>
       <HowItWorks/>
+</div>
+<div>
       <Services />
+</div>
+<div>
       <BanquetHalls/>
+</div>
+<div>
       <CorporateClients/>
+</div>
+<div>
       {/* <GoogleReviews/> */}
+</div>
       {/* <Testimonial/> */}
       <StatsSection/>
+</div> <div>     
       <Faq/>
-      
+
+
     </div>
-  );
+ </div> );
 };
 
 export default HomeCome;
