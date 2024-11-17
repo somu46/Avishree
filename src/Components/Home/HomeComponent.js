@@ -14,10 +14,18 @@ import FloatingWhatsAppButton from "../FloatWhatsapp/FloatingWhatsAppButton";
 // import GoogleReviews from '../GoogleReviews/GoogleReviews.js';
 
 
+
+
+{/* <div class="" ><div></div> */}
+
+
+
 const HomeCome = () => {
   return (
-    <div className="home-container">
-        <Hero />
+    <div className="home-container "
+   
+    >
+        <Hero/>
         <div  className="bg-image">
         <div className="max-w-screen bg-transparent opacity-80 backdrop-blur-xl">
         <IntroSection/>
