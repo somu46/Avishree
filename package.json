@@ -30,7 +30,6 @@
     "sweetalert2": "^11.14.5",
     "sweetalert2-react-content": "^5.0.7",
     "swiper": "^11.1.14",
-    "taos": "^1.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
