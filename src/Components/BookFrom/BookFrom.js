@@ -4,9 +4,17 @@ import emailjs from "@emailjs/browser";
 // import { useLocation } from "react-router-dom";
 import Swal from 'sweetalert2';
 import ButtonCom from "../Button/Button";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const QuoteForm = () => {
 
+
+
+  // const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleCaptchaChange = (value) => {
+    // setCaptchaValue(value);
+  };
   // const locationData=useLocation();
 
   // console.log(locationData.state);
@@ -182,16 +190,16 @@ const QuoteForm = () => {
      
 
 
-
+        <div>
+        <ReCAPTCHA
+        sitekey="fghjjhgfghghghg"
+        onChange={handleCaptchaChange}
+      />
+        </div>
      <div  className=" lg:w-[30%] lg:m-auto">
      <ButtonCom title="Request Quote"/>
      </div>
-          {/* <button
-            type="submit"
-            className="w-full py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-          >
-            Request Quote
-          </button> */}
+         
         </form>
       </div>
     </div>
