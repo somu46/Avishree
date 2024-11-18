@@ -85,14 +85,14 @@ const handleClick=()=>{
             <NavLink activeClass="active"  to="/menu">Menu</NavLink>
           </li>
           <li className="nav-item gallery-dropdown">
-            <NavLink activeClass="active"  to="/gallery">Gallery</NavLink>
+            <span   >Gallery</span>
             <ArrowDropDownIcon/>
             <ul className="dropdown bg-white bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
               <li>
-                <NavLink activeClass="active"  to="/gallery/videos">Video</NavLink>
+                <NavLink activeClass="active"   to="/gallery/videos">Video</NavLink>
               </li>
               <li>
-                <NavLink activeClass="active"  to="/gallery/Photos">Photo</NavLink>
+                <NavLink activeClass="active"   to="/gallery/Photos">Photo</NavLink>
               </li>
             </ul>
           </li>

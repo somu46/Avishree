@@ -8,12 +8,12 @@ import QuoteForm from './Components/BookFrom/BookFrom';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Services from './Pages/Services/Services';
 import Menu from './Pages/Menu/Menu';
-import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
-import Photos from './Pages/Photos/Photos';
+// import Photos from './Pages/Photos/Photos';
 import Videos from './Pages/Videos/Videos';
 import LoadingSpinner from './Components/Loding/Loding.js';
+import GalleryComponent from './Pages/Gallery/Gallery.js';
 
 
 
@@ -60,10 +60,6 @@ const Rout = createBrowserRouter([
         element: <Menu />
       },
       {
-        path: "/Gallery",
-        element: <Gallery />
-      },
-      {
         path: "/Contact",
         element: <Contact />
       },
@@ -73,7 +69,7 @@ const Rout = createBrowserRouter([
       },
       {
         path: "/Gallery/Photos",
-        element: <Photos />
+        element:<GalleryComponent />
       },
       {
         path: "/Gallery/Videos",
