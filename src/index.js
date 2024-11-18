@@ -60,7 +60,7 @@ const Rout = createBrowserRouter([
         element: <Menu />
       },
       {
-        path: "/Contact",
+        path: "/Contact-us",
         element: <Contact />
       },
       {
@@ -68,11 +68,11 @@ const Rout = createBrowserRouter([
         element: <Blogs />
       },
       {
-        path: "/Gallery/Photos",
+        path: "/Photos",
         element:<GalleryComponent />
       },
       {
-        path: "/Gallery/Videos",
+        path: "/videos",
         element: <Videos />
       },
       {

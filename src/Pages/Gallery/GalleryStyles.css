@@ -1,40 +1,4 @@
-/* GalleryStyles.css */
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f9fa;
-    padding: 3rem;
-  }
-  
-  .gallery-wrapper {
-    width: 90%;
-    max-width: 1200px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  .image-gallery {
-    border-radius: 20px;
-  }
-  
-  .image-gallery-slide img {
-    border-radius: 15px;
-  }
-  
-  .image-gallery-thumbnail img {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-gallery-thumbnail:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  .image-gallery-slide img {
+.image-gallery-slide img {
     border-radius: 0.75rem;
     transition: transform 0.3s ease-in-out;
   }
