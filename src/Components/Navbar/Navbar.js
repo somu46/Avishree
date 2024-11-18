@@ -98,21 +98,21 @@ const handleClick=()=>{
              onClick={handleHistory}>Menu</NavLink>
           </li>
           <li className="nav-item gallery-dropdown">
-            <span   >Gallery</span>
+            <span>Gallery</span>
             <ArrowDropDownIcon/>
             <ul className="dropdown bg-white bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
               <li>
-                <NavLink activeClass="active"   to="/gallery/videos"
+                <NavLink activeClass="active"   to="/videos"
                  onClick={handleHistory}>Video</NavLink>
               </li>
               <li>
-                <NavLink activeClass="active"   to="/gallery/Photos"
+                <NavLink activeClass="active"   to="/Photos"
                  onClick={handleHistory}>Photo</NavLink>
               </li>
             </ul>
           </li>
           <li>
-            <NavLink activeClass="active"  to="/contact"
+            <NavLink activeClass="active"  to="/contact-us"
              onClick={handleHistory}>Contact Us</NavLink>
           </li>
           <li>
@@ -203,7 +203,7 @@ const handleClick=()=>{
                 <ul className="pl-4 space-y-2">
                   <li>
                     <NavLink
-                      to="/Gallery/photos"
+                      to="/photos"
                       className={({ isActive }) =>
                         isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                       }
@@ -219,7 +219,7 @@ const handleClick=()=>{
                   </li>
                   <li>
                     <NavLink
-                      to="/Gallery/videos"
+                      to="/videos"
                       className={({ isActive }) =>
                         isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                       }
