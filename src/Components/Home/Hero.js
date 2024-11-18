@@ -52,11 +52,13 @@ const Hero = () => {
   </p>
 
   {/* Button */}
-  <NavLink to="/book">
-    <button className="m-auto w-[40%] lg:max-w-[15%] overflow-hidden flex items-center justify-center bg-white bg-opacity-70 border-2 border-rose-500 text-rose-500 text-sm font-semibold cursor-pointer rounded-lg lg:mt-3 hover:border-blue-400 hover:text-blue-400 transition-all duration-300 ease-in-out hover:tracking-wider pt-3">
-      <p className="font-mono mt-2">Book Now</p>
+ <div className=" m-auto absolute flex items-center  justify-center  bottom-[13rem] lg:bottom-[10rem] w-[90%]  ">
+ <NavLink to="/book">
+    <button className=" right-0  w-[120%] lg:w-[170%] overflow-hidden flex items-center text-center justify-center bg-white bg-opacity-70 border-2 border-rose-500 text-rose-500 text-sm font-semibold cursor-pointer rounded-lg lg:mt-3 hover:border-blue-400 hover:text-blue-400 transition-all duration-300 ease-in-out hover:tracking-wider pt-1">
+      <p className="font-mono mt-3">Book Now</p>
     </button>
   </NavLink>
+ </div>
 </div>
 
 
