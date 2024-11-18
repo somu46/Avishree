@@ -27,12 +27,13 @@
     padding: 60px 20px;
   }
   .background-video {
-    margin-top: 5rem;
+    margin-top: 5.1rem;
+    margin-bottom: 3rem;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 90%;
     object-fit: cover; 
     background-attachment: fixed;
     z-index: -1; /* Places the video behind other content */
@@ -63,7 +64,7 @@
   }
   
   /* Features Section */
-  .features {
+  /* .features {
     padding: 40px 20px;
     text-align: center;
   }
@@ -85,11 +86,11 @@
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
-  }
-  
+  } */
+/*   
   .feature-card h3 {
     margin-bottom: 10px;
-  }
+  } */
   
   /* Services Section */
   .services {
@@ -128,18 +129,18 @@
   }
 
 
-  .step-number {
-    font-size: 3rem; /* Adjust as needed */
+  /* .step-number {
+    font-size: 3rem; 
     font-weight: bold;
-    color: #FFBF00; /* Original color */
+    color: #FFBF00; 
     margin-bottom: 1rem;
     transition: transform 0.3s ease, color 0.3s ease;
-  }
+  } */
   
-  .step-number:hover {
-    transform: scale(1.1); /* Slightly enlarges the number */
-    color: #FF8000; /* Changes color on hover */
-  }
+  /* .step-number:hover {
+    transform: scale(1.1); 
+    color: #FF8000; 
+  } */
   
   
   .swiper-button-next,
@@ -167,6 +168,10 @@
   }
   
   @media (max-width: 768px) {
+
+    .background-video{
+      height: 70%;
+    }
     .features-cards {
       display: flex;
       flex-direction: column;

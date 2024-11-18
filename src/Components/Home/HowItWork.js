@@ -1,5 +1,4 @@
-// import React from 'react';
-import './Home.css'
+import './Home.css';
 
 function HowItWorks() {
   const steps = [
@@ -27,17 +26,28 @@ function HowItWorks() {
       number: '05',
       title: 'Post-Event Cleanup and Feedback',
       description: 'We handle post-event cleanup and welcome your feedback to continue improving our services.'
-    },
+    }
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-16">
+      {/* Section Heading */}
       <h2 className="text-center text-4xl font-bold text-teal-800 mb-12">How It Works</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      {/* Steps Container */}
+      <div className="flex flex-wrap justify-center gap-8">
         {steps.map((step, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <div className="step-number">{step.number}</div>
+          <div 
+            key={index} 
+            className="flex flex-col items-center text-center bg-white shadow-lg rounded-xl p-6 w-full max-w-xs transition-transform transform hover:-translate-y-2"
+          >
+            {/* Step Number */}
+            <div className="step-number text-4xl font-bold text-teal-500 mb-4">{step.number}</div>
+            
+            {/* Step Title */}
             <h3 className="text-xl font-semibold text-teal-900 mb-2">{step.title}</h3>
+            
+            {/* Step Description */}
             <p className="text-gray-600">{step.description}</p>
           </div>
         ))}

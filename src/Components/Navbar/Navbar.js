@@ -238,7 +238,7 @@ const handleClick=()=>{
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/contact-us"
                 className={({ isActive }) =>
                   isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                 }

@@ -65,7 +65,7 @@ const Menu = () => {
 
 
             <Box
-              className="bg-white rounded-lg shadow-lg p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="bg-white rounded-lg shadow-lg  p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
               {selectedMenu && (
                 <div className="flex flex-col items-center">
