@@ -34,7 +34,14 @@ const Navbar = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
  const navigate=useNavigate();
 
+ const handleHistory=()=>{
+  window.scrollTo(0, 0);
+}
 
+const handleMobileHistory=()=>{
+  window.scrollTo(0, 0);
+  setIsOpen(false);
+}
 
 
 const handleClick=()=>{
@@ -46,11 +53,13 @@ const handleClick=()=>{
   return (
     <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
       <div className="navbar-left  ">
-        <Link to="/">  
+        <Link to="/"
+         onClick={handleHistory}>  
           <img src="logo.png" alt="Avishree-Logo" className="logo" />
         </Link>
         <div className="brand">
-          <NavLink to="/">
+          <NavLink to="/"
+           onClick={handleHistory}>
            
             <h1>Avishree Hospitality Pvt. Ltd.</h1>
           </NavLink>
@@ -73,31 +82,38 @@ const handleClick=()=>{
       
         <ul className="navbar-menu">
           <li>
-            <NavLink activeClass="active" to="/">Home</NavLink>
+            <NavLink activeClass="active" to="/"
+             onClick={handleHistory}>Home</NavLink>
           </li>
           <li>
-            <NavLink activeClass="active"  to="/AboutUs">About Us</NavLink>
+            <NavLink activeClass="active"  to="/AboutUs"
+             onClick={handleHistory}>About Us</NavLink>
           </li>
           <li>
-            <NavLink activeClass="active"  to="/services">Services</NavLink>
+            <NavLink activeClass="active"  to="/services"
+             onClick={handleHistory}>Services</NavLink>
           </li>
           <li>
-            <NavLink activeClass="active"  to="/menu">Menu</NavLink>
+            <NavLink activeClass="active"  to="/menu"
+             onClick={handleHistory}>Menu</NavLink>
           </li>
           <li className="nav-item gallery-dropdown">
             <span   >Gallery</span>
             <ArrowDropDownIcon/>
             <ul className="dropdown bg-white bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
               <li>
-                <NavLink activeClass="active"   to="/gallery/videos">Video</NavLink>
+                <NavLink activeClass="active"   to="/gallery/videos"
+                 onClick={handleHistory}>Video</NavLink>
               </li>
               <li>
-                <NavLink activeClass="active"   to="/gallery/Photos">Photo</NavLink>
+                <NavLink activeClass="active"   to="/gallery/Photos"
+                 onClick={handleHistory}>Photo</NavLink>
               </li>
             </ul>
           </li>
           <li>
-            <NavLink activeClass="active"  to="/contact">Contact Us</NavLink>
+            <NavLink activeClass="active"  to="/contact"
+             onClick={handleHistory}>Contact Us</NavLink>
           </li>
           <li>
             {/* <NavLink activeClass="active"  to="/blogs">Blogs</NavLink> */}
@@ -133,7 +149,8 @@ const handleClick=()=>{
                 className={({ isActive }) =>
                   isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                 }
-                onClick={() => setIsOpen(false)}
+              
+                 onClick={handleMobileHistory}
               >
                 Home
               </NavLink>
@@ -144,7 +161,8 @@ const handleClick=()=>{
                 className={({ isActive }) =>
                   isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                 }
-                onClick={() => setIsOpen(false)}
+               
+                 onClick={handleMobileHistory}
               >
                 About Us
               </NavLink>
@@ -155,7 +173,8 @@ const handleClick=()=>{
                 className={({ isActive }) =>
                   isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                 }
-                onClick={() => setIsOpen(false)}
+             
+                 onClick={handleMobileHistory}
               >
                 Services
               </NavLink>
@@ -166,7 +185,8 @@ const handleClick=()=>{
                 className={({ isActive }) =>
                   isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                 }
-                onClick={() => setIsOpen(false)}
+               
+                 onClick={handleMobileHistory}
               >
                 Menu
               </NavLink>
@@ -190,7 +210,9 @@ const handleClick=()=>{
                       onClick={() => {
                         setIsOpen(false);
                         setIsGalleryOpen(false);
+                        handleMobileHistory();
                       }}
+                       
                     >
                       Photos
                     </NavLink>
@@ -204,7 +226,9 @@ const handleClick=()=>{
                       onClick={() => {
                         setIsOpen(false);
                         setIsGalleryOpen(false);
+                        handleMobileHistory();
                       }}
+                      
                     >
                       Videos
                     </NavLink>
@@ -218,7 +242,8 @@ const handleClick=()=>{
                 className={({ isActive }) =>
                   isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
                 }
-                onClick={() => setIsOpen(false)}
+              
+                 onClick={handleMobileHistory}
               >
                 Contact Us
               </NavLink>

@@ -1,6 +1,6 @@
 // import React from "react";
 import "./Footer.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
@@ -10,6 +10,13 @@ import FooterLogo from "../../Assets/FooterLogo.jpeg";
 import ReactTypingEffect from "react-typing-effect";
 
 const Footer = () => {
+
+
+  const handleHistory=()=>{
+    window.scrollTo(0, 0);
+  }
+
+
   return (
     <>
       <footer className="footer max-w-[100%]">
@@ -18,11 +25,17 @@ const Footer = () => {
           <div className="footer-section company-info">
             <div className="flex justify-center rounded-sm ">
               {" "}
+              <Link
+              onClick={handleHistory}
+                to='/'
+              >
               <img
+
                 src={FooterLogo}
                 alt="Company Logo"
                 className="footer-logo rounded-xl"
               />
+              </Link>
             </div>
             <p className="text-2xl ">Avishree Hospitality Pvt. Ltd.</p>
             <p>
@@ -41,22 +54,34 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/"
+                onClick={handleHistory}
+                >Home</NavLink>
               </li>
               <li>
-                <NavLink to="/AboutUs">About Us</NavLink>
+                <NavLink to="/AboutUs"
+                 onClick={handleHistory}
+                 >About Us</NavLink>
               </li>
               <li>
-                <NavLink to="/services">Services</NavLink>
+                <NavLink to="/services"
+                 onClick={handleHistory}
+                 >Services</NavLink>
               </li>
               <li>
-                <NavLink to="/menu">Menu</NavLink>
+                <NavLink to="/menu"
+                 onClick={handleHistory}
+                 >Menu</NavLink>
               </li>
               <li>
-                <NavLink to="/gallery">Gallery</NavLink>
+                <NavLink to="/gallery"
+                 onClick={handleHistory}
+                 >Gallery</NavLink>
               </li>
               <li>
-                <NavLink to="/contact">Contact Us</NavLink>
+                <NavLink to="/contact"
+                 onClick={handleHistory}
+                 >Contact Us</NavLink>
               </li>
               {/* <li>
                 <NavLink to="/blogs">Blogs</NavLink>
