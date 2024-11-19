@@ -36,7 +36,7 @@ function Photos() {
         {PhotosData.map((hall, index) => (
           <div
             key={index}
-            className="banquet-card bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+            className="banquet-card bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105"
             onClick={() => openLightbox(hall.image)}
           >
             <img src={hall.image} alt={`pho ${hall.id}`} className="w-full h-48 object-cover"/>
@@ -53,7 +53,7 @@ function Photos() {
           <div className="relative">
             <img src={selectedImage} alt="Enlarged" className="w-full max-h-[80vh] object-contain"/>
             <button
-              className="absolute top-2 text-5xl right-2 text-white bg-transparent rounded-full p-2"
+              className="absolute top-2 text-5xl right-2 text-white bg-transparent rounded-full p-2 focus:outline-none hover:bg-gray-800"
               onClick={closeLightbox}
             >
               &times;
@@ -61,8 +61,7 @@ function Photos() {
           </div>
         </div>
       )}
-            <FloatingWhatsAppButton/>
-
+      <FloatingWhatsAppButton />
     </div>
   );
 }

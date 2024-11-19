@@ -15,6 +15,14 @@ import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhats
 
 
 const ContactUs = () => {
+
+    const handleWhatsAppClick = () => {
+      const defaultMessage = "Hello! I am interested in the catering and event management services offered by Avishree Hospitality Pvt. Ltd. Could you please provide more details?";
+  
+      window.open(`https://wa.me/+918777584271?text=${encodeURIComponent(defaultMessage)}`, '_blank');
+    };
+
+
   return (
     <> <ContactSection/>
     <div className="contact-container ">
@@ -37,13 +45,13 @@ const ContactUs = () => {
       <div className='mt-10'> <h1>Follow Us On: </h1></div>   
       <div className="contact-options ">
    
-        <a href="https://www.youtube.com/@Avishree-241"  className="contact-link youtube " target="_blank"  rel="noopener noreferrer">
+        <a href="https://www.youtube.com/@avishreehospitality"  className="contact-link youtube " target="_blank"  rel="noopener noreferrer">
          <YouTubeIcon/>
         </a>
-        <a href="mailto:example@example.com" className="contact-link mail ">
+        <a href="mailto:example@example.com" className="hidden lg:flex  mail ">
          <MarkunreadIcon />
         </a>
-        <a href="https://wa.me/1234567890" className="contact-link whatsapp" target="_blank" rel="noopener noreferrer">
+        <a  onClick={handleWhatsAppClick} href='####'   className="contact-link whatsapp" target="_blank" rel="noopener noreferrer">
          <WhatsAppIcon  />
         </a>
         <a href="https://www.facebook.com/profile.php?id=61565446652658" className="contact-link facebook " target="_blank" rel="noopener noreferrer">

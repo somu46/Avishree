@@ -1,12 +1,13 @@
-// import React from 'react';
+import React from 'react';
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 import './floatingWhatsAppButton.css';
 
 const FloatingWhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+918777584271', '_blank'); // Replace with your WhatsApp number
-  };
+    const defaultMessage = "Hello! I am interested in the catering and event management services offered by Avishree Hospitality Pvt. Ltd. Could you please provide more details?";
 
+    window.open(`https://wa.me/+918777584271?text=${encodeURIComponent(defaultMessage)}`, '_blank');
+  };
   const handleCallClick = () => {
     window.open('tel:8777584271'); // Replace with your phone number
   };
