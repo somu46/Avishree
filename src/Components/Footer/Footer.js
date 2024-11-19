@@ -74,9 +74,9 @@ const Footer = () => {
                  >Menu</NavLink>
               </li>
               <li>
-                <NavLink to="/gallery"
+                <span 
                  onClick={handleHistory}
-                 >Gallery</NavLink>
+                 >Gallery</span>
               </li>
               <li>
                 <NavLink to="/contact"
@@ -118,7 +118,7 @@ const Footer = () => {
                 <XIcon />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@avishreehospitality"
                 target="_blank"
                 rel="noreferrer"
                 className="social-icon"
