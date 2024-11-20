@@ -1,14 +1,13 @@
-
 const PhotosData = [
     {
       id: 1,
-      original: 'https://images.pexels.com/photos/19555540/pexels-photo-19555540/free-photo-of-decorative-crown-of-thorns-plant.jpeg?auto=compress&cs=tinysrgb&w=600',
-      thumbnail: 'https://images.pexels.com/photos/19555540/pexels-photo-19555540/free-photo-of-decorative-crown-of-thorns-plant.jpeg?auto=compress&cs=tinysrgb&w=150',
+      original: 'https://drive.google.com/file/d/1Z4z24M0P7Mq8tjO2UKJVn_WfCuyVNKq3/view?usp=drive_link',
+      thumbnail: 'https://drive.google.com/file/d/1Z4z24M0P7Mq8tjO2UKJVn_WfCuyVNKq3/view?usp=drive_link',
     },
     {
       id: 2,
-      original: 'https://images.pexels.com/photos/1250957/pexels-photo-1250957.jpeg?auto=compress&cs=tinysrgb&w=600',
-      thumbnail: 'https://images.pexels.com/photos/1250957/pexels-photo-1250957.jpeg?auto=compress&cs=tinysrgb&w=150',
+      original: 'https://drive.google.com/file/d/1255frrmiXYsAwQfS7cCf7-esGJPNzYNp/view?usp=sharing',
+      thumbnail: 'https://drive.google.com/file/d/1255frrmiXYsAwQfS7cCf7-esGJPNzYNp/view?usp=sharing',
     },
     {
       id: 3,
