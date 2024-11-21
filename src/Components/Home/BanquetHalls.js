@@ -1,31 +1,62 @@
-// import React from 'react';
-
+import React, { useState } from 'react';
+import b1 from '../../Assets/Car-hire.jpg'
+import b2 from '../../Assets/BabyShowering.jpg'
+import b3 from '../../Assets/BengaliFood.webp'
 const banquetHalls = [
   {
     name: 'Haldirams',
     description: 'A spacious and elegant venue for weddings, receptions, and large gatherings. Features modern amenities and beautiful decor.',
-    image: 'path/to/sai-arati-image.jpg'
+    image: b1,
+    album: [b1, b2, b3]
   },
   {
     name: 'Royal Banquet',
     description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
-    image: 'path/to/grand-royal-image.jpg'
+    image: b2,
+    album: [b2, b1, b3]
   },
   {
     name: 'Shantibon',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
-    image: 'path/to/sunshine-image.jpg'
+    image: b3,
+    album: [b3, b2, b1]
   }
 ];
 
 function BanquetHalls() {
+  const [selectedHall, setSelectedHall] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [enlargedImage, setEnlargedImage] = useState(null);
+
+  const openAlbum = (hall) => {
+    setSelectedHall(hall);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedHall(null);
+    setIsModalOpen(false);
+  };
+
+  const enlargeImage = (image) => {
+    setEnlargedImage(image);
+  };
+
+  const closeEnlargedImage = () => {
+    setEnlargedImage(null);
+  };
+
   return (
     <div className="container mx-auto p-8">
       <h2 className="text-3xl font-bold text-center mb-8">Our Banquet Halls</h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {banquetHalls.map((hall, index) => (
-          <div key={index} className="banquet-card bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src={hall.image} alt={hall.name} className="w-full h-48 object-cover"/>
+          <div
+            key={index}
+            className="banquet-card bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+            onClick={() => openAlbum(hall)}
+          >
+            <img src={hall.image} alt={hall.name} className="w-full h-48 object-cover" />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{hall.name}</h3>
               <p className="text-gray-600">{hall.description}</p>
@@ -33,6 +64,42 @@ function BanquetHalls() {
           </div>
         ))}
       </div>
+
+      {/* Modal */}
+      {isModalOpen && selectedHall && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white rounded-lg overflow-hidden w-11/12 max-w-4xl p-6 relative">
+          <button className="absolute top-4 right-4 text-black hover:text-gray-900 text-3xl font-bold" onClick={closeModal}>
+            &times;
+          </button>
+            <h3 className="text-2xl font-bold mb-4">{selectedHall.name}</h3>
+            <p className="text-gray-600 mb-6">{selectedHall.description}</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {selectedHall.album.map((photo, index) => (
+                <img
+                  key={index}
+                  src={photo}
+                  alt={`Photo ${index + 1}`}
+                  className="w-full h-32 object-cover rounded-lg cursor-pointer"
+                  onClick={() => enlargeImage(photo)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Enlarged Image Modal */}
+      {enlargedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+          <div className="relative">
+          <button className="absolute top-4 right-4 text-black hover:text-gray-900 text-3xl font-bold" onClick={closeModal}>
+             &times;
+          </button>
+            <img src={enlargedImage} alt="Enlarged" className="max-w-full max-h-screen rounded-lg" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
