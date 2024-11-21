@@ -18,7 +18,24 @@ const AboutUs = () => {
           weddings, corporate events, and live shows.
         </p>
       </div>
-
+           {/* Company Description on the right */}
+           <div className="flex flex-wrap items-center flex-col founder-info lg:m-3 lg:w-[45%]">
+          <img
+            src={Company}
+            alt="Aurodeep Paul"
+            className="founder-image"
+          />
+          <div className="lg:p-3">
+            <h1 className="text-2xl font-semibold  text-center my-3">Avishree Hospitality Pvt. Ltd. </h1>
+          </div>
+          <p className=" text-center">
+            We pride ourselves on using only the finest ingredients, innovative
+            ideas, and meticulous planning to ensure that every event we handle
+            is nothing short of spectacular. From elegant weddings to vibrant
+            corporate events, live shows, and intimate gatherings, we take care
+            of every detail so you can focus on enjoying your special day.
+          </p>
+        </div>
       {/* Founder and Company Description Section */}
       <div className="flex flex-wrap flex-row justify-evenly  h-auto lg:p-3 my-10">
         {/* Founder Section on the left */}
@@ -44,24 +61,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Company Description on the right */}
-        <div className="flex flex-wrap items-center flex-col founder-info lg:m-3 lg:w-[45%]">
-          <img
-            src={Company}
-            alt="Aurodeep Paul"
-            className="founder-image"
-          />
-          <div className="lg:p-3">
-            <h1 className="text-2xl font-semibold  text-center my-3">Avishree Hospitality Pvt. Ltd. </h1>
-          </div>
-          <p className=" text-center">
-            We pride ourselves on using only the finest ingredients, innovative
-            ideas, and meticulous planning to ensure that every event we handle
-            is nothing short of spectacular. From elegant weddings to vibrant
-            corporate events, live shows, and intimate gatherings, we take care
-            of every detail so you can focus on enjoying your special day.
-          </p>
-        </div>
+     
       </div>
 
       {/* Team Section */}
