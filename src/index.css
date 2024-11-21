@@ -3,11 +3,28 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+
+
+
 *{
   font-family: 'Lobster', cursive;
     letter-spacing: 0.4px;
+    /* background-color: #121212; */
   
 }
+
+
+/* 
+h1, h2, h3, h4, h5, h6, a {
+  color: gold;
+} */
+
+/* Styles for paragraph elements */
+/* p,span {
+  color: white;
+} */
+
+
 
 *{
   scrollbar-width: thin;

@@ -51,7 +51,7 @@ const handleClick=()=>{
 }
 
   return (
-    <nav className="navbar   bg-white  md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
+    <nav className="navbar     md:bg-transparent  bg-opacity-50 md:bg-opacity-70  backdrop-blur-md">
       <div className="navbar-left  ">
         <Link to="/"
          onClick={handleHistory}>  
