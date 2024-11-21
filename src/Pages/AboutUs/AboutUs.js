@@ -2,13 +2,12 @@
 import teamData from "./teamData";
 import "./AboutUs.css";
 import founderImage from "../../Assets/Aurodeep Paul.jpg"; // Import the founder's image
-import Company from "../../Assets/logo.png"
+import Company from "../../Assets/logo.png";
 import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
-
 
 const AboutUs = () => {
   return (
-    <div className="about-container mt-[5.1rem]">
+    <div className="about-container mt-[5.1rem] border ">
       {/* Header Section */}
       <div className="about-header">
         <h1>About Us</h1>
@@ -18,15 +17,40 @@ const AboutUs = () => {
           weddings, corporate events, and live shows.
         </p>
       </div>
-           {/* Company Description on the right */}
-           <div className="flex flex-wrap items-center flex-col founder-info lg:m-3 lg:w-[45%]">
-          <img
-            src={Company}
-            alt="Aurodeep Paul"
-            className="founder-image"
-          />
+
+      <div className="flex flex-wrap  w-full ">
+        {/* <div className="flex flex-wrap flex-row justify-evenly  h-auto lg:p-3 border border-green-500"> */}
+          {/* Founder Section on the left */}
+          <div className="flex  flex-col justify-center items-center  m-3 lg:w-[48%] ">
+            <img
+              src={founderImage}
+              alt="Aurodeep Paul"
+              className="founder-image"
+              />
+            <div className="founder-info flex flex-col text-center py-3">
+              <h3>
+                <b>Aurodeep Paul</b>
+              </h3>
+              <p className="my-1">
+                <b>Founder & CEO</b>
+              </p>
+              {/* Founder and Company Description Section */}
+              <p className="founder-description">
+                Aurodeep Paul brings a wealth of experience and a passion for
+                hospitality to Avishree Hospitality Pvt. Ltd. His vision is to
+                create exceptional events with personalized service, ensuring
+                that each celebration is as unique as the clients we serve.
+              </p>
+            </div>
+          </div>
+        {/* </div> */}
+        {/* Company Description on the right */}
+        <div className="flex flex-wrap items-center flex-col founder-info lg:m-3 lg:w-[45%]">
+          <img src={Company} alt="Aurodeep Paul" className="founder-image" />
           <div className="lg:p-3">
-            <h1 className="text-2xl font-semibold  text-center my-3">Avishree Hospitality Pvt. Ltd. </h1>
+            <h1 className="text-2xl font-semibold  text-center my-3">
+              Avishree Hospitality Pvt. Ltd.{" "}
+            </h1>
           </div>
           <p className=" text-center">
             We pride ourselves on using only the finest ingredients, innovative
@@ -36,32 +60,6 @@ const AboutUs = () => {
             of every detail so you can focus on enjoying your special day.
           </p>
         </div>
-      {/* Founder and Company Description Section */}
-      <div className="flex flex-wrap flex-row justify-evenly  h-auto lg:p-3 my-10">
-        {/* Founder Section on the left */}
-        <div className="flex  flex-col justify-center items-center  m-3 lg:w-[48%] ">
-          <img
-            src={founderImage}
-            alt="Aurodeep Paul"
-            className="founder-image"
-          />
-          <div className="founder-info flex flex-col text-center py-3">
-            <h3>
-              <b>Aurodeep Paul</b>
-            </h3>
-            <p className="my-1">
-              <b>Founder & CEO</b>
-            </p>
-            <p className="founder-description">
-              Aurodeep Paul brings a wealth of experience and a passion for
-              hospitality to Avishree Hospitality Pvt. Ltd. His vision is to
-              create exceptional events with personalized service, ensuring that
-              each celebration is as unique as the clients we serve.
-            </p>
-          </div>
-        </div>
-
-     
       </div>
 
       {/* Team Section */}
@@ -80,8 +78,7 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
-      <FloatingWhatsAppButton/>
-
+      <FloatingWhatsAppButton />
     </div>
   );
 };
