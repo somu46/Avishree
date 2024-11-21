@@ -193,7 +193,7 @@ const handleClick=()=>{
             </li>
             <li>
               <button
-                className="focus:outline-none"
+                className="focus:outline-none mb-2"
                 onClick={() => setIsGalleryOpen(!isGalleryOpen)}
               >
                 Gallery
