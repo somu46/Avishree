@@ -55,13 +55,10 @@ const Menu = () => {
         <>
           {/* Cross button outside the Box */}
           <div
-            className="absolute top-14 right-5 lg:right-[26rem] z-50 cursor-pointer 
-             bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 
-             p-2 rounded-full shadow-md hover:bg-gray-200 dark:hover:bg-gray-700 
-             transition-all duration-200"
+            className="absolute top-14 right-5 lg:right-[26rem] z-50 cursor-pointer p-2    transition-all duration-200"
             onClick={handleClose}
           >
-            <LuUtensilsCrossed size={24} />
+            <button className='text-5xl text-red-500 hover:text-red-800' > &times; </button> 
           </div>
 
           <Box

@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
-import b1 from '../../Assets/Car-hire.jpg'
-import b2 from '../../Assets/BabyShowering.jpg'
-import b3 from '../../Assets/BengaliFood.webp'
+import b1 from '../../Assets/Car-hire.jpg';
+import b2 from '../../Assets/BabyShowering.jpg';
+import b3 from '../../Assets/BengaliFood.webp';
+
 const banquetHalls = [
   {
     name: 'Haldirams',
     description: 'A spacious and elegant venue for weddings, receptions, and large gatherings. Features modern amenities and beautiful decor.',
     image: b1,
-    album: [b1, b2, b3]
+    album: [b1, b2, b3],
   },
   {
     name: 'Royal Banquet',
     description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
     image: b2,
-    album: [b2, b1, b3]
+    album: [b2, b1, b3],
   },
   {
     name: 'Shantibon',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
     image: b3,
-    album: [b3, b2, b1]
-  }
+    album: [b3, b2, b1],
+  },
 ];
 
 function BanquetHalls() {
@@ -67,11 +68,20 @@ function BanquetHalls() {
 
       {/* Modal */}
       {isModalOpen && selectedHall && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg overflow-hidden w-11/12 max-w-4xl p-6 relative">
-          <button className="absolute top-4 right-4 text-black hover:text-gray-900 text-3xl font-bold" onClick={closeModal}>
-            &times;
-          </button>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white rounded-lg overflow-hidden w-11/12 max-w-4xl p-6 relative"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+          >
+            <button
+              className="absolute top-4 right-4 text-black hover:text-gray-900 text-5xl font-bold"
+              onClick={closeModal}
+            >
+              &times;
+            </button>
             <h3 className="text-2xl font-bold mb-4">{selectedHall.name}</h3>
             <p className="text-gray-600 mb-6">{selectedHall.description}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -91,12 +101,25 @@ function BanquetHalls() {
 
       {/* Enlarged Image Modal */}
       {enlargedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
-          <div className="relative">
-          <button className="absolute top-4 right-4 text-black hover:text-gray-900 text-3xl font-bold" onClick={closeModal}>
-             &times;
-          </button>
-            <img src={enlargedImage} alt="Enlarged" className="max-w-full max-h-screen rounded-lg" />
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
+          onClick={closeEnlargedImage}
+        >
+          <div
+            className="relative"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+          >
+            <button
+              className="absolute top-4 right-4 text-red-700 text-5xl font-bold hover:text-gray-300"
+              onClick={closeEnlargedImage}
+            >
+              &times;
+            </button>
+            <img
+              src={enlargedImage}
+              alt="Enlarged"
+              className="max-w-full max-h-screen rounded-lg"
+            />
           </div>
         </div>
       )}
