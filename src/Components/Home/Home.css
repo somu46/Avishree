@@ -92,6 +92,7 @@
     margin-bottom: 10px;
   } */
   
+  
   /* Services Section */
   .services {
     padding: 40px 20px;
@@ -168,6 +169,8 @@
   }
   
   @media (max-width: 768px) {
+    
+  
 
     .background-video{
       height: 70%;
@@ -180,7 +183,7 @@
       width:100%;
     }
     .feature-card{
-      width: 85%;
+      width: 100%;
     }
     .feature-card p{
       margin: 0 5px;

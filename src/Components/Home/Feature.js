@@ -11,7 +11,7 @@ const Feature = () => {
             </h2>
 
             {/* Feature Cards Container */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 px-8 lg:px-16">
+            <div className="features-cards grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-12 px-8 lg:px-16">
                 
                 {/* Card 1 - Exquisite Catering */}
                 <div className="feature-card group bg-white shadow-lg hover:shadow-2xl rounded-2xl p-8 transform transition-all duration-300 hover:-translate-y-3">

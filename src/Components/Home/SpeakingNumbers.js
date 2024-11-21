@@ -20,15 +20,15 @@ const StatsSection = () => {
 
   return (
     <section className="bg-gradient-to-r from-purple-100 to-blue-100 py-16" ref={ref}>
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto justify-center">
         <h2 className="text-4xl font-extrabold text-gray-800 mb-10">
           Our Numbers That Speak
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="bg-white shadow-lg rounded-lg p-8 flex flex-col items-center transform transition-transform hover:-translate-y-2 duration-300"
+              className="bg-white justify-self-center shadow-lg rounded-lg w-[80%] p-8 flex flex-col items-center transform transition-transform hover:-translate-y-2 duration-300"
             >
               <div className="text-5xl text-indigo-500 mb-4">{stat.icon}</div>
               <h3 className="text-5xl font-extrabold text-gray-900 mb-2">
