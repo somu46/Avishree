@@ -101,29 +101,17 @@ function BanquetHalls() {
 
       {/* Enlarged Image Modal */}
       {enlargedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
-          onClick={closeEnlargedImage}
-        >
-          <div
-            className="relative"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
-          >
-            <button
-              className="absolute top-4 right-4 text-red-700 text-5xl font-bold hover:text-gray-300"
-              onClick={closeEnlargedImage}
-            >
-              &times;
-            </button>
-            <img
-              src={enlargedImage}
-              alt="Enlarged"
-              className="max-w-full max-h-screen rounded-lg"
-            />
-          </div>
-        </div>
-      )}
+  <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeEnlargedImage} >
+    <div className="relative" onClick={(e) => e.stopPropagation()}>
+      <img src={enlargedImage} alt="Enlarged" className="w-[750px] h-[500px] object-cover rounded-lg"/>
+      <button className="absolute top-2 right-2 text-white text-5xl font-bold hover:text-gray-300" onClick={closeEnlargedImage}>
+        &times;
+      </button>
     </div>
+  </div>
+)}
+
+  </div>
   );
 }
 
