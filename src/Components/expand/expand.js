@@ -13,7 +13,7 @@ const Expand = ({ question, children }) => {
     <div className="expand-container ">
       <div className="expand-header" onClick={handleToggle} >
         <span className='text-red-500 font-mono '>{question}</span>
-        {isExpanded ? <MdOutlineKeyboardDoubleArrowUp /> : <MdOutlineKeyboardDoubleArrowDown />}
+        {isExpanded ? <MdOutlineKeyboardDoubleArrowUp size={25} /> : <MdOutlineKeyboardDoubleArrowDown size={25} />}
       </div>
 
       {isExpanded && (
