@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Typography, Modal, Box } from '@mui/material';
 import menuData from './MenuData';
 import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
-import { LuUtensilsCrossed } from 'react-icons/lu';
+
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
