@@ -1,8 +1,5 @@
 import  { useState } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa';
-
-
-
+import { MdOutlineKeyboardDoubleArrowDown ,MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 
 const Expand = ({ question, children }) => {
 
@@ -14,12 +11,9 @@ const Expand = ({ question, children }) => {
 
   return (
     <div className="expand-container ">
-      <div 
-        className="expand-header" 
-        onClick={handleToggle}
-      >
+      <div className="expand-header" onClick={handleToggle} >
         <span className='text-red-500 font-mono '>{question}</span>
-        {isExpanded ? <FaMinus /> : <FaPlus />}
+        {isExpanded ? <MdOutlineKeyboardDoubleArrowUp /> : <MdOutlineKeyboardDoubleArrowDown />}
       </div>
 
       {isExpanded && (
