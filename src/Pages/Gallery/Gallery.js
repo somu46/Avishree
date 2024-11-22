@@ -35,7 +35,7 @@ function GalleryComponent() {
                 {PhotosData.map((image, index) => {
                     return (
                         <a href={image.original} key={index}>
-                            <img alt={image.alt} src={image.thumbnail} />
+                            <img alt={image.alt} src={image.thumbnail} className='thumblin-img'/>
                         </a>
                     )
                 })}

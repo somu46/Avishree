@@ -11,21 +11,23 @@
 .lg-react-element {
   column-count: 3; /* Displays images in three columns */
   column-gap: 10px; /* Gap between columns */
+  
 }
 
 .app {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border: 3px solid red;
 }
 
-img {
-  width: 100%; /* Adjusts the image width */
+.thumblin-img {
+  width:330px; /* Adjusts the image width */
   display: block;
   padding: 5px;
   border-radius: 10px;
   transition: transform 0.2s ease; /* Smooth scaling effect */
- 
+
 }
 
 img:hover {
