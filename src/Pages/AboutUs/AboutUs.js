@@ -19,6 +19,11 @@ const AboutUs = () => {
       </div>
 
       <div className="flex flex-wrap  w-full ">
+        {/* </div> */}
+        {/* Company Description on the right */}
+        <div className="flex flex-wrap items-center flex-col founder-info lg:m-3 lg:w-[45%]">
+          <img src={Company} alt="Aurodeep Paul" className="founder-image" />
+          <div className="lg:p-3">
         {/* <div className="flex flex-wrap flex-row justify-evenly  h-auto lg:p-3 border border-green-500"> */}
           {/* Founder Section on the left */}
           <div className="flex  flex-col justify-center items-center  m-3 lg:w-[48%] ">
@@ -43,11 +48,6 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-        {/* </div> */}
-        {/* Company Description on the right */}
-        <div className="flex flex-wrap items-center flex-col founder-info lg:m-3 lg:w-[45%]">
-          <img src={Company} alt="Aurodeep Paul" className="founder-image" />
-          <div className="lg:p-3">
             <h1 className="text-2xl font-semibold  text-center my-3">
               Avishree Hospitality Pvt. Ltd.{" "}
             </h1>
