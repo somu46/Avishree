@@ -9,8 +9,8 @@
 
 
 .lg-react-element {
-  column-count: 3; /* Displays images in three columns */
-  column-gap: 9px; /* Gap between columns */
+  column-count: 3;
+  column-gap: 9px; 
   
 }
 
@@ -24,15 +24,15 @@
 }
 
 .thumblin-img {
-  width:330px; /* Adjusts the image width */
+  width:330px; 
   display: block;
   padding: 5px;
   border-radius: 10px;
-  transition: transform 0.2s ease; /* Smooth scaling effect */
+  transition: transform 0.2s ease; 
 
 }
 
 img:hover {
-  filter: opacity(0.9); /* Slight opacity change on hover */
-  transform: scale(1.01); /* Scales image slightly */
+  filter: opacity(0.9); 
+  transform: scale(1.01); 
 }

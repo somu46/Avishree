@@ -14,8 +14,8 @@ function GalleryComponent() {
 
     useEffect(() => {
         const fetchPhotos = async () => {
-            const apiKey = 'AIzaSyClV3dkL-ZsWjmhQoacCppPO7L9fxB3wio';
-            const folderId = '15vfI5ZXeUHahBmptmo6x_B6PA4jqmNnI';
+            const apiKey = process.env.REACT_APP_API_KEY;
+            const folderId = process.env.REACT_APP_FOLDER_ID;
 
             try {
                 const response = await axios.get(
@@ -29,6 +29,8 @@ function GalleryComponent() {
                     thumbnail: file.thumbnailLink,
                     alt: file.name
                 }));
+
+                console.log("Formatted Photos: ", formattedPhotos);
 
                 setPhotosData(formattedPhotos);
             } catch (error) {
@@ -52,6 +54,11 @@ function GalleryComponent() {
                             alt={image.alt} 
                             src={image.thumbnail} 
                             className='thumblin-img' 
+                            onError={(e) => {
+                                console.error(`Failed to load thumbnail for ${image.alt}`, e.target.src);
+                                e.target.src = 'https://via.placeholder.com/150'; 
+                                e.target.alt = 'Image not available';
+                            }}
                            
                         />
                     </a>
@@ -60,54 +67,5 @@ function GalleryComponent() {
         </div>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function GalleryComponent() {
-
-
-        
-//     const onInit = () => {
-//         console.log('lightGallery has been initialized');
-//     };
-//     return (
-//         <div className="mt-[5.1rem] app">
-//             <LightGallery
-//                 onInit={onInit}
-//                 speed={500}
-//                 plugins={[lgThumbnail, lgZoom, lgAutoplay, lgFullscreen, lgRotate, lgShare]}
-//             >
-
-//                 {PhotosData.map((image, index) => {
-//                     return (
-//                         <a href={image.original} key={index}>
-//                             <img alt={image.alt} src={image.thumbnail} className='thumblin-img'/>
-//                         </a>
-//                     )
-//                 })}
-
-
-//             </LightGallery>
-//         </div>
-//     );
-// }
-
 
 export default GalleryComponent;
