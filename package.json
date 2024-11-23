@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^8.17.1",
+    "axios": "^1.7.7",
     "flickr-justified-gallery": "^2.2.0",
     "hamburger-react": "^2.5.1",
     "imagesloaded": "^5.0.0",
