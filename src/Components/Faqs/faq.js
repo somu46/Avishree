@@ -32,7 +32,6 @@ const Faq = () => {
       <div className="faq-left">
         <h1>FAQ's</h1>
         <h3>Frequently Asked Questions</h3>
-        <button className="view-all-btn">View All</button>
       </div>
 
       {/* Right Section */}
