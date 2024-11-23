@@ -4,7 +4,7 @@ import './Intro.css';
 
 function IntroSection() {
   return (
-    <div className=" SizeContenar-14  bg-slate-50 opacity-100 p-8 mt-5  lg:mt-1 md:p-12 lg:p-16 mx-auto max-w-5xl rounded-lg shadow-md">
+    <div className=" SizeContenar-14   opacity-100 p-8 mt-5  lg:mt-1 md:p-12 lg:p-16 mx-auto max-w-5xl rounded-lg ">
       <div className='intro-text mt-5'>
       <h1 className=" opacity-100 text-3xl md:text-4xl lg:text-5xl font-bold text-center  mb-6">
         Avishree Hospitality Pvt. Ltd.
