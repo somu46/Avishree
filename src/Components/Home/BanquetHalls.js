@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import b1 from '../../Assets/Car-hire.jpg';
 import b2 from '../../Assets/BabyShowering.jpg';
 import b3 from '../../Assets/BengaliFood.webp';
+import b4 from '../../Assets/Exclusive.png';
 
 const banquetHalls = [
   {
@@ -21,6 +22,12 @@ const banquetHalls = [
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
     image: b3,
     album: [b3, b2, b1],
+  },
+  {
+    name: 'Sai Arati Banquet',
+    description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
+    image: b4,
+    album: [b4, b3, b2],
   },
 ];
 
@@ -50,11 +57,11 @@ function BanquetHalls() {
   return (
     <div className="container mx-auto p-8">
       <h2 className="text-3xl font-bold text-center mb-8">Our Banquet Halls</h2>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="border border-red-700 grid gap-y-8 gap-x-[-50rem] sm:grid-cols-1 lg:grid-cols-2 lg:grid-rows-2">
         {banquetHalls.map((hall, index) => (
           <div
             key={index}
-            className="banquet-card bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+            className="banquet-card bg-white border border-blue-700 shadow-lg rounded-lg overflow-hidden cursor-pointer max-w-lg mx-auto"
             onClick={() => openAlbum(hall)}
           >
             <img src={hall.image} alt={hall.name} className="w-full h-48 object-cover" />
@@ -101,17 +108,17 @@ function BanquetHalls() {
 
       {/* Enlarged Image Modal */}
       {enlargedImage && (
-  <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeEnlargedImage} >
-    <div className="relative" onClick={(e) => e.stopPropagation()}>
-      <img src={enlargedImage} alt="Enlarged" className="w-[750px] h-[500px] object-cover rounded-lg"/>
-      <button className="absolute top-2 right-2 text-white text-5xl font-bold hover:text-gray-300" onClick={closeEnlargedImage}>
-        &times;
-      </button>
-    </div>
-  </div>
-)}
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeEnlargedImage}>
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <img src={enlargedImage} alt="Enlarged" className="w-[750px] h-[500px] object-cover rounded-lg"/>
+            <button className="absolute top-2 right-2 text-white text-5xl font-bold hover:text-gray-300" onClick={closeEnlargedImage}>
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
 
-  </div>
+    </div>
   );
 }
 
