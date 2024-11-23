@@ -1,42 +1,35 @@
-import React from 'react';
-import LightGallery from 'lightgallery/react';
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
-import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
+import React, { useEffect, useState } from 'react';
 
-const PhotosData = [
-  {
-    id: 1,
-    image: '',
-  },
-  {
-    id: 2,
-    image: '',
-  },
-  {
-    id: 3,
-    image: '',
-  },
-];
+import fetchPhotos from '../../Services/PhotoServices';
+import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
 
 function Photos() {
-  const onInit = () => {
-    console.log('lightGallery has been initialized');
-  };
+
+  const [PhotosData, setPhotosData] = useState([]);
+
+  useEffect(() => {
+    const getPhotos = async () => {
+        const response = await fetchPhotos();
+        setPhotosData(response); 
+    };
+
+    getPhotos();
+}, []);
+
+
 
   return (
-    <div className="container mt-[5.1rem] mx-auto p-8">
+    <div className=" mt-[5.1rem] mx-auto p-8 flex flex-wrap justify-center flex-col">
       <h2 className="text-3xl font-bold text-center mb-8">Our Photo Gallery</h2>
-      <LightGallery speed={500} onInit={onInit} plugins={[lgThumbnail, lgZoom]}>
-        {PhotosData.map((img, id) => (
-          <a key={id} href={img.image}>
-            <img alt={`Gallery Thumbnail ${id + 1}`} src={img.image} />
+      <div className='border border-red-500 flex flex-wrap p-3'>
+      {PhotosData.map((img, id) => (
+          <a key={id} href={img.original} target='_blank'>
+            <img alt={`Gallery Thumbnail ${id + 1}`} src={img.thumbnail} className='border border-red-600 m-3' />
           </a>
         ))}
-      </LightGallery>
+     
+      </div>
+      
       <FloatingWhatsAppButton />
     </div>
   );
