@@ -25,7 +25,7 @@ function GalleryComponent() {
                 console.log("Files: ", files);
 
                 const formattedPhotos = files.map(file => ({
-                    original: file.webContentLink,
+                    original: `https://drive.usercontent.google.com/download?id=${file.id} `,
                     thumbnail: file.thumbnailLink,
                     alt: file.name
                 }));
