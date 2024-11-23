@@ -32,6 +32,7 @@ const banquetHalls = [
 ];
 
 function BanquetHalls() {
+  
   const [selectedHall, setSelectedHall] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [enlargedImage, setEnlargedImage] = useState(null);
