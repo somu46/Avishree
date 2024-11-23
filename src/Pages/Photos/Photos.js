@@ -23,7 +23,7 @@ function Photos() {
       <h2 className="text-3xl font-bold text-center mb-8">Our Photo Gallery</h2>
       <div className='border border-red-500 flex flex-wrap p-3'>
       {PhotosData.map((img, id) => (
-          <a key={id} href={img.original} target='_blank'>
+          <a key={id} href={img.original} target='_blank' rel="noreferrer" >
             <img alt={`Gallery Thumbnail ${id + 1}`} src={img.thumbnail} className='border border-red-600 m-3' />
           </a>
         ))}
