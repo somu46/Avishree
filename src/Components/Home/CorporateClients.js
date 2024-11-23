@@ -12,11 +12,11 @@ import Amartree from "../../Assets/AmarTree.jpg";
 const CorporateClients = () => {
   const clients = [
     { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
-    { name: "Amartree Group", logo: Amartree },
+    { name: "Amar Tree Group", logo: Amartree },
     { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
-    { name: "Amartree Group", logo: Amartree },
+    { name: "Amar Tree Group", logo: Amartree },
     { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
-    { name: "Amartree Group", logo: Amartree },
+    { name: "Amar Tree Group", logo: Amartree },
   ];
 
   return (
