@@ -89,7 +89,7 @@ function BanquetHalls() {
                 <img
                   key={index}
                   src={photo}
-                  alt={`Photo ${index + 1}`}
+                  alt={`poster ${index + 1}`}
                   className="w-full h-32 object-cover rounded-lg cursor-pointer"
                   onClick={() => enlargeImage(photo)}
                 />
