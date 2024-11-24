@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App mt-[5.1rem]">
        <motion.div
-       className='fixed  md:top-[4.8rem] left-0 right-0  h-[7px] bg-green-500 origin-left rounded-md z-30'
+       className='fixed top-[4.7rem] md:top-[4.8rem] left-0 right-0  h-[7px] bg-red-500 origin-left rounded-md z-30'
         style={{ scaleX: scrollYProgress }} />
       <Home/>
     </div>

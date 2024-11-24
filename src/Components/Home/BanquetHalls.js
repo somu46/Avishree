@@ -32,6 +32,7 @@ const banquetHalls = [
 ];
 
 function BanquetHalls() {
+
   const [selectedHall, setSelectedHall] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [enlargedImage, setEnlargedImage] = useState(null);
@@ -55,17 +56,17 @@ function BanquetHalls() {
   };
 
   return (
-    <div className="container mx-auto p-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Banquet Halls</h2>
-      <div className="border border-red-700 grid gap-y-8 gap-x-[-50rem] sm:grid-cols-1 lg:grid-cols-2 lg:grid-rows-2">
+    <div className="container mx-auto p-4">
+      <h2 className="text-3xl font-bold text-center mb-4">Our Banquet Halls</h2>
+      <div className="flex flex-wrap justify-center gap-8 py-3">
         {banquetHalls.map((hall, index) => (
           <div
             key={index}
-            className="banquet-card bg-white border border-blue-700 shadow-lg rounded-lg overflow-hidden cursor-pointer max-w-lg mx-auto"
+            className=" bg-white  shadow-lg rounded-lg  overflow-hidden cursor-pointer w-[80%] max-w-xs "
             onClick={() => openAlbum(hall)}
           >
             <img src={hall.image} alt={hall.name} className="w-full h-48 object-cover" />
-            <div className="p-6">
+            <div className="p-3">
               <h3 className="text-xl font-semibold mb-2">{hall.name}</h3>
               <p className="text-gray-600">{hall.description}</p>
             </div>
