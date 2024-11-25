@@ -55,9 +55,13 @@ const HomeCome = () => {
 </div>
       {/* <Testimonial/> */}
       <StatsSection/>
-</div> <div>     
+</div>
+ <div>     
       <Faq/>
+      <div className="m-5 p-5 border border-red-500 flex justify-center">
 
+      <img src="https://drive.google.com/uc?export=view&id=1H0-ezdIZTkBU165oatNdDnHAcktNNeDL" alt="Testing drive link"/>
+      </div>
 
     </div>
  </div> );
