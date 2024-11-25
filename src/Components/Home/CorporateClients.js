@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import Haldiram from "../../Assets/Haldiram's-Logo.png";
+import Haldiram from "../../Assets/HaldiramLogo.png";
 import Amartree from "../../Assets/AmarTree.jpg";
 
 const CorporateClients = () => {
