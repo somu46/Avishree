@@ -14,8 +14,8 @@ const fetchPhotos = async () => {
 
         const formattedPhotos = files.map(file => ({
             original: `https://drive.google.com/uc?export=view&id=${file.id}`,
-            thumbnail: file.thumbnailLink || `https://drive.google.com/uc?export=view&id=${file.id}`, 
-            alt: file.name || "Untitled Image", 
+            thumbnail: file.thumbnailLink || `https://drive.google.com/uc?export=view&id=${file.id}`,
+            alt: file.name || "Untitled Image",
         }));
 
         return formattedPhotos;
