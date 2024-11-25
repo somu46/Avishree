@@ -28,7 +28,7 @@ function Photos() {
         setPhotosData(validPhotos);
         setTimeout(() => {
           setIsLoading(false);
-        }, 1000); // 1-second delay for better UX
+        }, 1000); 
 
       } catch (error) {
         console.error("Error fetching photos:", error);
