@@ -18,6 +18,18 @@ const banquetHalls = [
     album: [RoyalBanquet,  ],
   },
   {
+    name: 'Zora',
+    description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
+    image: RoyalBanquet,
+    album: [RoyalBanquet,  ],
+  },
+  {
+    name: 'Sanai',
+    description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
+    image: RoyalBanquet,
+    album: [RoyalBanquet,  ],
+  },
+  {
     name: 'Shantibon',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
     image: Shantibon,
