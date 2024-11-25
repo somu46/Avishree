@@ -12,7 +12,6 @@ const fetchPhotos = async () => {
         const files = response.data.files || [];
         console.log("Files fetched: ", files);
 
-       
         const formattedPhotos = files.map(file => ({
             original: `https://drive.google.com/uc?export=view&id=${file.id}`,
             thumbnail: file.thumbnailLink || `https://drive.google.com/uc?export=view&id=${file.id}`, 
@@ -22,8 +21,6 @@ const fetchPhotos = async () => {
         return formattedPhotos;
     } catch (error) {
         console.error("Error fetching photos:", error);
-
-        
         return [];
     }
 };
