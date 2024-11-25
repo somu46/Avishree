@@ -8,17 +8,19 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Haldiram from "../../Assets/HaldiramLogo.png";
 import Amartree from "../../Assets/AmarTree.jpg";
+import ParadiseCar from '../../Assets/ParadiseCar.png'
+import RoyalGroup from '../../Assets/RoyalBanquet.png'
+import Shehnai from '../../Assets/Shehnai.png'
+import Senco from '../../Assets/senco.webp'
 
 const CorporateClients = () => {
   const clients = [
     { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
     { name: "Amar Tree Group", logo: Amartree },
-    { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
-    { name: "Amar Tree Group", logo: Amartree },
-    { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
-    { name: "Amar Tree Group", logo: Amartree },
-    { name: "Senco", logo: Amartree },
-    { name: "Royal group", logo: Amartree }
+    { name: "Paradise Car Rental", logo: ParadiseCar },
+    { name: "Senco", logo: Senco },
+    { name: "Royal group", logo: RoyalGroup },
+    { name: "Shehnai Banquet", logo: Shehnai }
 
   ];
 

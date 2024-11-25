@@ -1,45 +1,47 @@
 import React, { useState } from 'react';
 import Haldiram from '../../Assets/HaldiramLogo.png';
-import RoyalBanquet from '../../Assets/Royal Banquet.jpeg';
+import RoyalBanquet from '../../Assets/RoyalBanquet.png';
 import Shantibon from '../../Assets/Shantibon.jpeg';
 import SaiArati from '../../Assets/Photo Session area.jpeg';
+import Zora from '../../Assets/Zora.png'
+import Shehnai from '../../Assets/Shehnai.png'
 
 const banquetHalls = [
   {
     name: 'Haldirams',
     description: 'A spacious and elegant venue for weddings, receptions, and large gatherings. Features modern amenities and beautiful decor.',
     image: Haldiram,
-    album: [ RoyalBanquet, ],
+    album: [ Haldiram,Haldiram ],
   },
   {
     name: 'Royal Banquet',
     description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
     image: RoyalBanquet,
-    album: [RoyalBanquet,  ],
+    album: [RoyalBanquet, RoyalBanquet ],
   },
   {
     name: 'Zora',
     description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
-    image: RoyalBanquet,
-    album: [RoyalBanquet,  ],
+    image: Zora,
+    album: [Zora, Zora ],
   },
   {
-    name: 'Sanai',
+    name: 'Shehnai',
     description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
-    image: RoyalBanquet,
-    album: [RoyalBanquet,  ],
+    image: Shehnai,
+    album: [Shehnai,Shehnai],
   },
   {
     name: 'Shantibon',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
     image: Shantibon,
-    album: [Shantibon],
+    album: [Shantibon,Shantibon],
   },
   {
     name: 'Sai Arati Banquet',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
     image: SaiArati,
-    album: [SaiArati],
+    album: [SaiArati,SaiArati],
   },
 ];
 
