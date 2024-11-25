@@ -17,6 +17,9 @@ const CorporateClients = () => {
     { name: "Amar Tree Group", logo: Amartree },
     { name: "Haldiram Prahuji Ltd.", logo: Haldiram },
     { name: "Amar Tree Group", logo: Amartree },
+    { name: "Senco", logo: Amartree },
+    { name: "Royal group", logo: Amartree }
+
   ];
 
   return (
