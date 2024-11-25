@@ -4,7 +4,7 @@ import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhats
 
 function Photos() {
   const [photosData, setPhotosData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);  // Loading state
+  const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
 
@@ -14,26 +14,24 @@ function Photos() {
         const response = await fetchPhotos();
         console.log("Files fetched: ", response);
 
-        // Verify each fetched file has the necessary fields
         const validPhotos = response.filter(img => {
-          if (img.thumbnail && img.webContentLink) {
+          if (img.thumbnail && img.original) {
             return true;
           } else {
-            console.warn(`Invalid file: ${img.name}`, img);
+            console.warn(`Invalid file: ${img.alt}`, img);
             return false;
           }
         });
         console.log("Valid Photos: ", validPhotos);
 
-        // Introduce a 5-second delay before updating the state
         setTimeout(() => {
           setPhotosData(validPhotos);
-          setIsLoading(false);  // Set loading to false once the data is fetched
-        }, 5000);  // 5-second delay
+          setIsLoading(false);
+        }, 1000);  // 5-second delay
 
       } catch (error) {
         console.error("Error fetching photos:", error);
-        setIsLoading(false);  // Ensure loading is turned off in case of error
+        setIsLoading(false);
       }
     };
     getPhotos();
@@ -53,7 +51,6 @@ function Photos() {
     <div className="mt-[5.1rem] mx-auto p-8">
       <h2 className="text-3xl font-bold text-center mb-8">Our Photo Gallery</h2>
 
-      {/* Loading Indicator */}
       {isLoading ? (
         <div className="text-center">
           <p>Loading photos...</p>
@@ -66,16 +63,16 @@ function Photos() {
                 alt={`Gallery Thumbnail ${id + 1}`}
                 src={img.thumbnail}
                 className="w-full h-48 object-cover rounded-lg shadow-md border-2 border-transparent group-hover:border-red-500 transition-all duration-300 cursor-pointer"
-                onClick={() => openModal(img.webContentLink)}
+                onClick={() => openModal(img.original)}
                 onError={(e) => {
-                  console.error(`Failed to load thumbnail for ${img.name}: ${e.target.src}`);
-                  e.target.src = 'https://via.placeholder.com/150';  // Fallback image URL
-                  e.target.alt = 'Image not available';  // Fallback alt text
+                  console.error(`Failed to load thumbnail for ${img.alt}: ${e.target.src}`);
+                  e.target.src = 'https://via.placeholder.com/150';
+                  e.target.alt = 'Image not available';
                 }}
               />
               <div
                 className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg cursor-pointer"
-                onClick={() => openModal(img.webContentLink)}
+                onClick={() => openModal(img.original)}
               >
                 <span className="text-white text-lg font-semibold">View Image</span>
               </div>
@@ -99,15 +96,14 @@ function Photos() {
               className="w-full h-auto max-h-[80vh] rounded-lg"
               onError={(e) => {
                 console.error(`Failed to load full-size image: ${e.target.src}`);
-                e.target.src = 'https://via.placeholder.com/600';  // Fallback image URL for modal
-                e.target.alt = 'Image not available';  // Fallback alt text
+                e.target.src = 'https://via.placeholder.com/600';
+                e.target.alt = 'Image not available';
               }}
             />
           </div>
         </div>
       )}
 
-      {/* WhatsApp Button */}
       <FloatingWhatsAppButton />
     </div>
   );
