@@ -8,7 +8,7 @@ const Hero = () => {
   const videoRef = useRef();
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5; // Set your desired speed (e.g., 0.5 for half speed)
+      videoRef.current.playbackRate = 0.5; 
     }
   }, []);
   return (
