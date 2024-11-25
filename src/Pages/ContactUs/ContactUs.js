@@ -91,7 +91,7 @@ const ContactUs = () => {
       href="https://www.youtube.com/@avishreehospitality"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-red-600 hover:text-red-700"
+      className="text-red-600 hover:scale-110 hover:text-red-700"
     >
       <YouTubeIcon fontSize="large" />
     </a>
@@ -99,7 +99,7 @@ const ContactUs = () => {
       href="mailto:avishreehospitality@gmail.com"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-orange-500 hover:text-orange-600"
+      className="text-orange-500 hover:text-orange-600 hover:scale-110"
     >
       <MarkunreadIcon fontSize="large" />
     </a>
@@ -107,7 +107,7 @@ const ContactUs = () => {
       href="https://wa.me/+918777584271"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-green-500 hover:text-green-600"
+      className="text-green-500 hover:text-green-600 hover:scale-110"
     >
       <WhatsAppIcon fontSize="large" />
     </a>
@@ -115,7 +115,7 @@ const ContactUs = () => {
       href="https://www.facebook.com/profile.php?id=61565446652658"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-700"
+      className="text-blue-600 hover:text-blue-700 hover:scale-110"
     >
       <FacebookIcon fontSize="large" />
     </a>
@@ -123,7 +123,7 @@ const ContactUs = () => {
       href="https://www.instagram.com/avishreehospitalityofficial"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-pink-500 hover:text-pink-600"
+      className="text-pink-500 hover:text-pink-600 hover:scale-110"
     >
       <InstagramIcon fontSize="large" />
     </a>

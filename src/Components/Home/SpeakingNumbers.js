@@ -15,7 +15,7 @@ const StatsSection = () => {
     { id: 4, title: 'Trained Employees', count: 30, icon: <FaUsers className="text-red-500" /> },
     { id: 5, title: 'Dishes on Menu', count: 200, icon: <FaConciergeBell className="text-purple-500" /> },
   ];
-
+  
   return (
     <section className=" py-12" ref={ref}>
       <div className="container mx-auto text-center">

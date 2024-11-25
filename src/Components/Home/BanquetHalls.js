@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
-import b1 from '../../Assets/Car-hire.jpg';
-import b2 from '../../Assets/BabyShowering.jpg';
-import b3 from '../../Assets/BengaliFood.webp';
-import b4 from '../../Assets/Exclusive.png';
+import Haldiram from '../../Assets/HaldiramLogo.png';
+import RoyalBanquet from '../../Assets/Royal Banquet.jpeg';
+import Shantibon from '../../Assets/Shantibon.jpeg';
+import SaiArati from '../../Assets/Photo Session area.jpeg';
 
 const banquetHalls = [
   {
     name: 'Haldirams',
     description: 'A spacious and elegant venue for weddings, receptions, and large gatherings. Features modern amenities and beautiful decor.',
-    image: b1,
-    album: [b1, b2, b3],
+    image: Haldiram,
+    album: [ RoyalBanquet, ],
   },
   {
     name: 'Royal Banquet',
     description: 'Perfect for corporate events and social functions, offering a refined ambiance with premium services.',
-    image: b2,
-    album: [b2, b1, b3],
+    image: RoyalBanquet,
+    album: [RoyalBanquet,  ],
   },
   {
     name: 'Shantibon',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
-    image: b3,
-    album: [b3, b2, b1],
+    image: Shantibon,
+    album: [Shantibon],
   },
   {
     name: 'Sai Arati Banquet',
     description: 'An intimate setting ideal for small to medium-sized events, with customizable decoration and catering options.',
-    image: b4,
-    album: [b4, b3, b2],
+    image: SaiArati,
+    album: [SaiArati],
   },
 ];
 
