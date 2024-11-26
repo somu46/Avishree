@@ -130,13 +130,14 @@ const ContactUs = () => {
   </div>
 
   {/* Additional Contact Details */}
-  <div className="text-left space-y-6">
+  <div className="text-center space-y-6">
+    <p className="text-3xl font-semibold text-gray-800 mb-6">Reach Us</p>
     {/* Office Section */}
     <div className="flex items-start space-x-4">
       <span className="p-2 bg-gray-100 rounded-full">
       <LocationOnIcon/>
       </span>
-      <div>
+      <div className='text-left'>
         <h3 className="text-lg font-medium text-gray-800">Office</h3>
         <p className="text-gray-600">
           Sai Arati Banquet, Narendranagar<br />
@@ -146,7 +147,7 @@ const ContactUs = () => {
     </div>
 
     {/* Phone Section */}
-    <div className="flex items-start space-x-4">
+    <div className="flex text-left items-start space-x-4">
     
       <span className="p-2 bg-gray-100 rounded-full">
       <PhoneIcon/>
@@ -161,7 +162,7 @@ const ContactUs = () => {
     </div>
 
     {/* Email Section */}
-    <div className="flex items-start space-x-4">
+    <div className="flex text-left items-start space-x-4">
       <span className="p-2 bg-gray-100 rounded-full">
       <MailOutlineIcon/>
       </span>

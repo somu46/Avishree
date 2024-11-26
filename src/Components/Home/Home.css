@@ -15,11 +15,10 @@
     font-weight: bolder;
     text-shadow: 2px,2px,4px;
     text-align: center;
-    padding: 60px 20px;
+    /* padding: 60px 20px; */
   }
   .background-video {
-    margin-top: 5.1rem;
-    margin-bottom: 3rem;
+    margin-top: 4.5rem;
     position: absolute;
     top: 0;
     left: 0;

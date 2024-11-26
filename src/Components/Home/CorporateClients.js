@@ -34,7 +34,7 @@ const CorporateClients = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true }}
-        speed={1000}
+        speed={2500}
         
         pagination={{ clickable: true }}
         breakpoints={{
