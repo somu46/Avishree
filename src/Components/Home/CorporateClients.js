@@ -21,7 +21,6 @@ const CorporateClients = () => {
     { name: "Senco", logo: Senco },
     { name: "Royal group", logo: RoyalGroup },
     { name: "Shehnai Banquet", logo: Shehnai }
-
   ];
 
   return (
@@ -33,8 +32,10 @@ const CorporateClients = () => {
         modules={[Navigation, Autoplay, Pagination]}
         spaceBetween={30}
         slidesPerView={1}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        navigation={{ hideOnClick: true }}
+        loop={true}
+        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true }}
+        speed={2500}
+        
         pagination={{ clickable: true }}
         breakpoints={{
           640: { slidesPerView: 1 },
@@ -45,7 +46,7 @@ const CorporateClients = () => {
       >
         {clients.map((client, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center">
-            <div className="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center">
+            <div className="bg-transparent rounded-lg p-8 flex flex-col items-center text-center">
               <img
                 src={client.logo}
                 alt={client.name}
