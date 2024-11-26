@@ -12,7 +12,8 @@ import Contact from './Pages/ContactUs/ContactUs';
 import Blogs from './Pages/Blogs/Blogs';
 import Videos from './Pages/Videos/Videos';
 import LoadingSpinner from './Components/Loding/Loding.js';
-import Photos from './Pages/Photos/Photos.js';
+// import Photos from './Pages/Photos/Photos.js';
+import Gallery from './Pages/Gallery/Gallery.js';
 
 
 
@@ -69,7 +70,7 @@ const Rout = createBrowserRouter([
       },
       {
         path: "/Photos",
-        element:<Photos/>
+        element:<Gallery/>
       },
       {
         path: "/videos",
