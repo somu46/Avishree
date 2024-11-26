@@ -1,23 +1,36 @@
 import React from 'react';
 import FloatingWhatsAppButton from '../../Components/FloatWhatsapp/FloatingWhatsAppButton';
+import SAv1 from '../../Assets/videos/SAv1.mp4';
+import SAv2 from '../../Assets/videos/SAv2.mp4';
+import v1 from '../../Assets/videos/v1.mp4';
+import v2 from '../../Assets/videos/v2.mp4';
+import v3 from '../../Assets/videos/v3.mp4';
+import v4 from '../../Assets/videos/v4.mp4';
+import v5 from '../../Assets/videos/v5.mp4';
+import v6 from '../../Assets/videos/v6.mp4';
+import v7 from '../../Assets/videos/v7.mp4';
+import v8 from '../../Assets/videos/v8.mp4';
 
-const VideoItem = ({ videoSrc, title, clickedFun }) => {
+const VideoItem = ({ videoSrc, title }) => {
   return (
-    <div 
-      onClick={clickedFun}
-      className="border relative cursor-pointer group w-[90%] h-52 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:opacity-90"
-    >
+    <div className="border relative cursor-pointer group w-full h-52 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:opacity-90">
       <video src={videoSrc} title={title} className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" controls />
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center duration-300"></div>
     </div>
   );
 };
 
 const Videos = () => {
   const videos = [
-    { src: 'path/to/sai-arati-video.mp4', title: 'Sai Arati', id: 'sai-arati' },
-    { src: 'path/to/grand-royal-video.mp4', title: 'Grand Royal', id: 'grand-royal' },
-    { src: 'path/to/sunshine-video.mp4', title: 'Sunshine', id: 'sunshine' }
+    { src: SAv1, title: 'Sai Arati' },
+    { src: SAv2, title: 'Sai Arati' },
+    { src: v1, title: 'Shantibon' },
+    { src: v2, title: 'Shantibon' },
+    { src: v3, title: 'Shantibon' },
+    { src: v4, title: 'Shantibon' },
+    { src: v5, title: 'Shantibon' },
+    { src: v6, title: 'Shantibon' },
+    { src: v7, title: 'Shantibon' },
+    { src: v8, title: 'Shantibon' }
   ];
 
   return (
