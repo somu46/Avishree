@@ -59,8 +59,10 @@ const HomeCome = () => {
  <div>     
       <Faq/>
       <div className="m-5 p-5 border border-red-500 flex justify-center">
+      {/* <iframe src="https://drive.google.com/file/d/1EIBTd9bFwB9mx38y5FCwlrxR67HWcH0b/preview" width="640" height="480"></iframe> */}
 
-      <img src="https://drive.google.com/uc?export=view&id=1H0-ezdIZTkBU165oatNdDnHAcktNNeDL" alt="Testing drive link"/>
+
+
       </div>
 
     </div>
