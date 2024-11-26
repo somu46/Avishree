@@ -3,11 +3,12 @@ import axios from "axios";
 const fetchPhotos = async () => {
     const apiKey = process.env.REACT_APP_API_KEY;
     const folderId = process.env.REACT_APP_FOLDER_ID;
-
     try {
         const response = await axios.get(
             `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,thumbnailLink,webContentLink)`
         );
+      
+        
 
         const files = response.data.files || [];
         console.log("Files fetched: ", files);
