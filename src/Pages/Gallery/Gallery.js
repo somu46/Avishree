@@ -37,7 +37,7 @@ const Gallery = () => {
       {isopen ? (
         <EventsSection propsFun={handleItem} />
       ) : (
-        <section id={sectionId} className="h-screen bg-gray-100">
+        <section id={sectionId} className="min-h-screen bg-gray-100">
           <div  className="h-auto">
             <header className="text-center py-8 bg-gray-100 text-gray-800 relative flex justify-between px-3">
               <div className="mx-5">
