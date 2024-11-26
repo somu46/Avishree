@@ -1,0 +1,33 @@
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-thumbnail.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-autoplay.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-fullscreen.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-share.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-rotate.css');
+
+
+
+.lg-react-element {
+  column-count: 3;
+  column-gap: 9px; 
+  
+}
+
+// .G-App {
+//   display: flex;
+//   align-items: center;
+//   flex-direction: row;
+//   justify-content: center;
+//   border: 3px solid red;
+
+// }
+
+.thumblin-img {
+  width:330px; 
+  display: block;
+  padding: 5px;
+  border-radius: 10px;
+  transition: transform 0.2s ease; 
+
+}
