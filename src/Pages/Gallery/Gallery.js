@@ -38,7 +38,7 @@ const Gallery = () => {
         <EventsSection propsFun={handleItem} />
       ) : (
         <section id={sectionId} className="h-screen bg-gray-100">
-          <div>
+          <div  className="h-auto">
             <header className="text-center py-8 bg-gray-100 text-gray-800 relative flex justify-between px-3">
               <div className="mx-5">
                 <h1 className="text-4xl font-bold mb-4 text-gray-700 border-b-2 rounded-md border-orange-500">
