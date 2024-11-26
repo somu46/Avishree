@@ -17,7 +17,7 @@ const HomeCome = () => {
     <div className="home-container ">
       <Hero />
       <div className="bg-image mt-[18rem] lg:mt-[9rem] ">
-        <div className="max-w-screen bg-transparent opacity-80 backdrop-blur-xl">
+        <div >
           <IntroSection />
         </div>
       </div>
