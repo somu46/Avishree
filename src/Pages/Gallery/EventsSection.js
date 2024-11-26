@@ -1,16 +1,21 @@
 import React from 'react';
 import Event from './Event';
-
+import weddingThumb from "../../Assets/wedding.jpg";
+import sangeetHaldiThumb from "../../Assets/photos/Shantibon/2.jpeg";
+import Birthdays from "../../Assets/Birthday.jpg";
+import Party from "../../Assets/party.jpg";
+import Cultural  from "../../Assets/cultural-shows.jpg";
+import Receptions  from "../../Assets/Rsepstion.jpeg";
 
 
 
 const events = [
-    { image: 'https://images.pexels.com/photos/29408341/pexels-photo-29408341/free-photo-of-tranquil-autumn-sunrise-in-latvian-countryside.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Wedding Collection', id: 'wedding' },
-    { image: 'https://images.pexels.com/photos/2348658/pexels-photo-2348658.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load', title: 'Receptions', id: 'receptions' },
-    { image: 'https://images.pexels.com/photos/13742504/pexels-photo-13742504.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load', title: 'Sangeet & Haldi', id: 'sangeet-haldi' },
-    { image: 'https://images.pexels.com/photos/1777428/pexels-photo-1777428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Birthdays Celebrated', id: 'birthdays' },
-    { image: 'https://images.pexels.com/photos/27421320/pexels-photo-27421320/free-photo-of-golden-morning.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Cultural Events', id: 'cultural-events' },
-    { image: 'https://images.pexels.com/photos/24713006/pexels-photo-24713006/free-photo-of-sunrise-over-misty-lake.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load', title: 'Parties Collection', id: 'parties' },
+    { image: weddingThumb, title: 'Wedding Collection', id: 'wedding' },
+    { image:Receptions, title: 'Receptions', id: 'receptions' },
+    { image: sangeetHaldiThumb, title: 'Sangeet & Haldi', id: 'sangeet-haldi' },
+    { image: Birthdays, title: 'Birthdays Celebrated', id: 'birthdays' },
+    { image: Cultural, title: 'Cultural Events', id: 'cultural-events' },
+    { image: Party, title: 'Parties Collection', id: 'parties' },
 ];
 
 const EventsSection = ({ propsFun }) => {
