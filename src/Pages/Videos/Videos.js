@@ -13,7 +13,7 @@ import v8 from '../../Assets/videos/v8.mp4';
 
 const VideoItem = ({ videoSrc, title }) => {
   return (
-    <div className="border relative cursor-pointer group w-full h-52 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:opacity-90">
+    <div className="border relative cursor-pointer group w-full h-52 overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:opacity-90">
       <video src={videoSrc} title={title} className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" controls />
     </div>
   );
