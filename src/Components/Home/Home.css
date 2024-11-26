@@ -11,7 +11,7 @@
   /* Hero Section */
   .hero {
 
-      height: 30rem;
+      height: 90%;
       /* background-image: url('../../Assets/Poster.jpeg'); 
       background-size: cover; 
       background-position: center;
@@ -128,7 +128,8 @@
   
 
     .background-video{
-      height: 70%;
+      height: 90%;
+      
     }
     .features-cards {
       display: flex;
