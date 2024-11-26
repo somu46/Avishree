@@ -1,6 +1,9 @@
 import React from 'react';
 import Event from './Event';
 
+
+
+
 const events = [
     { image: 'https://images.pexels.com/photos/29408341/pexels-photo-29408341/free-photo-of-tranquil-autumn-sunrise-in-latvian-countryside.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Wedding Collection', id: 'wedding' },
     { image: 'https://images.pexels.com/photos/2348658/pexels-photo-2348658.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load', title: 'Receptions', id: 'receptions' },
