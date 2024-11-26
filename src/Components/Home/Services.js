@@ -12,6 +12,7 @@ import Aniversary from '../../Assets/Anniversary.webp'
 import Birthday from '../../Assets/Birthday.jpg'
 import HouseWarming from '../../Assets/House-Warming.jpg'
 import BabyShower from '../../Assets/BabyShowering.jpg'
+import NewYear from '../../Assets/New Year.jpg';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -73,6 +74,12 @@ const Services = () => {
       image: corporate,
       description: 'Elevate your corporate events with our professional planning services. We specialize in conferences, product launches, and business meetings, handling everything from venue setup to audio-visual equipment.',
     },
+    {
+      title: 'New Year Parties',
+      image: NewYear,
+      description: 'Ring in the New Year with style and splendor at our exclusive parties. From lively entertainment and stunning decorations to gourmet catering and a midnight countdown, we ensure every detail is perfect for a memorable celebration. Join us for a night of joy, laughter, and unforgettable moments as we welcome the new year together.'
+    }
+    
   ];
 
   const toggleExpand = (index) => {
