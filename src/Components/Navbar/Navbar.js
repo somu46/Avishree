@@ -147,7 +147,7 @@ const handleClick=()=>{
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                  isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                 }
               
                  onClick={handleMobileHistory}
@@ -159,7 +159,7 @@ const handleClick=()=>{
               <NavLink
                 to="/AboutUs"
                 className={({ isActive }) =>
-                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                  isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                 }
                
                  onClick={handleMobileHistory}
@@ -171,7 +171,7 @@ const handleClick=()=>{
               <NavLink
                 to="/services"
                 className={({ isActive }) =>
-                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                  isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                 }
              
                  onClick={handleMobileHistory}
@@ -183,7 +183,7 @@ const handleClick=()=>{
               <NavLink
                 to="/menu"
                 className={({ isActive }) =>
-                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                  isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                 }
                
                  onClick={handleMobileHistory}
@@ -205,7 +205,7 @@ const handleClick=()=>{
                     <NavLink
                       to="/photos"
                       className={({ isActive }) =>
-                        isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                        isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                       }
                       onClick={() => {
                         setIsOpen(false);
@@ -221,7 +221,7 @@ const handleClick=()=>{
                     <NavLink
                       to="/videos"
                       className={({ isActive }) =>
-                        isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                        isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                       }
                       onClick={() => {
                         setIsOpen(false);
@@ -240,7 +240,7 @@ const handleClick=()=>{
               <NavLink
                 to="/contact-us"
                 className={({ isActive }) =>
-                  isActive ? 'text-blue-500 font-bold' : 'text-gray-700'
+                  isActive ? 'text-red-500 font-bold' : 'text-gray-700'
                 }
               
                  onClick={handleMobileHistory}

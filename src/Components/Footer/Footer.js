@@ -26,7 +26,7 @@ const Footer = () => {
                 <img src={FooterLogo} alt="Company Logo" className="footer-logo rounded-xl" />
               </Link>
             </div>
-            <p className="text-2xl ">Avishree Hospitality Pvt. Ltd.</p>
+            <p className="text-2xl text-red-700 ">Avishree Hospitality Pvt. Ltd.</p>
             <p>
               <ReactTypingEffect
                 speed={100}
