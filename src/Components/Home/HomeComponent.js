@@ -17,7 +17,7 @@ const HomeCome = () => {
     <div className="home-container ">
       <Hero />
       <div className="bg-image mt-[18rem] lg:mt-[9rem] ">
-        <div className="max-w-screen bg-transparent opacity-80 backdrop-blur-xl">
+        <div >
           <IntroSection />
         </div>
       </div>
@@ -45,9 +45,6 @@ const HomeCome = () => {
       </div>
       <div>
         <Faq />
-        <div className="m-5 p-5 border border-red-500 flex justify-center">
-          {/* <iframe src="https://drive.google.com/file/d/1EIBTd9bFwB9mx38y5FCwlrxR67HWcH0b/preview" width="640" height="480"></iframe> */}
-        </div>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
   return (
     <>
-      <section className="hero mt-[5.1rem] ">
+      <section className="hero mt-[7rem]  ">
         <video
           className="background-video opacity-90"
           ref={videoRef}
