@@ -28,10 +28,7 @@ const Gallery = () => {
           Welcome to Our Elegant Venue
         </h1>
         <p className="text-lg">
-          Our spacious and versatile banquet hall can accommodate events of all
-          sizes, from intimate gatherings to grand celebrations. The beautifully
-          designed space features high ceilings, modern decor, and customizable
-          lighting options to create the perfect atmosphere for your event.
+        At Avishree Hospitality Pvt. Ltd., our spacious and versatile banquet hall is the perfect setting for events of all sizes, from intimate gatherings to grand celebrations. Designed with elegance and functionality in mind, the venue boasts high ceilings, modern decor, and customizable lighting options to create the ideal ambiance for your special occasion. Let us transform your event into an unforgettable experience with our exceptional facilities and personalized service.
         </p>
       </header>
       {isopen ? (
@@ -52,7 +49,7 @@ const Gallery = () => {
                 BACK TO GALLERY
               </button>
             </header>
-            <Photos />
+            <Photos id={sectionId} />
           </div>
         </section>
       )}
