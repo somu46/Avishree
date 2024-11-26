@@ -223,11 +223,11 @@ function BanquetHalls() {
       {/* Modal */}
       {isModalOpen && selectedHall && (
         <div
-        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center  "
         onClick={closeModal}
       >
         <div
-          className="bg-white rounded-lg overflow-y-auto max-h-full w-full max-w-4xl p-6 relative"
+          className="bg-white rounded-lg overflow-y-auto max-h-full w-full max-w-4xl p-6 relative  mt-[11rem]"
           onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
         >
           <button
