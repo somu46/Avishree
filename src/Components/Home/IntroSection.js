@@ -4,7 +4,7 @@ function IntroSection() {
   return (
     <div className=" p-8 lg:mt-52 mx-auto max-w-5xl rounded-lg shadow-lg">
       <div className="intro-text lg:mt-[7.5rem]">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-indigo-600 mb-6">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl mt-[3rem] font-bold text-center text-indigo-600 mb-6">
           Avishree Hospitality Pvt. Ltd.
         </h1>
         <p className="text-lg md:text-xl text-center text-gray-700 mb-8">
