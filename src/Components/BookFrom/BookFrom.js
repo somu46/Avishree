@@ -9,9 +9,15 @@ import ReCAPTCHA from "react-google-recaptcha";
 const QuoteForm = () => {
 
 
+  const site_key=process.env.REACT_APP_RECAPTURE_SITE_KEY;
+ const servicesId=process.env.REACT_APP_RECAPTURE_EMAIL_JS_SERVICES_ID;
+ const templateId=process.env.REACT_APP_RECAPTURE_EMAIL_JS_TEMPLATE_ID
+ const publicKey=process.env.REACT_APP_RECAPTURE_EMAIL_JS_PUBLIC_KEY;
+ 
   const [captchaValue, setCaptchaValue] = useState(null);
+
   const onCaptchaChange = (value) => {
-    console.log("Captcha value:", value);
+    // console.log("Captcha value:", value);
     setCaptchaValue(value);
   };
 
@@ -29,10 +35,10 @@ const QuoteForm = () => {
     if(captchaValue){
     emailjs
       .sendForm(
-        "service_pb5lx2h",
-        "template_ae3951x",
+        servicesId,
+        templateId,
         formRef.current,
-        "nFhx0SkpCFIPu0t2K"
+        publicKey
       )
       .then(
         (result) => {
@@ -190,7 +196,7 @@ const QuoteForm = () => {
 
           <div>
             <ReCAPTCHA
-              sitekey="6LfqF5AqAAAAAFqgs8AhAQTwKFUL5694kZkUnZ8g"
+              sitekey={site_key}
               onChange={onCaptchaChange}
             />
           </div>
