@@ -1,25 +1,25 @@
-import  { useRef } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 // import { useLocation } from "react-router-dom";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import ButtonCom from "../Button/Button";
-import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const QuoteForm = () => {
 
 
+  const site_key=process.env.REACT_APP_RECAPTURE_SITE_KEY;
+ const servicesId=process.env.REACT_APP_RECAPTURE_EMAIL_JS_SERVICES_ID;
+ const templateId=process.env.REACT_APP_RECAPTURE_EMAIL_JS_TEMPLATE_ID
+ const publicKey=process.env.REACT_APP_RECAPTURE_EMAIL_JS_PUBLIC_KEY;
+ 
+  const [captchaValue, setCaptchaValue] = useState(null);
 
-  // const [captchaValue, setCaptchaValue] = useState(null);
-
-  const handleCaptchaChange = (value) => {
-    // setCaptchaValue(value);
+  const onCaptchaChange = (value) => {
+    // console.log("Captcha value:", value);
+    setCaptchaValue(value);
   };
-  // const locationData=useLocation();
-
-  // console.log(locationData.state);
-  
-
 
   const {
     register,
@@ -30,15 +30,15 @@ const QuoteForm = () => {
   const formRef = useRef();
 
   const handleFormSubmit = () => {
- 
     if (!formRef.current) return;
 
+    if(captchaValue){
     emailjs
       .sendForm(
-        "service_pb5lx2h",
-        "template_ae3951x",
+        servicesId,
+        templateId,
         formRef.current,
-        "nFhx0SkpCFIPu0t2K"
+        publicKey
       )
       .then(
         (result) => {
@@ -49,15 +49,14 @@ const QuoteForm = () => {
           console.log("FAILED...", error.text);
         }
       );
-     
+    }
 
+    let timerInterval;
 
-      
-  let timerInterval;
-
-  Swal.fire({
-    title: '<span className="font-mono" style="color: #4CAF50;">Your Quote is Sending......</span>',
-    html: `
+    Swal.fire({
+      title:
+        '<span className="font-mono" style="color: #4CAF50;">Your Quote is Sending......</span>',
+      html: `
     <div style="
       font-size: 18px; 
       color: #555; 
@@ -71,25 +70,24 @@ const QuoteForm = () => {
       <br /> This will close automatically.
     </div>
   `,
-  background: `url(${require('../../Assets/FooterLogo.jpeg')}) center/cover no-repeat`,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: () => {
-      Swal.showLoading();
-      
-      
-    },
-    willClose: () => {
-      clearInterval(timerInterval);
-    }
-  }).then(() => {
-    Swal.fire({
-      title: '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
-      text: "WE will  Contact you Soon !",
-      icon: "success",
-      confirmButtonColor: "#4CAF50"
+      background: `url(${require("../../Assets/FooterLogo.jpeg")}) center/cover no-repeat`,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then(() => {
+      Swal.fire({
+        title:
+          '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
+        text: "WE will  Contact you Soon !",
+        icon: "success",
+        confirmButtonColor: "#4CAF50",
+      });
     });
-  });
   };
 
   return (
@@ -112,33 +110,40 @@ const QuoteForm = () => {
             aria-label="Full Name"
           />
           {errors.user_name && (
-            <div className="text-red-500 text-sm">{errors.user_name.message}</div>
-          )} 
-
-         <div className=" flex flex-col lg:flex-row " >
-         <input
-            {...register("Phone_Number", { required: "Phone Number is required" })}
-            type="text"
-            placeholder="Phone Number *"
-            className="w-full my-1 ml-0 lg:mr-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
-            aria-label="Phone Number"
-          />
-          {errors.Phone_Number && (
-            <div className="text-red-500 text-sm">{errors.Phone_Number.message}</div>
+            <div className="text-red-500 text-sm">
+              {errors.user_name.message}
+            </div>
           )}
 
-          <input
-            type="email"
-            {...register("user_email", { required: "Email is required" })}
-            placeholder="Email *"
-            className="w-full lg:my-1 mt-4 mr-0 lg:ml-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
-            aria-label="Email"
-          />
-          {errors.user_email && (
-            <div className="text-red-500 text-sm">{errors.user_email.message}</div>
-          )}
+          <div className=" flex flex-col lg:flex-row ">
+            <input
+              {...register("Phone_Number", {
+                required: "Phone Number is required",
+              })}
+              type="text"
+              placeholder="Phone Number *"
+              className="w-full my-1 ml-0 lg:mr-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+              aria-label="Phone Number"
+            />
+            {errors.Phone_Number && (
+              <div className="text-red-500 text-sm">
+                {errors.Phone_Number.message}
+              </div>
+            )}
 
-         </div>
+            <input
+              type="email"
+              {...register("user_email", { required: "Email is required" })}
+              placeholder="Email *"
+              className="w-full lg:my-1 mt-4 mr-0 lg:ml-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+              aria-label="Email"
+            />
+            {errors.user_email && (
+              <div className="text-red-500 text-sm">
+                {errors.user_email.message}
+              </div>
+            )}
+          </div>
           <select
             {...register("service", { required: "Service is required" })}
             className="w-full p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
@@ -152,19 +157,20 @@ const QuoteForm = () => {
           {errors.service && (
             <div className="text-red-500 text-sm">{errors.service.message}</div>
           )}
-        <div className="flex flex-row ">
-        <label className="flex lg:hidden text-center mr-1 mt-1">Enter Event Date:</label>
-          <input
-            type="date"
-            placeholder="Date"
-            {...register("date", { required: "Date is required" })}
-            min={new Date().toISOString().split("T")[0]}
-            className="w-[55%] lg:w-full p-1 lg:p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
-            aria-label="Date"
-          />
-          
-        </div>
-        {errors.date && (
+          <div className="flex flex-row ">
+            <label className="flex lg:hidden text-center mr-1 mt-1">
+              Enter Event Date:
+            </label>
+            <input
+              type="date"
+              placeholder="Date"
+              {...register("date", { required: "Date is required" })}
+              min={new Date().toISOString().split("T")[0]}
+              className="w-[55%] lg:w-full p-1 lg:p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+              aria-label="Date"
+            />
+          </div>
+          {errors.date && (
             <div className="text-red-500 text-sm">{errors.date.message}</div>
           )}
 
@@ -187,19 +193,19 @@ const QuoteForm = () => {
           {errors.message && (
             <div className="text-red-500 text-sm">{errors.message.message}</div>
           )}
-     
 
-
-        <div>
-        <ReCAPTCHA
-        sitekey="fghjjhgfghghghg"
-        onChange={handleCaptchaChange}
-      />
-        </div>
-     <div  className=" lg:w-[30%] lg:m-auto">
-     <ButtonCom title="Request Quote"/>
-     </div>
-         
+          <div>
+            <ReCAPTCHA
+              sitekey={site_key}
+              onChange={onCaptchaChange}
+            />
+          </div>
+          <div className=" lg:w-[30%] lg:m-auto">
+            {captchaValue&& (
+              
+              <ButtonCom title="Request Quote" />
+            )}
+          </div>
         </form>
       </div>
     </div>
