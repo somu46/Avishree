@@ -1,100 +1,67 @@
-import  { useRef } from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-// import { useLocation } from "react-router-dom";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import ButtonCom from "../Button/Button";
-import ReCAPTCHA from 'react-google-recaptcha';
+import FooterLogo from "../../Assets/FooterLogo.jpeg";
 
 const QuoteForm = () => {
-
-
-
-  // const [captchaValue, setCaptchaValue] = useState(null);
-
-  const handleCaptchaChange = (value) => {
-    // setCaptchaValue(value);
-  };
-  // const locationData=useLocation();
-
-  // console.log(locationData.state);
-  
-
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const formRef = useRef();
 
-  const handleFormSubmit = () => {
- 
+  const handleFormSubmit = async () => {
     if (!formRef.current) return;
 
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         "service_pb5lx2h",
         "template_ae3951x",
         formRef.current,
         "nFhx0SkpCFIPu0t2K"
-      )
-      .then(
-        (result) => {
-          console.log("Email successfully sent!", result.text);
-          formRef.current.reset();
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
       );
-     
+      console.log("Email successfully sent!");
+      formRef.current.reset();
 
-
-      
-  let timerInterval;
-
-  Swal.fire({
-    title: '<span className="font-mono" style="color: #4CAF50;">Your Quote is Sending......</span>',
-    html: `
-    <div style="
-      font-size: 18px; 
-      color: #555; 
-      margin-bottom: 10px; 
-      padding: 10px;
-      opacity:0.5;
-      background-color: rgba(255, 255, 255, 0.8); 
-      border-radius: 8px;
-    ">
-      Please wait while we submit your quote. 
-      <br /> This will close automatically.
-    </div>
-  `,
-  background: `url(${require('../../Assets/FooterLogo.jpeg')}) center/cover no-repeat`,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: () => {
-      Swal.showLoading();
-      
-      
-    },
-    willClose: () => {
-      clearInterval(timerInterval);
+      Swal.fire({
+        title: '<span style="color: #4CAF50;">Your Quote is Sending...</span>',
+        html: `
+          <div style="
+            font-size: 18px; 
+            color: #555; 
+            margin-bottom: 10px; 
+            padding: 10px;
+            opacity:0.5;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 8px;">
+            Please wait while we submit your quote.
+            <br /> This will close automatically.
+          </div>`,
+        background: `url(${FooterLogo}) center/cover no-repeat`,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => Swal.showLoading(),
+      }).then(() => {
+        Swal.fire({
+          title: '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
+          text: "We will contact you soon!",
+          icon: "success",
+          confirmButtonColor: "#4CAF50",
+        });
+      });
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      Swal.fire({
+        title: "Error",
+        text: "There was an issue submitting your quote. Please try again later.",
+        icon: "error",
+        confirmButtonColor: "#E53935",
+      });
     }
-  }).then(() => {
-    Swal.fire({
-      title: '<span style="color: #1E88E5;">Your Quote is Successfully Submitted!</span>',
-      text: "WE will  Contact you Soon !",
-      icon: "success",
-      confirmButtonColor: "#4CAF50"
-    });
-  });
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10 px-3 lg:px-6 mt-[5.1rem]">
-      <div className=" w-full min-w-[85%] max-w-lg bg-white rounded-lg shadow-lg p-8">
+      <div className="w-full min-w-[85%] max-w-lg bg-white rounded-lg shadow-lg p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
           Request a Quote
         </h2>
@@ -113,32 +80,32 @@ const QuoteForm = () => {
           />
           {errors.user_name && (
             <div className="text-red-500 text-sm">{errors.user_name.message}</div>
-          )} 
-
-         <div className=" flex flex-col lg:flex-row " >
-         <input
-            {...register("Phone_Number", { required: "Phone Number is required" })}
-            type="text"
-            placeholder="Phone Number *"
-            className="w-full my-1 ml-0 lg:mr-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
-            aria-label="Phone Number"
-          />
-          {errors.Phone_Number && (
-            <div className="text-red-500 text-sm">{errors.Phone_Number.message}</div>
           )}
 
-          <input
-            type="email"
-            {...register("user_email", { required: "Email is required" })}
-            placeholder="Email *"
-            className="w-full lg:my-1 mt-4 mr-0 lg:ml-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
-            aria-label="Email"
-          />
-          {errors.user_email && (
-            <div className="text-red-500 text-sm">{errors.user_email.message}</div>
-          )}
+          <div className="flex flex-col lg:flex-row">
+            <input
+              {...register("Phone_Number", { required: "Phone Number is required" })}
+              type="text"
+              placeholder="Phone Number *"
+              className="w-full my-1 ml-0 lg:mr-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+              aria-label="Phone Number"
+            />
+            {errors.Phone_Number && (
+              <div className="text-red-500 text-sm">{errors.Phone_Number.message}</div>
+            )}
 
-         </div>
+            <input
+              type="email"
+              {...register("user_email", { required: "Email is required" })}
+              placeholder="Email *"
+              className="w-full lg:my-1 mt-4 mr-0 lg:ml-2 p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+              aria-label="Email"
+            />
+            {errors.user_email && (
+              <div className="text-red-500 text-sm">{errors.user_email.message}</div>
+            )}
+          </div>
+
           <select
             {...register("service", { required: "Service is required" })}
             className="w-full p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
@@ -152,19 +119,20 @@ const QuoteForm = () => {
           {errors.service && (
             <div className="text-red-500 text-sm">{errors.service.message}</div>
           )}
-        <div className="flex flex-row ">
-        <label className="flex lg:hidden text-center mr-1 mt-1">Enter Event Date:</label>
-          <input
-            type="date"
-            placeholder="Date"
-            {...register("date", { required: "Date is required" })}
-            min={new Date().toISOString().split("T")[0]}
-            className="w-[55%] lg:w-full p-1 lg:p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
-            aria-label="Date"
-          />
-          
-        </div>
-        {errors.date && (
+
+          <div className="flex flex-row">
+            <label className="flex lg:hidden text-center mr-1 mt-1">
+              Enter Event Date:
+            </label>
+            <input
+              type="date"
+              {...register("date", { required: "Date is required" })}
+              min={new Date().toISOString().split("T")[0]}
+              className="w-[55%] lg:w-full p-1 lg:p-4 text-gray-800 rounded-lg border border-gray-300 focus:outline-none focus:border-green-500"
+              aria-label="Date"
+            />
+          </div>
+          {errors.date && (
             <div className="text-red-500 text-sm">{errors.date.message}</div>
           )}
 
@@ -187,19 +155,10 @@ const QuoteForm = () => {
           {errors.message && (
             <div className="text-red-500 text-sm">{errors.message.message}</div>
           )}
-     
 
-
-        <div>
-        <ReCAPTCHA
-        sitekey="fghjjhgfghghghg"
-        onChange={handleCaptchaChange}
-      />
-        </div>
-     <div  className=" lg:w-[30%] lg:m-auto">
-     <ButtonCom title="Request Quote"/>
-     </div>
-         
+          <div className="lg:w-[30%] lg:m-auto">
+            <ButtonCom title="Request Quote" />
+          </div>
         </form>
       </div>
     </div>

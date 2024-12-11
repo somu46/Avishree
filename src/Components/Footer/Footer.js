@@ -58,7 +58,7 @@ const Footer = () => {
                 <span onClick={handleHistory}>Gallery</span>
               </li>
               <li>
-                <NavLink to="/contact" onClick={handleHistory}>Contact Us</NavLink>
+                <NavLink to="/contact-us" onClick={handleHistory}>Contact Us</NavLink>
               </li>
             </ul>
           </div>

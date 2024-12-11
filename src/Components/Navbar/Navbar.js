@@ -8,12 +8,6 @@ import ButtonCom from "../Button/Button";
 import { motion} from 'framer-motion';
 
 
-
-  
-
-
-
-
 const variants = {
   open: {
     x: 0,
@@ -26,8 +20,6 @@ const variants = {
     transition: { type: 'spring', stiffness: 200, damping: 20 },
   },
 };
-
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +34,6 @@ const handleMobileHistory=()=>{
   window.scrollTo(0, 0);
   setIsOpen(false);
 }
-
 
 const handleClick=()=>{
   setIsOpen(!isOpen);
