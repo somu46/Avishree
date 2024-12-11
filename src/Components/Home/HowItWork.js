@@ -42,7 +42,7 @@ function HowItWorks() {
             className="flex flex-col items-center text-center bg-white shadow-lg rounded-xl p-6 w-full max-w-xs transition-transform transform hover:-translate-y-2"
           >
             {/* Step Number */}
-            <div className="step-number text-4xl font-bold text-teal-500 mb-4">{step.number}</div>
+            <div className="step-number text-4xl font-bold text-[#FFD700] mb-4">{step.number}</div>
             
             {/* Step Title */}
             <h3 className="text-xl font-semibold text-teal-900 mb-2">{step.title}</h3>

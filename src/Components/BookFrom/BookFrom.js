@@ -194,7 +194,14 @@ const QuoteForm = () => {
             <div className="text-red-500 text-sm">{errors.message.message}</div>
           )}
  
-          <div>
+          <div className="  flex justify-center flex-col items-center">
+           {!captchaValue&&(
+             <div>
+             <p className=" font-mono text-red-600 mb-3 ">
+               * Please verify yourself to Submit the form
+             </p>
+           </div>
+           )}
             <ReCAPTCHA
               sitekey={site_key}
               onChange={onCaptchaChange}
@@ -202,7 +209,7 @@ const QuoteForm = () => {
           </div>
           <div className=" lg:w-[30%] lg:m-auto">
             {
-             
+            captchaValue&&
               <ButtonCom title="Request Quote" />
             }
           </div>

@@ -4,8 +4,9 @@ import Hamburger from "hamburger-react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ReactTypingEffect from "react-typing-effect";
-import ButtonCom from "../Button/Button";
+// import ButtonCom from "../Button/Button";
 import { motion} from 'framer-motion';
+import UiButton from "../Button/UiButton";
 
 
 const variants = {
@@ -112,7 +113,13 @@ const handleClick=()=>{
         </ul>
         
          {/* <Button onClick={handleClick} variant="outlined">Book Now</Button> */}
-        <div><ButtonCom title="Book Now" fun={handleClick}/></div> 
+        <div>
+          {/* <ButtonCom title="Book Now" fun={handleClick}/> */}
+          <UiButton  
+            title="Book Now"
+            fun={handleClick}
+            />
+          </div> 
        
       </div>
 
@@ -240,9 +247,13 @@ const handleClick=()=>{
               </NavLink>
             </li>
             <li>
-              <ButtonCom title="Book Now" 
+              {/* <ButtonCom title="Book Now" 
               
-              fun={handleClick} />
+              fun={handleClick} /> */}
+            <UiButton  
+            title="Book Now"
+            fun={handleClick}
+            />
             </li>
           </ul>
         </nav>
