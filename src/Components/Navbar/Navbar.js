@@ -4,7 +4,6 @@ import Hamburger from "hamburger-react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ReactTypingEffect from "react-typing-effect";
-// import ButtonCom from "../Button/Button";
 import { motion} from 'framer-motion';
 import UiButton from "../Button/UiButton";
 
@@ -107,14 +106,12 @@ const handleClick=()=>{
             <NavLink activeClass="active"  to="/contact-us"
              onClick={handleHistory}>Contact Us</NavLink>
           </li>
-          <li>
-            {/* <NavLink activeClass="active"  to="/blogs">Blogs</NavLink> */}
-          </li>
+          
         </ul>
         
-         {/* <Button onClick={handleClick} variant="outlined">Book Now</Button> */}
+         
         <div>
-          {/* <ButtonCom title="Book Now" fun={handleClick}/> */}
+          
           <UiButton  
             title="Book Now"
             fun={handleClick}
@@ -247,9 +244,7 @@ const handleClick=()=>{
               </NavLink>
             </li>
             <li>
-              {/* <ButtonCom title="Book Now" 
               
-              fun={handleClick} /> */}
             <UiButton  
             title="Book Now"
             fun={handleClick}

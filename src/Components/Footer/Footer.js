@@ -3,7 +3,7 @@ import "./Footer.css";
 import { Link, NavLink } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
+// import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Qrcode from "../../Assets/AvishreeHospitality.png";
 import FooterLogo from "../../Assets/FooterLogo.jpeg";
@@ -55,7 +55,12 @@ const Footer = () => {
                 <NavLink to="/menu" onClick={handleHistory}>Menu</NavLink>
               </li>
               <li>
-                <span onClick={handleHistory}>Gallery</span>
+                <NavLink   to="/videos"
+                 onClick={handleHistory}>Video</NavLink>
+              </li>
+              <li>
+                <NavLink   to="/Photos"
+                 onClick={handleHistory}>Photo</NavLink>
               </li>
               <li>
                 <NavLink to="/contact-us" onClick={handleHistory}>Contact Us</NavLink>
@@ -73,9 +78,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/avishreehospitalityofficial/" target="_blank" rel="noreferrer" className="social-icon">
                 <InstagramIcon />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-icon">
+              {/* <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-icon">
                 <XIcon />
-              </a>
+              </a> */}
               <a href="https://www.youtube.com/@avishreehospitality" target="_blank" rel="noreferrer" className="social-icon">
                 <YouTubeIcon />
               </a>
